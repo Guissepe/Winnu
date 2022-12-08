@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Button } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -11,6 +12,10 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <main>This is the main page</main>
+
+      <Button variant="primary">Custom button</Button>
     </div>
   );
 }

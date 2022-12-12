@@ -14,6 +14,9 @@ export const buttonStyles = {
       fontWeight: "normal",
       borderRadius: "6px",
     },
+    transparent: {
+      bg: "transparent",
+    },
   },
   // The default `size` or `variant` values
   defaultProps: {},

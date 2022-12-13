@@ -26,7 +26,7 @@ const header = () => {
         />
 
         <Show above="md">
-          <Flex color="white" fontWeight="600" gridGap="55px">
+          <Flex color="white" fontFamily="sora" fontWeight="600" gridGap="55px">
             {navs.map((nav) => {
               return (
                 <Link href={nav.route} key={nav.name}>

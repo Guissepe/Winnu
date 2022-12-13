@@ -3,7 +3,11 @@ import Footer from "./footer";
 
 import React from "react";
 
-const layout = ({ children }) => {
+type layoutProps = {
+  children: React.ReactNode;
+};
+
+const layout = ({ children }: layoutProps) => {
   return (
     <>
       <Header />

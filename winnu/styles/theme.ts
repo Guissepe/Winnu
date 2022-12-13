@@ -1,5 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 import { buttonStyles as Button } from "./components/buttonStyles";
+import "@fontsource/manrope";
+import "@fontsource/sora";
 
 export const theme = extendTheme({
   colors: {
@@ -7,6 +9,21 @@ export const theme = extendTheme({
       primary: "#FCCF47",
       secondary: "#FFAFA3",
     },
+    text: {
+      grey02: "#383838",
+      peach: "#E1B0A8",
+    },
+  },
+  fonts: {
+    sora: "Sora, sans-serif",
+    manrope: "Manrope, sans-serif",
+  },
+  breakpoints: {
+    sm: "520px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+    "2xl": "1536px",
   },
   components: {
     Button,

@@ -23,7 +23,7 @@ export default Page;
 export async function getStaticProps({ previewData }: { previewData: any }) {
   const client = createClient({ previewData });
 
-  const page = await client.getSingle("Page");
+  const page = await client.getSingle("page");
 
   return {
     props: {

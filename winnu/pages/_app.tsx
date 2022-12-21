@@ -6,13 +6,17 @@ import Link from "next/link";
 import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "../prismicio";
+import Layout from "../components/layout/layout";
+import React from "react";
 
 function App({ Component, pageProps }: { Component: any; pageProps: any }) {
   return (
     <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
       <PrismicPreview repositoryName={repositoryName}>
         <ChakraProvider theme={theme}>
-          <Component {...pageProps} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
         </ChakraProvider>
       </PrismicPreview>
     </PrismicProvider>

@@ -1,0 +1,72 @@
+{
+  "id": "header",
+  "type": "SharedSlice",
+  "name": "Header",
+  "description": "Header",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Header",
+      "primary": {
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "home": {
+          "type": "Link",
+          "config": {
+            "label": "Home",
+            "placeholder": "Home",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "pricing": {
+          "type": "Link",
+          "config": {
+            "label": "Pricing",
+            "placeholder": "Pricing",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "aboutus": {
+          "type": "Link",
+          "config": {
+            "label": "Aboutus",
+            "placeholder": "About Us",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "login": {
+          "type": "Link",
+          "config": {
+            "label": "Login",
+            "placeholder": "Log in",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "getstarted": {
+          "type": "Link",
+          "config": {
+            "label": "Getstarted",
+            "placeholder": "Get Started",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

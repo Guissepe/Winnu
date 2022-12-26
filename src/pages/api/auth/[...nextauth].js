@@ -4,7 +4,8 @@ import GoogleProvider from 'next-auth/providers/google';
 import AppleProvider from 'next-auth/providers/apple';
 
 const options = {
-    // debug: true,
+    debug: true,
+
     providers: [
         GitHubProvider({
             clientId: process.env.GITHUB_ID,
@@ -16,20 +17,24 @@ const options = {
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
             state: false,
             // authorizationUrl:
-            authorization: {
-                params: {
-                    prompt: 'consent',
-                    access_type: 'offline',
-                    response_type: 'code',
-                },
-            },
+            // authorization: {
+            //     params: {
+            //         prompt: 'consent',
+            //         access_type: 'offline',
+            //         response_type: 'code',
+            //     },
+            // },
         }),
         AppleProvider({
             clientId: process.env.APPLE_ID,
             clientSecret: process.env.APPLE_SECRET,
         }),
     ],
+    // pages: {
+    //     signIn: '/api/auth/sigIn',
+    // },
     secret: process.env.NEXTAUTH_SECRET,
+
     callbacks: {
         async signIn({ account, profile }) {
             if (account.provider === 'google') {

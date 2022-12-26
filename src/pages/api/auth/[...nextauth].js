@@ -29,6 +29,7 @@ const options = {
             clientSecret: process.env.APPLE_SECRET,
         }),
     ],
+    secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
         async signIn({ account, profile }) {
             if (account.provider === 'google') {
@@ -37,7 +38,12 @@ const options = {
                     profile.email.endsWith('@example.com')
                 );
             }
+
             return true; // Do different verification for other providers that don't have `email_verified`
+        },
+        async jwt({ token }) {
+            token.userRole = 'admin';
+            return token;
         },
     },
 };

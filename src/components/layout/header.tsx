@@ -3,6 +3,7 @@ import { Box, Button, Flex, Hide, Show, Text } from "@chakra-ui/react";
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Image from "next/image";
 import Link from "next/link";
+import { any } from "io-ts";
 
 const header = () => {
 
@@ -17,7 +18,7 @@ const header = () => {
         signOut()
     }
 
-    const { data: session, status } = useSession();
+    const { data: session, status }: any = useSession();
     const loading = status === "loading"
 
 

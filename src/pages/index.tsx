@@ -6,6 +6,7 @@ import { SliceZone } from "@prismicio/react";
 import { createClient } from "../../prismicio";
 import { components } from "../slices";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useSession } from 'next-auth/react'
 
 // code provided by prismic
 
@@ -18,6 +19,8 @@ const Page = ({
   navigation: any;
   settings: any;
 }) => {
+
+
   // return <SliceZone slices={page.data.slices} components={components} />;
   return (
     <div>

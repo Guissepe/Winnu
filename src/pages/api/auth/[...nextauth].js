@@ -17,35 +17,33 @@ const options = {
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
             state: false,
             // authorizationUrl:
-            // authorization: {
-            //     params: {
-            //         prompt: 'consent',
-            //         access_type: 'offline',
-            //         response_type: 'code',
-            //     },
-            // },
+            authorization: {
+                params: {
+                    prompt: 'consent',
+                    access_type: 'offline',
+                    response_type: 'code',
+                },
+            },
         }),
         AppleProvider({
             clientId: process.env.APPLE_ID,
             clientSecret: process.env.APPLE_SECRET,
         }),
     ],
-    // pages: {
-    //     signIn: '/api/auth/sigIn',
-    // },
+
     secret: process.env.NEXTAUTH_SECRET,
 
     callbacks: {
-        async signIn({ account, profile }) {
-            if (account.provider === 'google') {
-                return (
-                    profile.email_verified &&
-                    profile.email.endsWith('@example.com')
-                );
-            }
+        // async signin({ account, profile }) {
+        //     if (account.provider === 'google') {
+        //         return (
+        //             profile.email_verified &&
+        //             profile.email.endsWith('@example.com')
+        //         );
+        //     }
 
-            return true; // Do different verification for other providers that don't have `email_verified`
-        },
+        //     return true; // Do different verification for other providers that don't have `email_verified`
+        // },
         async jwt({ token }) {
             token.userRole = 'admin';
             return token;

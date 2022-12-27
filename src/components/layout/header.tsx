@@ -36,26 +36,6 @@ const header = () => {
 
   return (
     <Box bg="black" py="24px" pl="12px" pr="22px">
-        {/* Log ing / Log ou button */}
-        <Box>
-                {session && <Button onClick={handleSignout} className="btn-signin">Sign out</Button>  }
-        </Box>
-        <Box>
-           {loading && <Box>Loading...</Box>}
-           {
-            session &&
-              <>
-                <Text color='white' >{session.user.name ?? session.user.email}!</Text>
-               <Text mb='10px'> </Text> <br />
-              </>
-            }
-           {
-            !session &&
-              <>
-              </>
-           }
-         </Box>
-        {/*  */}
       <Flex align="center" justify="space-between" maxW="1280px" mx="auto">
         <Image
           src="/assets/winnu-logo.svg"
@@ -85,9 +65,32 @@ const header = () => {
             </Button>
             </Link>
             }
-            <Button variant="primary" py="16px" px="35px" borderRadius="3px">
+            {!session &&
+             <Button variant="primary" py="16px" px="35px" borderRadius="3px">
               Get started
             </Button>
+            }
+            {/* Log ing / Log ou button */}
+        <Box>
+                {session && <Button onClick={handleSignout} className="btn-signin">Sign out</Button>  }
+        </Box>
+        <Box>
+           {loading && <Box>Loading...</Box>}
+           {
+            session &&
+              <>
+                <Text color='white' >{session.user.name ?? session.user.email}!</Text>
+               <Text mb='10px'> </Text> <br />
+              </>
+            }
+           {
+            !session &&
+              <>
+              </>
+           }
+         </Box>
+        {/*  */}
+
           </Flex>
         </Show>
         <Hide above="md">

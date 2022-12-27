@@ -5,7 +5,6 @@ import AppleProvider from 'next-auth/providers/apple';
 
 const options = {
     debug: true,
-
     providers: [
         GitHubProvider({
             clientId: process.env.GITHUB_ID,
@@ -36,21 +35,13 @@ const options = {
     secret: process.env.NEXTAUTH_SECRET,
 
     callbacks: {
-        async signIn({
-            user,
-            account,
-            profile,
-            email,
-            credentials,
-            url,
-            baseUrl,
-        }) {
+        async signIn({ baseUrl }) {
             return [baseUrl, true];
         },
-        async session({ session, user, token }) {
+        async session({ session }) {
             return session;
         },
-        async jwt({ token, user, account, profile, isNewUser }) {
+        async jwt({ token }) {
             return token;
         },
         async redirect({ url, baseUrl }) {

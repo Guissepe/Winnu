@@ -34,18 +34,16 @@ const options = {
     secret: process.env.NEXTAUTH_SECRET,
 
     callbacks: {
-        // async signin({ account, profile }) {
-        //     if (account.provider === 'google') {
-        //         return (
-        //             profile.email_verified &&
-        //             profile.email.endsWith('@example.com')
-        //         );
-        //     }
-
-        //     return true; // Do different verification for other providers that don't have `email_verified`
-        // },
-        async jwt({ token }) {
-            token.userRole = 'admin';
+        async signIn({ user, account, profile, email, credentials }) {
+            return true;
+        },
+        async redirect({ url, baseUrl }) {
+            return baseUrl;
+        },
+        async session({ session, user, token }) {
+            return session;
+        },
+        async jwt({ token, user, account, profile, isNewUser }) {
             return token;
         },
     },

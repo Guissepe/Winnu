@@ -34,8 +34,16 @@ const options = {
     secret: process.env.NEXTAUTH_SECRET,
 
     callbacks: {
-        async signIn({ user, account, profile, email, credentials }) {
-            return true;
+        async signIn({
+            user,
+            account,
+            profile,
+            email,
+            credentials,
+            url,
+            baseUrl,
+        }) {
+            return [baseUrl, true];
         },
         async session({ session, user, token }) {
             return session;

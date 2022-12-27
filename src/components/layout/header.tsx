@@ -78,7 +78,13 @@ const header = () => {
 
         <Show above="lg">
           <Flex align="center">
-            {!session && <Button  color="white" px="29px" variant="transparent" onClick={handleSignin}  className="btn-signin">Login</Button>  }
+          {!session &&
+            <Link href={"/auth/login"} >
+            <Button color="white" px="29px" variant="transparent">
+                Login
+            </Button>
+            </Link>
+            }
             <Button variant="primary" py="16px" px="35px" borderRadius="3px">
               Get started
             </Button>

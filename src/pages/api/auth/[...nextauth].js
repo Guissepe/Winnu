@@ -30,7 +30,9 @@ const options = {
             clientSecret: process.env.APPLE_SECRET,
         }),
     ],
-
+    pages: {
+        login: '/auth/login',
+    },
     secret: process.env.NEXTAUTH_SECRET,
 
     callbacks: {

@@ -2,6 +2,7 @@ import NextAuth from 'next-auth';
 import GitHubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import AppleProvider from 'next-auth/providers/apple';
+import FacebookProvider from 'next-auth/providers/facebook';
 
 const options = {
     debug: true,
@@ -27,6 +28,10 @@ const options = {
         AppleProvider({
             clientId: process.env.APPLE_ID,
             clientSecret: process.env.APPLE_SECRET,
+        }),
+        FacebookProvider({
+            clientId: process.env.FACEBOOK_CLIENT_ID,
+            clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
         }),
     ],
     pages: {

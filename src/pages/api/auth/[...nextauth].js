@@ -10,7 +10,6 @@ const options = {
         GitHubProvider({
             clientId: process.env.GITHUB_ID,
             clientSecret: process.env.GITHUB_SECRET,
-            // authorization: { params: { scope: 'notifications' } },
         }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,

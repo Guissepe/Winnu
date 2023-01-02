@@ -21,34 +21,21 @@ import Nextauth from "../api/auth/[...nextauth]";
 
 
 export default function SignIn({ providers }: { providers: any}) {
-  return (
-    <>
-        <Box  background='black' key={providers.name}>
-                    {/* <Button width={250} fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={handleGoogleSignin}>
-                        Sign in with {providers.name}
-                    </Button>
-                    <Button width={250} fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={handleFacebookSignin}>
-                        Sign in with {providers.name}
-                    </Button>
-                    <Button width={250} fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={handleGitHubSignin}>
-                        Sign in with {providers.name}
-                    </Button> */}
-            {Object.values(providers).map ((provider: any) => (
-                <>
-                <Flex>
-                    <Button width={250} fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn(providers.id, { callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app' })}>
-                        Sign in with {providers.name}
-                    </Button>
-
-                </Flex>
-
-                </>
-                    ))}
-        </Box>
-    </>
-  )
+  return(
+  <>
+  <Box background='black'>
+    {Object.values(providers).map((provider: any) => (
+      <Flex key={provider.name}>
+        <Image src="https://raw.githubusercontent.com/nextauthjs/next-auth/main/packages/next-auth/provider-logos/github.svg"></Image>
+        <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn(provider.id, { callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app' })}>
+          Sign in with {provider.name}
+        </Button>
+      </Flex>
+    ))}
+  </Box>
+  </>
+)
 }
-
 // SignIn.getInitialProps = async(context: any) => {
 //     const {req, res} = context
 //     const session = await getSession({req});

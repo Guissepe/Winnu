@@ -60,9 +60,9 @@ const header = () => {
           <Flex align="center">
           {!session &&
             <Link href={"/auth/login"} >
-            <Button color="white" px="29px" variant="transparent">
-                Login
-            </Button>
+                <Button color="white" px="29px" variant="transparent">
+                    Login
+                </Button>
             </Link>
             }
             {!session &&

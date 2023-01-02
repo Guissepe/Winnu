@@ -7,12 +7,6 @@ import {
   } from "@chakra-ui/react";
 
 export default function SignIn({ providers }: { providers: any }) {
-    try {
-        throw new Error('Something bad happened');
-      }
-      catch(e) {
-        console.log(e);
-      };
   return (
     <>
     <Box background='black'>

@@ -7,25 +7,26 @@ import {
   } from "@chakra-ui/react";
 
 export default function SignIn({ providers }: { providers: any }) {
-    try {
-        throw new Error('Something bad happened');
-      }
-      catch(e) {
-        console.log(e);
-      };
   return (
     <>
     <Box background='black'>
-        <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn(providers.id, { callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app' })}>
-            Sign in with {providers.name}
+        <Button onClick={() => signIn()}>
+            login here
         </Button>
+      {Object.values(providers).map((provider: any) => (
+         <Flex key={provider.name}>
+          <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn(provider.id, { callbackUrl: 'https://winnu-git-fix-guissepe.vercel.app' })}>
+            Sign in with {provider.name}
+          </Button>
+        </Flex>
+          ))}
     </Box>
     </>
   );
 };
 
 export async function getServerSideProps(context: any) {
-  const providers = await getProviders()
+  const providers = getProviders()
   return {
     props: { providers },
   };

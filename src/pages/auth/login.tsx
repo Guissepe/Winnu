@@ -10,6 +10,12 @@ import {
 export default function SignIn({ providers }: { providers: any }) {
   return (
     <>
+    <Box background='black'>
+        {Object.values(providers).map((provider: any) => (
+        <Flex key={provider.name}>
+        </Flex>
+        ))}
+    </Box>
 
     </>
   )
@@ -21,3 +27,6 @@ export async function getServerSideProps(context: any) {
       props: { providers },
     }
   }
+
+
+

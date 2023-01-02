@@ -237,33 +237,33 @@ export async function getStaticProps({ previewData }: { previewData: any }) {
 }
 
 // messege user if loged in or not
-function Guest() {
-  return (
-    <div>
-      <Head>
-        <title>Winnu</title>
-        <meta
-          name="description"
-          content="Build your dream website simple and easy"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>You are not logged in, you should log in</main>
-    </div>
-  );
-}
-function User() {
-    return (
-      <div>
-        <Head>
-          <title>Winnu</title>
-          <meta
-            name="description"
-            content="Build your dream website simple and easy"
-          />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <main>You are logged in, Thank you :D</main>
-      </div>
-    );
-  }
+// function Guest() {
+//   return (
+//     <div>
+//       <Head>
+//         <title>Winnu</title>
+//         <meta
+//           name="description"
+//           content="Build your dream website simple and easy"
+//         />
+//         <link rel="icon" href="/favicon.ico" />
+//       </Head>
+//       <main>You are not logged in, you should log in</main>
+//     </div>
+//   );
+// }
+// function User() {
+//     return (
+//       <div>
+//         <Head>
+//           <title>Winnu</title>
+//           <meta
+//             name="description"
+//             content="Build your dream website simple and easy"
+//           />
+//           <link rel="icon" href="/favicon.ico" />
+//         </Head>
+//         <main>You are logged in, Thank you :D</main>
+//       </div>
+//     );
+//   }

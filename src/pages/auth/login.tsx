@@ -10,14 +10,15 @@ export default function SignIn({ providers }: { providers: any }) {
   return (
     <>
     <Box background='black'>
-        <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn()}>
-            Sign in with
-        </Button>
+
       {Object.values(providers).map((provider: any) => (
          <Flex key={provider.name}>
-          <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn()}>
-            Sign in with {provider.name}
-          </Button>
+            <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn()}>
+                Sign in with
+            </Button>
+            <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn()}>
+                Sign in with {provider.name}
+            </Button>
         </Flex>
           ))}
     </Box>

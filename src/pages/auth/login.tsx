@@ -13,13 +13,13 @@ export default function SignIn({ providers }: { providers: any }) {
         <Button onClick={() => signIn}>
             login here
         </Button>
-      {/* {Object.values(providers).map((provider: any) => (
+      {Object.values(providers).map((provider: any) => (
          <Flex key={provider.name}>
           <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn(provider.id, { callbackUrl: 'https://winnu-git-fix-guissepe.vercel.app' })}>
             Sign in with {provider.name}
           </Button>
         </Flex>
-          ))} */}
+          ))}
     </Box>
     </>
   );

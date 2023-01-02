@@ -227,11 +227,31 @@ export default Page;
 export async function getStaticProps({ previewData }: { previewData: any }) {
   const client = createClient({ previewData });
 
-  const page = await client.getSingle("Page");
+  // const page = await client.getSingle("Page");
 
   return {
     props: {
-      page
+      // page,
     },
   };
 }
+
+// original code
+// export default function Home() {
+//   return (
+//     <div>
+//       <Head>
+//         <title>Winnu</title>
+//         <meta
+//           name="description"
+//           content="Build your dream website simple and easy"
+//         />
+//         <link rel="icon" href="/favicon.ico" />
+//       </Head>
+
+//       <main>This is the main page</main>
+
+//       <Button variant="primary">Custom button</Button>
+//     </div>
+//   );
+// }

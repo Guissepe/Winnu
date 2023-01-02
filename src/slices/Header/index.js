@@ -1,6 +1,5 @@
 import React from 'react';
 import { PrismicRichText, PrismicLink } from '@prismicio/react';
-
 /**
  * @typedef {import("@prismicio/client").Content.HeaderSlice} HeaderSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<HeaderSlice>} HeaderProps

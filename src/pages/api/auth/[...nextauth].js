@@ -30,7 +30,7 @@ const options = {
     pages: {
         login: '/auth/login',
     },
-
+    secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
         async signIn({ baseUrl }) {
             return [baseUrl, true];

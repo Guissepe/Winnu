@@ -20,10 +20,11 @@ const Page = ({
   settings: any;
 }) => {
 
-
+    const { data: session } = useSession()
   // return <SliceZone slices={page.data.slices} components={components} />;
   return (
     <div>
+        {session?User(): Guest()}
       <Head>
         <title>Winnu | Home</title>
       </Head>
@@ -237,21 +238,33 @@ export async function getStaticProps({ previewData }: { previewData: any }) {
 }
 
 // original code
-// export default function Home() {
-//   return (
-//     <div>
-//       <Head>
-//         <title>Winnu</title>
-//         <meta
-//           name="description"
-//           content="Build your dream website simple and easy"
-//         />
-//         <link rel="icon" href="/favicon.ico" />
-//       </Head>
-
-//       <main>This is the main page</main>
-
-//       <Button variant="primary">Custom button</Button>
-//     </div>
-//   );
-// }
+function Guest() {
+  return (
+    <div>
+      <Head>
+        <title>Winnu</title>
+        <meta
+          name="description"
+          content="Build your dream website simple and easy"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main>You are not logged in, you should log in</main>
+    </div>
+  );
+}
+function User() {
+    return (
+      <div>
+        <Head>
+          <title>Winnu</title>
+          <meta
+            name="description"
+            content="Build your dream website simple and easy"
+          />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <main>You are logged in, Thank you :D</main>
+      </div>
+    );
+  }

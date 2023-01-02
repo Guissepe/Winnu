@@ -94,12 +94,12 @@ const header = () => {
           </Flex>
         </Show>
         <Hide above="md">
-          <Image
-            src="/assets/icons/menu.svg"
-            width={24}
-            height={10}
-            alt="menu"
-          />
+                <Image
+                src="/assets/icons/menu.svg"
+                width={24}
+                height={10}
+                alt="menu"
+                />
         </Hide>
       </Flex>
     </Box>

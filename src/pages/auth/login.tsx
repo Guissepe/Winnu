@@ -20,11 +20,18 @@ export default function SignIn({ providers }: { providers: any }) {
         {/* // </Flex> */}
           {/* ))} */}
     </Box>
+
     </>
   )
 }
 
 export async function getServerSideProps(context: any) {
+    try {
+        throw new Error('Something bad happened');
+      }
+      catch(e) {
+        console.log(e);
+      }
   const providers = await getProviders()
   return {
     props: { providers },

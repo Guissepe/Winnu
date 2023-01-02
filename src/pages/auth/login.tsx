@@ -25,7 +25,7 @@ export default function SignIn({ providers }: { providers: any }) {
   )
 }
 
-export async function getServerSideProps(context: any) {
+export async function getServerProps(context: any) {
     try {
         throw new Error('Something bad happened');
       }

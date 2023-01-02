@@ -4,7 +4,7 @@ import GoogleProvider from 'next-auth/providers/google';
 import AppleProvider from 'next-auth/providers/apple';
 import FacebookProvider from 'next-auth/providers/facebook';
 
-const options = {
+export const options = {
     debug: true,
     providers: [
         FacebookProvider({

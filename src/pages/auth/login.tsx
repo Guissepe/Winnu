@@ -1,3 +1,4 @@
+import React from "react";
 import { getProviders, signIn } from "next-auth/react"
 import {
     Box,
@@ -5,6 +6,7 @@ import {
     Flex,
     Image,
   } from "@chakra-ui/react";
+
 
 
 export default function SignIn({ providers }: { providers: any }) {

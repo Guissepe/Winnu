@@ -11,10 +11,10 @@ export default function SignIn({ providers }: { providers: any }) {
   return (
     <>
     <Box background='black'>
-        {Object.values(providers).map((provider: any) => (
-        <Flex key={provider.name}>
+
+        <Flex key={providers.name}>
         </Flex>
-        ))}
+
     </Box>
 
     </>

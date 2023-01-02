@@ -10,7 +10,7 @@ export default function SignIn({ providers }: { providers: any }) {
   return (
     <>
     <Box background='black'>
-        <Button onClick={() => signIn}>
+        <Button onClick={() => signIn()}>
             login here
         </Button>
       {Object.values(providers).map((provider: any) => (

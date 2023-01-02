@@ -4,7 +4,6 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 import Image from "next/image";
 import Link from "next/link";
 import { any } from "io-ts";
-
 const header = () => {
 
     // Methods to triger Log in and Log out
@@ -59,11 +58,12 @@ const header = () => {
         <Show above="lg">
           <Flex align="center">
           {!session &&
-            <Link href={"/auth/login"} >
-            <Button color="white" px="29px" variant="transparent">
+        //   Uncoment this after solving the problem with the login page, i am talking to you Nathan.  From Nathan
+            // <Link href={"/auth/login"} >
+            <Button onClick={handleSignin} color="white" px="29px" variant="transparent">
                 Login
             </Button>
-            </Link>
+            // </Link>
             }
             {!session &&
              <Button variant="primary" py="16px" px="35px" borderRadius="3px">

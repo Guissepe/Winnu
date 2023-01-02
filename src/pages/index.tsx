@@ -20,11 +20,10 @@ const Page = ({
   settings: any;
 }) => {
 
-    const { data: session } = useSession()
+
   // return <SliceZone slices={page.data.slices} components={components} />;
   return (
     <div>
-        {session?User(): Guest()}
       <Head>
         <title>Winnu | Home</title>
       </Head>
@@ -237,7 +236,7 @@ export async function getStaticProps({ previewData }: { previewData: any }) {
   };
 }
 
-// original code
+// messege user if loged in or not
 function Guest() {
   return (
     <div>

@@ -10,7 +10,6 @@ export default function SignIn({ providers }: { providers: any }) {
   return (
     <>
     <Box background='black'>
-
       {Object.values(providers).map((provider: any) => (
          <Flex key={provider.name}>
             <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn()}>
@@ -27,7 +26,7 @@ export default function SignIn({ providers }: { providers: any }) {
 };
 
 export async function getServerSideProps(context: any) {
-  const providers = getProviders()
+  const providers = await getProviders()
   return {
     props: { providers },
   };

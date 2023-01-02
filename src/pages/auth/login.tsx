@@ -14,8 +14,8 @@ export default function SignIn({ providers }: { providers: any }) {
       {/* {Object.values(providers).map((provider: any) => ( */}
         {/* // <Flex key={provider.name}> */}
         //   <Image src="https://raw.githubusercontent.com/nextauthjs/next-auth/main/packages/next-auth/provider-logos/github.svg"></Image>
-          <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn(providers.id, { callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app' })}>
-            Sign in with {providers.name}
+          <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px">
+            Sign in with
           </Button>
         {/* // </Flex> */}
           {/* ))} */}

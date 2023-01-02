@@ -90,10 +90,11 @@ const pricing = () => {
         gridGap="36px"
         direction={{ base: 'column', md: 'row' }}
       >
-        {plans.map(plan => {
+        {plans.map((plan, index) => {
           const { name, price, description, benefits } = plan;
           return (
             <Box
+              key={index}
               height={{ base: 'auto', md: '752px' }}
               border="1px"
               borderColor="#FFBDB4"
@@ -121,9 +122,14 @@ const pricing = () => {
               </Box>
               <Box px="12px">
                 <Box>
-                  {benefits.map(benefit => {
+                  {benefits.map((benefit, index) => {
                     return (
-                      <Flex alignItems="center" gridGap="8px" mb="14px">
+                      <Flex
+                        key={index}
+                        alignItems="center"
+                        gridGap="8px"
+                        mb="14px"
+                      >
                         <FiCheck />
                         <Text fontSize="16px" lineHeight="30px">
                           {benefit}

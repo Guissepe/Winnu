@@ -4,7 +4,10 @@ import {
     Button,
     Flex,
     Image,
+    Text,
   } from "@chakra-ui/react";
+import { LogInbutton } from "../../components/loginbutton";
+
 
   import Google, { GoogleProfile } from "next-auth/providers/google";
   import Nextauth from "../api/auth/[...nextauth]";
@@ -23,30 +26,56 @@ async function handleGitHubSignin(){
 
 export default function SignIn({ providers }: { providers: any }) {
 
-
-// Google handler
-
   return (
     <>
-    <Box background='black'>
-            <Button width={250} fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={ () => handleGoogleSignin()}>
-                Sign in with {providers.name}
-            </Button>
-            <Button width={250} fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={ () => handleFacebookSignin()}>
-                Sign in with {providers.name}
-            </Button>
-            <Button width={250} fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={ () => handleGitHubSignin()}>
-                Sign in with {providers.name}
-            </Button>
-    {/* {Object.values(providers).map((provider: any) => (
-        <Flex key={provider.name}>
+    <Box  background='black'>
+        <Box pb='150px' pt='150px'>
+            <Text
+            fontSize='30px'
+            textAlign='center'
+            color='white'
+            fontFamily='Sora'
+            px='400px'
+            >
+                Sign in to Winnu
+            </Text>
+            <Text
+            textAlign='center'
+            color='#787878'
+            pb='30px'
+            >
+                Build your dream website with simplicity
+            </Text>
+            <LogInbutton
+            margin = '336px'
+            color = 'black'
+            backcolor = '#EBC142'
+            provname = 'Google'
+            handler = {handleGoogleSignin}
+            />
+            <Flex pt='15px' mx='178px'>
+                <Box
+                pr='12px'
+                >
+                <LogInbutton
+                color = 'white'
+                backcolor = '#1E1E1E'
+                provname = 'Facebook'
+                handler = {handleFacebookSignin}
+                />
 
 
-            <Button fontFamily="Sora" variant="primary" py="16px" px="35px" borderRadius="3px" onClick={() => signIn()}>
-                Sign in with {provider.name}
-            </Button>
-        </Flex>
-          ))} */}
+                </Box>
+
+                <LogInbutton
+                color = 'white'
+                backcolor = '#1E1E1E'
+                provname = 'GitHub'
+                handler = {handleGitHubSignin}
+                />
+            </Flex>
+        </Box>
+
     </Box>
     </>
   );

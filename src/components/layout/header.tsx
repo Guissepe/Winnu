@@ -16,7 +16,6 @@ const header = () => {
         e.preventDefault()
         signOut()
     }
-
     const { data: session, status }: any = useSession();
     const loading = status === "loading"
 

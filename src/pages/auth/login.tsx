@@ -13,7 +13,7 @@ import { LogInbutton } from "../../components/loginbutton";
   import Nextauth from "../api/auth/[...nextauth]";
 
 
-  async function handleGoogleSignin(){
+async function handleGoogleSignin(){
     signIn('google', {callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user'})
 }
 async function handleFacebookSignin(){

@@ -17,12 +17,9 @@ const title = ''
 export const InputField = (props: any) => {
 
     return (
-      <Box background='black'>
+      <Box width='519px' background='black'>
           <Box >
-              <Text color = ' white'>
-                  {props.title}
-              </Text>
-              <Input focusBorderColor='#C9A538' borderRadius='0' border='#383838' background='#383838'>
+              <Input color='white' focusBorderColor='#C9A538' borderRadius='0' border='#383838' background='#383838'>
               </Input>
           </Box>
         </Box>

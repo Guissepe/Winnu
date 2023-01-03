@@ -31,11 +31,9 @@ const styles = {
 
 return(
 
-    <Box background='#1E1E1E'>
-
+    <Box width='519px'  background='#1E1E1E'>
         <Select
          onChange={(e) => setValue(e.target.value)}
-         iconSize=''
          iconColor='#A3A3A3'
          icon={<VscTriangleDown />}
          background='#1E1E1E'
@@ -54,9 +52,9 @@ return(
             <option style={styles} value={props.vl8}>{props.text8}</option>
             <option style={styles} value={props.vl9}>{props.text9}</option>
         </Select>
-        <Text color='white'>
+        {/* <Text color='white'>
             {value}
-        </Text>
+        </Text> */}
     </Box>
 
 )

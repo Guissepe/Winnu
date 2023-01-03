@@ -57,12 +57,11 @@ const header = () => {
         <Show above="lg">
           <Flex align="center">
           {!session &&
-        //   Uncoment this after solving the problem with the login page, i am talking to you Nathan.  From Nathan
-            // <Link href={"/auth/login"} >
-            <Button onClick={handleSignin} color="white" px="29px" variant="transparent">
-                Login
-            </Button>
-            // </Link>
+            <Link href={"/auth/login"} >
+                <Button color="white" px="29px" variant="transparent">
+                    Login
+                </Button>
+            </Link>
             }
             {!session &&
              <Button variant="primary" py="16px" px="35px" borderRadius="3px">

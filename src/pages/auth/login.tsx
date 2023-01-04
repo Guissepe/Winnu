@@ -1,7 +1,89 @@
-import React from "react";
+import { getProviders, signIn } from "next-auth/react"
+import {
+    Box,
+    Button,
+    Flex,
+    Image,
+    Text,
+  } from "@chakra-ui/react";
+import { LogInbutton } from "../../components/loginbutton";
 
-const login = () => {
-  return <div>This is the login page</div>;
+
+  import Google, { GoogleProfile } from "next-auth/providers/google";
+  import Nextauth from "../api/auth/[...nextauth]";
+
+
+async function handleGoogleSignin(){
+    signIn('google', {callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user'})
+}
+async function handleFacebookSignin(){
+    signIn('facebook', {callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user'})
+}
+async function handleGitHubSignin(){
+    signIn('github', {callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user'})
+}
+
+
+export default function SignIn({ providers }: { providers: any }) {
+
+  return (
+    <>
+    <Box  background='black'>
+        <Box pb='150px' pt='150px'>
+            <Text
+            fontSize='30px'
+            textAlign='center'
+            color='white'
+            fontFamily='Sora'
+            px='400px'
+            >
+                Sign in to Winnu
+            </Text>
+            <Text
+            textAlign='center'
+            color='#787878'
+            pb='30px'
+            >
+                Build your dream website with simplicity
+            </Text>
+            <LogInbutton
+            margin = '336px'
+            color = 'black'
+            backcolor = '#EBC142'
+            provname = 'Google'
+            handler = {handleGoogleSignin}
+            />
+            <Flex pt='15px' mx='178px'>
+                <Box
+                pr='12px'
+                >
+                <LogInbutton
+                color = 'white'
+                backcolor = '#1E1E1E'
+                provname = 'Facebook'
+                handler = {handleFacebookSignin}
+                />
+
+
+                </Box>
+
+                <LogInbutton
+                color = 'white'
+                backcolor = '#1E1E1E'
+                provname = 'GitHub'
+                handler = {handleGitHubSignin}
+                />
+            </Flex>
+        </Box>
+
+    </Box>
+    </>
+  );
 };
 
-export default login;
+export async function getServerSideProps(context: any) {
+  const providers = await getProviders()
+  return {
+    props: { providers },
+  };
+};

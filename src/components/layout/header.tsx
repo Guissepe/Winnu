@@ -1,9 +1,25 @@
 import React from "react";
-import { Box, Button, Flex, Hide, Show } from "@chakra-ui/react";
+import { Box, Button, Flex, Hide, Show, Text } from "@chakra-ui/react";
+import { useSession, signIn, signOut } from 'next-auth/react'
 import Image from "next/image";
 import Link from "next/link";
-
+import { any } from "io-ts";
 const header = () => {
+
+    // Methods to triger Log in and Log out
+    const handleSignin = (e: any) => {
+        e.preventDefault()
+        signIn()
+    }
+
+    const handleSignout = (e: any) => {
+        e.preventDefault()
+        signOut()
+    }
+    const { data: session, status }: any = useSession();
+    const loading = status === "loading"
+
+
   type navRoutes = {
     name: string;
     route: string;
@@ -14,6 +30,7 @@ const header = () => {
     { name: "Pricing", route: "/pricing" },
     { name: "About Us", route: "/about" },
   ];
+
 
   return (
     <Box bg="black" py="24px" pl="12px" pr="22px">
@@ -39,12 +56,39 @@ const header = () => {
 
         <Show above="lg">
           <Flex align="center">
-            <Button color="white" px="29px" variant="transparent">
-              Login
-            </Button>
-            <Button variant="primary" py="16px" px="35px" borderRadius="3px">
+          {!session &&
+            <Link href={"/auth/login"} >
+                <Button color="white" px="29px" variant="transparent">
+                    Login
+                </Button>
+            </Link>
+            }
+            {!session &&
+             <Button variant="primary" py="16px" px="35px" borderRadius="3px">
               Get started
             </Button>
+            }
+            {/* Log ing / Log ou button */}
+        <Box>
+                {session && <Button onClick={handleSignout} className="btn-signin">Sign out</Button>  }
+        </Box>
+        <Box>
+           {loading && <Box>Loading...</Box>}
+           {
+            session &&
+              <>
+                <Text color='white' >{session.user.name ?? session.user.email}!</Text>
+               <Text mb='10px'> </Text> <br />
+              </>
+            }
+           {
+            !session &&
+              <>
+              </>
+           }
+         </Box>
+        {/*  */}
+
           </Flex>
         </Show>
         <Hide above="md">

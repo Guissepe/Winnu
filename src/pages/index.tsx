@@ -3,9 +3,10 @@ import Head from "next/head";
 import { Box, Button, Flex, Show, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { SliceZone } from "@prismicio/react";
-import { createClient } from "../../prismicio";
+// import { createClient } from "../../prismicio";
 import { components } from "../slices";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useSession } from 'next-auth/react'
 
 // code provided by prismic
 
@@ -18,6 +19,8 @@ const Page = ({
   navigation: any;
   settings: any;
 }) => {
+
+
   // return <SliceZone slices={page.data.slices} components={components} />;
   return (
     <div>
@@ -221,17 +224,17 @@ const Page = ({
 
 export default Page;
 
-export async function getStaticProps({ previewData }: { previewData: any }) {
-  const client = createClient({ previewData });
+// export async function getStaticProps({ previewData }: { previewData: any }) {
+//   const client = createClient({ previewData });
 
-  // const page = await client.getSingle("Page");
+//   const page = await client.getSingle("Page");
 
-  return {
-    props: {
-      // page,
-    },
-  };
-}
+//   return {
+//     props: {
+//       page
+//     },
+//   };
+// }
 
 // original code
 // export default function Home() {

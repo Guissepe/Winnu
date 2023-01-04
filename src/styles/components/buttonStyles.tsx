@@ -14,7 +14,6 @@ export const buttonStyles = {
       fontWeight: "normal",
       borderRadius: "6px",
       fontFamily: "inter",
-      paddingTop: '18px',
     },
     transparent: {
       bg: "transparent",

@@ -12,6 +12,7 @@ import {
         color={props.color}
         background={props.backcolor}
         width={300}
+        maxWidth={300}
         height={45}
         fontFamily="Sora"
         variant="primary"
@@ -19,6 +20,7 @@ import {
         px="35px"
         borderRadius="3px"
         onClick={ () => props.handler()}
+        display='flex'
         mx={props.margin}
         >
             Sign in with {props.provname}

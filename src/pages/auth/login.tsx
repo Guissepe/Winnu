@@ -5,6 +5,7 @@ import {
     Flex,
     Image,
     Text,
+    Center,
   } from "@chakra-ui/react";
 import { LogInbutton } from "../../components/loginbutton";
 
@@ -46,34 +47,36 @@ export default function SignIn({ providers }: { providers: any }) {
             >
                 Build your dream website with simplicity
             </Text>
-            <LogInbutton
-            margin = '336px'
-            color = 'black'
-            backcolor = '#EBC142'
-            provname = 'Google'
-            handler = {handleGoogleSignin}
-            />
-            <Flex pt='15px' mx='178px'>
+            <Center >
+              <LogInbutton
+              margin = {''}
+              color = 'black'
+              backcolor = '#EBC142'
+              provname = 'Google'
+              handler = {handleGoogleSignin}
+              />
+            </Center>
+            <Center>
+              <Flex pt='15px' mx='34%'>
                 <Box
                 pr='12px'
                 >
-                <LogInbutton
-                color = 'white'
-                backcolor = '#1E1E1E'
-                provname = 'Facebook'
-                handler = {handleFacebookSignin}
+                  <LogInbutton
+                  color = 'white'
+                  backcolor = '#1E1E1E'
+                  provname = 'Facebook'
+                  handler = {handleFacebookSignin}
                 />
-
-
                 </Box>
-
-                <LogInbutton
-                color = 'white'
-                backcolor = '#1E1E1E'
-                provname = 'GitHub'
-                handler = {handleGitHubSignin}
-                />
+                  <LogInbutton
+                  color = 'white'
+                  backcolor = '#1E1E1E'
+                  provname = 'GitHub'
+                  handler = {handleGitHubSignin}
+                  />
             </Flex>
+            </Center>
+
         </Box>
 
     </Box>

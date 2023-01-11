@@ -1,0 +1,42 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Scale",
+          "spans": []
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Lorem tempor laboris aliqua consequat duis deserunt mollit.",
+          "spans": []
+        }
+      ],
+      "btext": [
+        {
+          "type": "paragraph",
+          "text": "Non id nisi esse fugiat deserunt dolor excepteur duis aute consectetur enim. Exercitation velit irure anim duis ipsum quis elit id enim ex nostrud. Deserunt laborum pariatur deserunt sint reprehenderit qui amet labore adipisicing non exercitation ullamco.",
+          "spans": []
+        }
+      ],
+      "backgroud": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea"
+      }
+    },
+    "slice_type": "slice1"
+  }
+]

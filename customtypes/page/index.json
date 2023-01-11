@@ -8,17 +8,8 @@
       "uid": {
         "type": "UID",
         "config": {
-          "label": "uid",
+          "label": "UID",
           "placeholder": ""
-        }
-      },
-      "title": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Title",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "heading1"
         }
       },
       "slices": {
@@ -26,6 +17,15 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "infobox": {
+              "type": "SharedSlice"
+            },
+            "header": {
+              "type": "SharedSlice"
+            },
+            "navigation_item": {
+              "type": "SharedSlice"
+            },
             "slice1": {
               "type": "SharedSlice"
             }

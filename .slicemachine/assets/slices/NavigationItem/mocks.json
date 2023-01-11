@@ -1,0 +1,35 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "child_name": [
+          {
+            "type": "paragraph",
+            "text": "Consequat quis enim nisi sit pariatur culpa.",
+            "spans": []
+          }
+        ],
+        "child_link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      }
+    ],
+    "primary": {
+      "name": [
+        {
+          "type": "paragraph",
+          "text": "Quis ullamco voluptate consequat quis nisi do incididunt.",
+          "spans": []
+        }
+      ],
+      "link": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      }
+    },
+    "slice_type": "navigation_item"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "slices": {
+    "Infobox": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Button": {
+      "default": {
+        "primary": {
+          "cta_text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "NavigationItem": {
+      "default": {
+        "items": {
+          "child_name": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "_cts": {
+    "page": {},
+    "testtype": {},
+    "homepage": {},
+    "login": {}
+  }
+}

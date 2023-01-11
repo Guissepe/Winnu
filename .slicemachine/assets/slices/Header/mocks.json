@@ -1,0 +1,41 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "logo": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a"
+      },
+      "home": {
+        "link_type": "Web",
+        "url": "http://google.com"
+      },
+      "pricing": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "aboutus": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "login": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      },
+      "getstarted": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      }
+    },
+    "slice_type": "header"
+  }
+]

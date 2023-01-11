@@ -7,15 +7,12 @@ import { PrismicRichText } from '@prismicio/react';
  * @param { Slice1Props }
  */
 const Slice1 = ({ slice }) => (
-    <section>
-        <PrismicRichText field={slice.primary.title} />
-        <PrismicRichText field={slice.primary.body} />
-        <PrismicRichText field={slice.primary.btext} />
-        <img
-            src={slice.primary.backgroud.url}
-            alt={slice.primary.backgroud.alt}
-        />
-    </section>
+  <section>
+    <PrismicRichText field={slice.primary.title} />
+    <PrismicRichText field={slice.primary.body} />
+    <PrismicRichText field={slice.primary.btext} />
+    <img src={slice.primary.backgroud.url} alt={slice.primary.backgroud.alt} />
+  </section>
 );
 
 export default Slice1;

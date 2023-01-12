@@ -10,9 +10,6 @@ import {
   Center,
   VStack,
 } from '@chakra-ui/react';
-import Image from 'next/image';
-import { FiArrowUpRight } from 'react-icons/fi';
-import { useSession } from 'next-auth/react';
 import CustomLink from '../../src/components/CustomLink.tsx';
 import RichText from '../../src/components/RichText.tsx';
 import { PrismicNextImage } from '@prismicio/next';
@@ -32,7 +29,11 @@ const Infobox = ({ slice }) => (
               className="text-2xl text-blue font-bold"
             />
           </Box>
-
+          <div>
+            {slice?.items?.map((item, i) => (
+              <PrismicLink field={item.cta_link}>{item.cta_text}</PrismicLink>
+            ))}
+          </div>
           <RichText field={slice.primary.description} className="text-white" />
         </VStack>
       </Center>

@@ -28,6 +28,9 @@
             },
             "slice1": {
               "type": "SharedSlice"
+            },
+            "button": {
+              "type": "SharedSlice"
             }
           }
         }

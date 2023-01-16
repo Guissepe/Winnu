@@ -5,20 +5,25 @@
   "status": true,
   "json": {
     "Main": {
-      "title": {
-        "type": "StructuredText",
+      "uid": {
+        "type": "UID",
         "config": {
-          "label": "Title",
-          "placeholder": "A random title",
-          "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          "label": "UID",
+          "placeholder": ""
         }
       },
-      "description": {
+      "seo_title": {
+        "type": "Text",
+        "config": {
+          "label": "SEO title",
+          "placeholder": ""
+        }
+      },
+      "seo_description": {
         "type": "StructuredText",
         "config": {
-          "label": "Description",
-          "placeholder": "A random description",
+          "label": "SEO description",
+          "placeholder": "",
           "allowTargetBlank": true,
           "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }

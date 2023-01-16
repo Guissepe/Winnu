@@ -4,14 +4,14 @@ import Button from './Button';
 import Header from './Header';
 import Infobox from './Infobox';
 import NavigationItem from './NavigationItem';
-import Slice1 from './Slice1';
+import PageInfo from './PageInfo';
 
 export {
 	Button,
 	Header,
 	Infobox,
 	NavigationItem,
-	Slice1,
+	PageInfo,
 };
 
 export const components = {
@@ -19,5 +19,5 @@ export const components = {
 	header: Header,
 	infobox: Infobox,
 	navigation_item: NavigationItem,
-	slice1: Slice1,
+	slice1: PageInfo,
 };

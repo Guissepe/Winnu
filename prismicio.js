@@ -9,10 +9,10 @@ export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
 const routes = [
     {
         type: 'page',
-        path: '/',
+        path: '/:uid',
     },
     {
-        type: 'login',
+        type: 'homepage',
         path: '/:uid',
     },
 ];
@@ -21,8 +21,6 @@ export function linkResolver(doc) {
   switch (doc.type) {
     case 'homepage':
       return '/'
-    case 'login':
-      return `/${doc.uid}`
     default:
       return null
   }

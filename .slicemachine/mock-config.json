@@ -29,12 +29,25 @@
           }
         }
       }
+    },
+    "PageInfo": {
+      "default": {
+        "primary": {
+          "body": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   },
   "_cts": {
     "page": {},
     "testtype": {},
     "homepage": {},
-    "login": {}
+    "login": {},
+    "header": {}
   }
 }

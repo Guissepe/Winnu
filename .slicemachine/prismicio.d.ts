@@ -6,30 +6,80 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Header documents */
+interface HeaderDocumentData {
+    /**
+     * Menu items field in *Header*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.menu_items[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    menu_items: prismicT.GroupField<Simplify<HeaderDocumentDataMenuItemsItem>>;
+}
+/**
+ * Item in Header → Menu items
+ *
+ */
+export interface HeaderDocumentDataMenuItemsItem {
+    /**
+     * Label field in *Header → Menu items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.menu_items[].label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    label: prismicT.KeyTextField;
+    /**
+     * Link field in *Header → Menu items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.menu_items[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Header document from Prismic
+ *
+ * - **API ID**: `header`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HeaderDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HeaderDocumentData>, "header", Lang>;
 /** Content for Homepage documents */
 interface HomepageDocumentData {
     /**
-     * Title field in *Homepage*
+     * SEO title field in *Homepage*
      *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A random title
-     * - **API ID Path**: homepage.title
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.seo_title
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    title: prismicT.RichTextField;
+    seo_title: prismicT.KeyTextField;
     /**
-     * Description field in *Homepage*
+     * SEO description field in *Homepage*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A random description
-     * - **API ID Path**: homepage.description
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.seo_description
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    description: prismicT.RichTextField;
+    seo_description: prismicT.RichTextField;
     /**
      * Slice Zone field in *Homepage*
      *
@@ -56,7 +106,7 @@ type HomepageDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | NavigationIt
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
+export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
 /** Content for Login documents */
 interface LoginDocumentData {
     /**
@@ -115,7 +165,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = InfoboxSlice | HeaderSlice | NavigationItemSlice | Slice1Slice;
+type PageDocumentDataSlicesSlice = InfoboxSlice | HeaderSlice | NavigationItemSlice | Slice1Slice | ButtonSlice;
 /**
  * Page document from Prismic
  *
@@ -138,7 +188,7 @@ type TesttypeDocumentData = Record<string, never>;
  * @typeParam Lang - Language API ID of the document.
  */
 export type TesttypeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<TesttypeDocumentData>, "testtype", Lang>;
-export type AllDocumentTypes = HomepageDocument | LoginDocument | PageDocument | TesttypeDocument;
+export type AllDocumentTypes = HeaderDocument | HomepageDocument | LoginDocument | PageDocument | TesttypeDocument;
 /**
  * Primary content in Button → Primary
  *
@@ -302,16 +352,6 @@ interface InfoboxSliceDefaultPrimary {
      *
      */
     description: prismicT.RichTextField;
-    /**
-     * Image field in *Infobox → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: infobox.primary.image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    image: prismicT.ImageField<never>;
 }
 /**
  * Item in Infobox → Items
@@ -438,12 +478,12 @@ type NavigationItemSliceVariation = NavigationItemSliceDefault;
  */
 export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
 /**
- * Primary content in Slice1 → Primary
+ * Primary content in PageInfo → Primary
  *
  */
 interface Slice1SliceDefaultPrimary {
     /**
-     * Title field in *Slice1 → Primary*
+     * Title field in *PageInfo → Primary*
      *
      * - **Field Type**: Title
      * - **Placeholder**: *None*
@@ -453,7 +493,7 @@ interface Slice1SliceDefaultPrimary {
      */
     title: prismicT.TitleField;
     /**
-     * Body field in *Slice1 → Primary*
+     * Body field in *PageInfo → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -463,7 +503,7 @@ interface Slice1SliceDefaultPrimary {
      */
     body: prismicT.RichTextField;
     /**
-     * Btext field in *Slice1 → Primary*
+     * Btext field in *PageInfo → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -472,33 +512,59 @@ interface Slice1SliceDefaultPrimary {
      *
      */
     btext: prismicT.RichTextField;
+}
+/**
+ * Item in PageInfo → Items
+ *
+ */
+export interface Slice1SliceDefaultItem {
     /**
-     * Backgroud field in *Slice1 → Primary*
+     * Membimg field in *PageInfo → Items*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: slice1.primary.backgroud
+     * - **API ID Path**: slice1.items[].membimg
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    backgroud: prismicT.ImageField<never>;
+    membimg: prismicT.ImageField<never>;
+    /**
+     * Name field in *PageInfo → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: slice1.items[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    name: prismicT.RichTextField;
+    /**
+     * Function field in *PageInfo → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: slice1.items[].function
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    function: prismicT.RichTextField;
 }
 /**
- * Default variation for Slice1 Slice
+ * Default variation for PageInfo Slice
  *
  * - **API ID**: `default`
  * - **Description**: `Slice1`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type Slice1SliceDefault = prismicT.SharedSliceVariation<"default", Simplify<Slice1SliceDefaultPrimary>, never>;
+export type Slice1SliceDefault = prismicT.SharedSliceVariation<"default", Simplify<Slice1SliceDefaultPrimary>, Simplify<Slice1SliceDefaultItem>>;
 /**
- * Slice variation for *Slice1*
+ * Slice variation for *PageInfo*
  *
  */
 type Slice1SliceVariation = Slice1SliceDefault;
 /**
- * Slice1 Shared Slice
+ * PageInfo Shared Slice
  *
  * - **API ID**: `slice1`
  * - **Description**: `Slice1`
@@ -511,6 +577,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceVariation, ButtonSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceVariation, InfoboxSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceVariation, Slice1Slice };
+        export type { HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceVariation, ButtonSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceVariation, InfoboxSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefaultItem, Slice1SliceDefault, Slice1SliceVariation, Slice1Slice };
     }
 }

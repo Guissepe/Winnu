@@ -17,7 +17,6 @@ import { PrismicNextImage } from '@prismicio/next';
 const Infobox = ({ slice }) => (
   <section className="section relative bg-black">
     <div className="absolute inset-0">
-      <img src={slice.primary.image.url} alt={slice.primary.image.alt} />
       <div className="absolute inset-0 bg-black bg-opacity-75  mix-blend-multiply" />
     </div>
     <div className="container relative py-48">

@@ -26,14 +26,6 @@
             "label": "Description",
             "placeholder": "A nice description of your feature"
           }
-        },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
         }
       },
       "items": {

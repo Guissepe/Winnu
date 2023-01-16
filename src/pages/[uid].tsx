@@ -2,18 +2,26 @@ import * as prismicH from '@prismicio/helpers'
 import { SliceZone } from '@prismicio/react'
 import { createClient, linkResolver } from '../../prismicio'
 import { components } from '../../slices/index'
+import { Box } from '@chakra-ui/react'
 
-const Page = ({ page, navigation, settings }: any) => {
-  return <SliceZone slices={page.data.slices} components={components} />
+export async function Page({ page, navigation }: any) {
+  return (
+    <Box>
+      <SliceZone slices={page.data.slices} components={components} />
+    </Box>
+  )
 }
-
-export default Page
 
 export async function getStaticProps({ params, previewData }: any) {
   const client = createClient({ previewData })
-  const page = await client.getByUID('page', params.uid)
+  const [navigation, page] = await Promise.all([
+   client.getByUID('page', params.uid),
+   client.getByUID('navigation', 'header'),
+  ])
+
   return {
     props: {
+      navigation,
       page,
     },
   }

@@ -96,7 +96,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | NavigationItemSlice | Slice1Slice;
+type HomepageDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | NavigationItemSlice | Slice1Slice | ButtonSlice | TextimgSlice | CustumersSlice;
 /**
  * Homepage document from Prismic
  *
@@ -147,6 +147,46 @@ type LoginDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | Slice1Slice | N
  * @typeParam Lang - Language API ID of the document.
  */
 export type LoginDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<LoginDocumentData>, "login", Lang>;
+/** Content for Navigation documents */
+interface NavigationDocumentData {
+    /**
+     * Name field in *Navigation*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.name
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * Slice Zone field in *Navigation*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavigationDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Navigation → Slice Zone*
+ *
+ */
+type NavigationDocumentDataSlicesSlice = NavigationItemSlice;
+/**
+ * Navigation document from Prismic
+ *
+ * - **API ID**: `navigation`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
 /** Content for Page documents */
 interface PageDocumentData {
     /**
@@ -187,8 +227,8 @@ type TesttypeDocumentData = Record<string, never>;
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type TesttypeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<TesttypeDocumentData>, "testtype", Lang>;
-export type AllDocumentTypes = HeaderDocument | HomepageDocument | LoginDocument | PageDocument | TesttypeDocument;
+export type TesttypeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<TesttypeDocumentData>, "testtype", Lang>;
+export type AllDocumentTypes = HeaderDocument | HomepageDocument | LoginDocument | NavigationDocument | PageDocument | TesttypeDocument;
 /**
  * Primary content in Button → Primary
  *
@@ -239,6 +279,61 @@ type ButtonSliceVariation = ButtonSliceDefault;
  */
 export type ButtonSlice = prismicT.SharedSlice<"button", ButtonSliceVariation>;
 /**
+ * Primary content in Custumers → Primary
+ *
+ */
+interface CustumersSliceDefaultPrimary {
+    /**
+     * Title field in *Custumers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: custumers.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+}
+/**
+ * Item in Custumers → Items
+ *
+ */
+export interface CustumersSliceDefaultItem {
+    /**
+     * Custumer field in *Custumers → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: custumers.items[].custumer
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    custumer: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for Custumers Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Custumers`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CustumersSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CustumersSliceDefaultPrimary>, Simplify<CustumersSliceDefaultItem>>;
+/**
+ * Slice variation for *Custumers*
+ *
+ */
+type CustumersSliceVariation = CustumersSliceDefault;
+/**
+ * Custumers Shared Slice
+ *
+ * - **API ID**: `custumers`
+ * - **Description**: `Custumers`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CustumersSlice = prismicT.SharedSlice<"custumers", CustumersSliceVariation>;
+/**
  * Primary content in Header → Primary
  *
  */
@@ -254,55 +349,25 @@ interface HeaderSliceDefaultPrimary {
      */
     logo: prismicT.ImageField<never>;
     /**
-     * Home field in *Header → Primary*
+     * Button field in *Header → Primary*
      *
-     * - **Field Type**: Link
-     * - **Placeholder**: Home
-     * - **API ID Path**: header.primary.home
+     * - **Field Type**: Link to Media
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.primary.button
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    home: prismicT.LinkField;
+    button: prismicT.LinkToMediaField;
     /**
-     * Pricing field in *Header → Primary*
+     * Normalbutton field in *Header → Primary*
      *
      * - **Field Type**: Link
-     * - **Placeholder**: Pricing
-     * - **API ID Path**: header.primary.pricing
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.primary.normalbutton
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    pricing: prismicT.LinkField;
-    /**
-     * Aboutus field in *Header → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: About Us
-     * - **API ID Path**: header.primary.aboutus
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    aboutus: prismicT.LinkField;
-    /**
-     * Login field in *Header → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: Log in
-     * - **API ID Path**: header.primary.login
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    login: prismicT.LinkField;
-    /**
-     * Getstarted field in *Header → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: Get Started
-     * - **API ID Path**: header.primary.getstarted
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    getstarted: prismicT.LinkField;
+    normalbutton: prismicT.LinkField;
 }
 /**
  * Default variation for Header Slice
@@ -572,11 +637,145 @@ type Slice1SliceVariation = Slice1SliceDefault;
  *
  */
 export type Slice1Slice = prismicT.SharedSlice<"slice1", Slice1SliceVariation>;
+/**
+ * Primary content in Textimg → Primary
+ *
+ */
+interface TextimgSliceDefaultPrimary {
+    /**
+     * Title field in *Textimg → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: textimg.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Subtitle field in *Textimg → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: textimg.primary.subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    subtitle: prismicT.RichTextField;
+    /**
+     * Description field in *Textimg → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: textimg.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Title2 field in *Textimg → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: textimg.primary.title2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title2: prismicT.KeyTextField;
+    /**
+     * Image field in *Textimg → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: textimg.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for Textimg Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Textimg`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextimgSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextimgSliceDefaultPrimary>, never>;
+/**
+ * Primary content in Textimg → Primary
+ *
+ */
+interface TextimgSliceTextimgImgBottomPrimary {
+    /**
+     * Title field in *Textimg → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: textimg.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Subtitle field in *Textimg → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: textimg.primary.subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    subtitle: prismicT.RichTextField;
+    /**
+     * Description field in *Textimg → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: textimg.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Image field in *Textimg → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: textimg.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Textimg img bottom variation for Textimg Slice
+ *
+ * - **API ID**: `textimgImgBottom`
+ * - **Description**: `Textimg`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextimgSliceTextimgImgBottom = prismicT.SharedSliceVariation<"textimgImgBottom", Simplify<TextimgSliceTextimgImgBottomPrimary>, never>;
+/**
+ * Slice variation for *Textimg*
+ *
+ */
+type TextimgSliceVariation = TextimgSliceDefault | TextimgSliceTextimgImgBottom;
+/**
+ * Textimg Shared Slice
+ *
+ * - **API ID**: `textimg`
+ * - **Description**: `Textimg`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextimgSlice = prismicT.SharedSlice<"textimg", TextimgSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceVariation, ButtonSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceVariation, InfoboxSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefaultItem, Slice1SliceDefault, Slice1SliceVariation, Slice1Slice };
+        export type { HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceVariation, ButtonSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceVariation, InfoboxSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefaultItem, Slice1SliceDefault, Slice1SliceVariation, Slice1Slice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice };
     }
 }

@@ -1,0 +1,75 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "highest"
+  },
+  "name": {
+    "__TYPE__": "FieldContent",
+    "value": "while",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "navigation_item$de25c559-36b9-4af4-b987-1c3963f6993a",
+        "name": "navigation_item",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "name": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Laborum voluptate voluptate labore sunt cupidatat veniam consequat excepteur enim ut aliquip reprehenderit. Aute sint duis nulla adipisicing laborum ipsum dolore magna irure proident aliquip reprehenderit aliquip. Nisi pariatur adipisicing consequat veniam qui excepteur pariatur pariatur magna pariatur."
+                  }
+                }
+              ]
+            },
+            "link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "child_name",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "heading1",
+                        "content": {
+                          "text": "Welcome"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "child_link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "https://prismic.io"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

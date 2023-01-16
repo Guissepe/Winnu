@@ -32,6 +32,16 @@ const PageInfo = ({ slice }) => (
         ))}
       </Flex>
     </Center>
+    <style jsx>{`
+      section {
+        max-width: 900px;
+        margin: 4em auto;
+        text-align: left;
+      }
+      .title {
+        color: #8592e0;
+      }
+    `}</style>
   </section>
 );
 

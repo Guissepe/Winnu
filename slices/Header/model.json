@@ -19,48 +19,19 @@
             "thumbnails": []
           }
         },
-        "home": {
+        "button": {
           "type": "Link",
           "config": {
-            "label": "Home",
-            "placeholder": "Home",
-            "allowTargetBlank": false,
-            "select": null
+            "label": "Button",
+            "placeholder": "",
+            "select": "media"
           }
         },
-        "pricing": {
+        "normalbutton": {
           "type": "Link",
           "config": {
-            "label": "Pricing",
-            "placeholder": "Pricing",
-            "allowTargetBlank": false,
-            "select": null
-          }
-        },
-        "aboutus": {
-          "type": "Link",
-          "config": {
-            "label": "Aboutus",
-            "placeholder": "About Us",
-            "allowTargetBlank": false,
-            "select": null
-          }
-        },
-        "login": {
-          "type": "Link",
-          "config": {
-            "label": "Login",
-            "placeholder": "Log in",
-            "allowTargetBlank": false,
-            "select": null
-          }
-        },
-        "getstarted": {
-          "type": "Link",
-          "config": {
-            "label": "Getstarted",
-            "placeholder": "Get Started",
-            "allowTargetBlank": false,
+            "label": "Normalbutton",
+            "placeholder": "",
             "select": null
           }
         }

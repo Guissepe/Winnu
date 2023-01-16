@@ -41,6 +41,24 @@
           }
         }
       }
+    },
+    "Header": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Textimg": {
+      "default": {
+        "items": {}
+      },
+      "textimgImgBottom": {
+        "primary": {}
+      }
+    },
+    "Custumers": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
@@ -48,6 +66,7 @@
     "testtype": {},
     "homepage": {},
     "login": {},
-    "header": {}
+    "header": {},
+    "navigation": {}
   }
 }

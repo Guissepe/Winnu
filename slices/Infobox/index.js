@@ -20,7 +20,7 @@ const Infobox = ({ slice }) => (
       <div className="absolute inset-0 bg-black bg-opacity-75  mix-blend-multiply" />
     </div>
     <div className="container relative py-48">
-      <Center fontSize="20px" background="yellow">
+      <Center fontSize="20px">
         <VStack>
           <Box fontSize="50px" width="750px" textAlign="center">
             <RichText

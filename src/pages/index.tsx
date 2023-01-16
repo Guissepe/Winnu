@@ -9,7 +9,7 @@ import { createClient } from '../../prismicio'
 import { components } from '../../slices/index'
 
 const Page = ({ page, navigation, settings }: any) => {
-  return <SliceZone slices={page.data.slices} components={components} />
+  return <SliceZone slices={page.data.slices} components={components}/>
 }
 
 export default Page

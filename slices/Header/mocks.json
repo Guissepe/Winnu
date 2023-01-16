@@ -4,7 +4,6 @@
     "variation": "default",
     "primary": {
       "logo": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
           "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
@@ -22,41 +21,27 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       },
-      "home": {
+      "button": {
         "__TYPE__": "LinkContent",
         "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "http://google.com"
+          "id": "mock_Media_link",
+          "kind": "image/jpeg",
+          "name": "mock_name",
+          "url": "https://source.unsplash.com/daily",
+          "size": "0",
+          "__TYPE__": "FileLink"
         }
       },
-      "pricing": {
+      "normalbutton": {
         "__TYPE__": "LinkContent",
         "value": {
           "__TYPE__": "ExternalLink",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      "aboutus": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "http://google.com"
-        }
-      },
-      "login": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      "getstarted": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "https://slicemachine.dev"
+          "url": "https://prismic.io"
         }
       }
     },

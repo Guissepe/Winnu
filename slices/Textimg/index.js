@@ -1,6 +1,6 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
-import { Box, Flex, Center } from '@chakra-ui/react';
+import { Box, Flex, Center, Image } from '@chakra-ui/react';
 
 const Textimg = ({ slice }) => (
   <section>
@@ -12,7 +12,7 @@ const Textimg = ({ slice }) => (
           <PrismicRichText field={slice.primary.description} />
           <span>{slice.primary.title2}</span>
         </Box>
-        <img
+        <Image
           width="200px"
           src={slice.primary.image.url}
           alt={slice.primary.image.alt}
@@ -26,7 +26,7 @@ const Textimg = ({ slice }) => (
           <PrismicRichText field={slice.primary.description} />
           <span>{slice.primary.title2}</span>
         </Box>
-        <img
+        <Image
           width="200px"
           src={slice.primary.image.url}
           alt={slice.primary.image.alt}

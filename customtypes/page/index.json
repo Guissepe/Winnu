@@ -31,6 +31,15 @@
             },
             "button": {
               "type": "SharedSlice"
+            },
+            "custumers": {
+              "type": "SharedSlice"
+            },
+            "imgrow": {
+              "type": "SharedSlice"
+            },
+            "textimg": {
+              "type": "SharedSlice"
             }
           }
         }

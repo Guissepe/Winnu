@@ -205,7 +205,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = InfoboxSlice | HeaderSlice | NavigationItemSlice | Slice1Slice | ButtonSlice;
+type PageDocumentDataSlicesSlice = InfoboxSlice | HeaderSlice | NavigationItemSlice | Slice1Slice | ButtonSlice | CustumersSlice | ImgrowSlice | TextimgSlice;
 /**
  * Page document from Prismic
  *
@@ -393,6 +393,81 @@ type HeaderSliceVariation = HeaderSliceDefault;
  */
 export type HeaderSlice = prismicT.SharedSlice<"header", HeaderSliceVariation>;
 /**
+ * Primary content in Imgrow → Primary
+ *
+ */
+interface ImgrowSliceDefaultPrimary {
+    /**
+     * Main Title field in *Imgrow → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imgrow.primary.main_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    main_title: prismicT.KeyTextField;
+}
+/**
+ * Item in Imgrow → Items
+ *
+ */
+export interface ImgrowSliceDefaultItem {
+    /**
+     * Image field in *Imgrow → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imgrow.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Title field in *Imgrow → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imgrow.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *Imgrow → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imgrow.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for Imgrow Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Imgrow`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImgrowSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ImgrowSliceDefaultPrimary>, Simplify<ImgrowSliceDefaultItem>>;
+/**
+ * Slice variation for *Imgrow*
+ *
+ */
+type ImgrowSliceVariation = ImgrowSliceDefault;
+/**
+ * Imgrow Shared Slice
+ *
+ * - **API ID**: `imgrow`
+ * - **Description**: `Imgrow`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImgrowSlice = prismicT.SharedSlice<"imgrow", ImgrowSliceVariation>;
+/**
  * Primary content in Infobox → Primary
  *
  */
@@ -567,52 +642,6 @@ interface Slice1SliceDefaultPrimary {
      *
      */
     body: prismicT.RichTextField;
-    /**
-     * Btext field in *PageInfo → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: slice1.primary.btext
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    btext: prismicT.RichTextField;
-}
-/**
- * Item in PageInfo → Items
- *
- */
-export interface Slice1SliceDefaultItem {
-    /**
-     * Membimg field in *PageInfo → Items*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: slice1.items[].membimg
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    membimg: prismicT.ImageField<never>;
-    /**
-     * Name field in *PageInfo → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: slice1.items[].name
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    name: prismicT.RichTextField;
-    /**
-     * Function field in *PageInfo → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: slice1.items[].function
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    function: prismicT.RichTextField;
 }
 /**
  * Default variation for PageInfo Slice
@@ -622,7 +651,7 @@ export interface Slice1SliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type Slice1SliceDefault = prismicT.SharedSliceVariation<"default", Simplify<Slice1SliceDefaultPrimary>, Simplify<Slice1SliceDefaultItem>>;
+export type Slice1SliceDefault = prismicT.SharedSliceVariation<"default", Simplify<Slice1SliceDefaultPrimary>, never>;
 /**
  * Slice variation for *PageInfo*
  *
@@ -776,6 +805,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceVariation, ButtonSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceVariation, InfoboxSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefaultItem, Slice1SliceDefault, Slice1SliceVariation, Slice1Slice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice };
+        export type { HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceVariation, ButtonSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceVariation, InfoboxSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceVariation, Slice1Slice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice };
     }
 }

@@ -24,78 +24,12 @@
             }
           }
         ]
-      },
-      "btext": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Deserunt pariatur elit officia tempor ea."
-            }
-          }
-        ]
       }
     },
     "items": [
       {
         "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "membimg",
-            {
-              "origin": {
-                "id": "main",
-                "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
-                "width": 3212,
-                "height": 3880
-              },
-              "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
-              "width": 3212,
-              "height": 3880,
-              "edit": {
-                "zoom": 1,
-                "crop": {
-                  "x": 0,
-                  "y": 0
-                },
-                "background": "transparent"
-              },
-              "credits": null,
-              "alt": null,
-              "__TYPE__": "ImageContent",
-              "thumbnails": {}
-            }
-          ],
-          [
-            "name",
-            {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Irure et laboris occaecat cillum velit id duis aute aliqua laborum nisi ex occaecat dolor incididunt. Magna velit laborum adipisicing laboris."
-                  }
-                }
-              ]
-            }
-          ],
-          [
-            "function",
-            {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Ex eu excepteur laborum enim est ex anim incididunt pariatur proident enim ad incididunt laboris."
-                  }
-                }
-              ]
-            }
-          ]
-        ]
+        "value": []
       }
     ]
   }

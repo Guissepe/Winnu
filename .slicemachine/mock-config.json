@@ -39,7 +39,8 @@
               "blocks": 1
             }
           }
-        }
+        },
+        "items": {}
       }
     },
     "Header": {
@@ -58,6 +59,12 @@
     "Custumers": {
       "default": {
         "primary": {}
+      }
+    },
+    "Imgrow": {
+      "default": {
+        "primary": {},
+        "items": {}
       }
     }
   },

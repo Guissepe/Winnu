@@ -3,6 +3,7 @@
 import Button from './Button';
 import Custumers from './Custumers';
 import Header from './Header';
+import Imgrow from './Imgrow';
 import Infobox from './Infobox';
 import NavigationItem from './NavigationItem';
 import PageInfo from './PageInfo';
@@ -12,6 +13,7 @@ export {
 	Button,
 	Custumers,
 	Header,
+	Imgrow,
 	Infobox,
 	NavigationItem,
 	PageInfo,
@@ -22,6 +24,7 @@ export const components = {
 	button: Button,
 	custumers: Custumers,
 	header: Header,
+	imgrow: Imgrow,
 	infobox: Infobox,
 	navigation_item: NavigationItem,
 	slice1: PageInfo,

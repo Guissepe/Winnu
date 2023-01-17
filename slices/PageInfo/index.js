@@ -6,21 +6,25 @@ const PageInfo = ({ slice }) => (
   <section>
     <Box>
       <Box
-        pt="5%"
         textAlign="center"
-        fontFamily="sora"
-        fontSize="32px"
-        pb="35px"
+        fontWeight="600"
+        fontSize={{ base: '20px', md: '46px' }}
+        lineHeight={{ base: '26px', md: '80px' }}
+        color="text.01"
+        pt="5%"
       >
         <PrismicRichText field={slice.primary.title} />
       </Box>
       <Box
-        px="31%"
+        px="28%"
         width="100%"
         textAlign="center"
         fontFamily="sora"
-        fontSize="15px"
         pb="8%"
+        fontSize={{ base: '16px', md: '16px' }}
+        lineHeight="24px"
+        color="text.02"
+        mt="30px"
       >
         <PrismicRichText field={slice.primary.body} />
       </Box>

@@ -4,7 +4,8 @@ import { createClient, linkResolver } from '../../prismicio'
 import { components } from '../../slices/index'
 import { Box } from '@chakra-ui/react'
 
-export async function Page({ page, navigation }: any) {
+type PageParams = { uid: string }
+export default async function Page({ page, navigation }: any) {
   return (
     <Box>
       <SliceZone slices={page.data.slices} components={components} />
@@ -15,7 +16,7 @@ export async function Page({ page, navigation }: any) {
 export async function getStaticProps({ params, previewData }: any) {
   const client = createClient({ previewData })
   const [navigation, page] = await Promise.all([
-   client.getByUID('page', params.uid),
+   client.getByUID('page', "loginpage"),
    client.getByUID('navigation', 'header'),
   ])
 

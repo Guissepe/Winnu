@@ -1,9 +1,7 @@
 import { getProviders, signIn } from "next-auth/react"
 import {
     Box,
-    Button,
     Flex,
-    Image,
     Text,
     Center,
   } from "@chakra-ui/react";

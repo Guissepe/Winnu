@@ -17,7 +17,7 @@ import { PrismicNextImage } from '@prismicio/next';
 
 const Infobox = ({ slice }) => (
   <Box className="section relative bg-black">
-    {slice.variation !== 'SingleButton' ? (
+    {slice.variation !== 'singleButton' ? (
       <Center
         textAlign="center"
         fontFamily="sora"
@@ -26,7 +26,7 @@ const Infobox = ({ slice }) => (
         px="22px"
         fontSize="20px"
       >
-        <VStack>
+        <Box>
           <Box
             fontWeight="600"
             fontSize={{ base: '20px', md: '42px' }}
@@ -49,18 +49,20 @@ const Infobox = ({ slice }) => (
             direction={{ base: 'column', md: 'row' }}
             justifyContent="center"
           >
-            <Button
-              src={slice.primary.cta_link}
-              variant="primary"
-              py="18px"
-              px="37px"
-              mt={{ base: '20px', md: '48px' }}
-              borderRadius="0px"
-            >
-              <PrismicRichText field={slice.primary.cta_text}></PrismicRichText>
-            </Button>
+            {slice?.items?.map((item, i) => (
+              <Button
+                src={item.cta_link}
+                variant="primary"
+                py="18px"
+                px="37px"
+                mt={{ base: '20px', md: '48px' }}
+                borderRadius="0px"
+              >
+                <PrismicRichText field={item.cta_text}></PrismicRichText>
+              </Button>
+            ))}
           </Flex>
-        </VStack>
+        </Box>
       </Center>
     ) : (
       <Center
@@ -71,7 +73,7 @@ const Infobox = ({ slice }) => (
         px="22px"
         fontSize="20px"
       >
-        <VStack>
+        <Box>
           <Box
             fontWeight="600"
             fontSize={{ base: '20px', md: '42px' }}
@@ -93,7 +95,17 @@ const Infobox = ({ slice }) => (
             direction={{ base: 'column', md: 'row' }}
             justifyContent="center"
           ></Flex>
-        </VStack>
+          <Button
+            src={slice.primary.cta_link}
+            variant="primary"
+            py="18px"
+            px="37px"
+            mt={{ base: '20px', md: '48px' }}
+            borderRadius="0px"
+          >
+            <PrismicRichText field={slice.primary.cta_text} />
+          </Button>
+        </Box>
       </Center>
     )}
     ;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
-import { Flex, Center } from '@chakra-ui/react';
+import { Flex, Center, Box, Text, Image } from '@chakra-ui/react';
 
 /**
  * @typedef {import("@prismicio/client").Content.CustumersSlice} CustumersSlice
@@ -8,26 +8,23 @@ import { Flex, Center } from '@chakra-ui/react';
  * @param { CustumersProps }
  */
 const Custumers = ({ slice }) => (
-  <section>
-    <span>{slice.primary.title}</span>
-    <Flex>
-      <Center>
-        {slice?.items?.map((item, i) => (
-          <img width="200px" src={item.custumer.url} alt={item.custumer.alt} />
-        ))}
-      </Center>
-    </Flex>
-    <style jsx>{`
-      section {
-        max-width: 600px;
-        margin: 4em auto;
-        text-align: center;
-      }
-      .title {
-        color: #8592e0;
-      }
-    `}</style>
-  </section>
+  <Box>
+    <Box maxW="756px" mx="auto" textAlign="center">
+      <Text fontWeight="600" fontSize={{ base: '20px', sm: '24px' }}>
+        {slice.primary.title}
+      </Text>
+    </Box>
+    <Center>
+      {slice?.items?.map((item, i) => (
+        <Image
+          px="3%"
+          mt="28px"
+          src={item.custumer.url}
+          alt={item.custumer.alt}
+        />
+      ))}
+    </Center>
+  </Box>
 );
 
 export default Custumers;

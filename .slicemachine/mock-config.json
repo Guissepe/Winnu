@@ -4,6 +4,9 @@
       "default": {
         "primary": {},
         "items": {}
+      },
+      "singleButton": {
+        "items": {}
       }
     },
     "Button": {

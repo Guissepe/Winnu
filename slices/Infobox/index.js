@@ -1,6 +1,7 @@
 import React from 'react';
 import { PrismicRichText, PrismicLink } from '@prismicio/react';
 import Head from 'next/head';
+import { FiArrowUpRight } from 'react-icons/fi';
 import {
   Box,
   Button,
@@ -15,29 +16,88 @@ import RichText from '../../src/components/RichText.tsx';
 import { PrismicNextImage } from '@prismicio/next';
 
 const Infobox = ({ slice }) => (
-  <section className="section relative bg-black">
-    <div className="absolute inset-0">
-      <div className="absolute inset-0 bg-black bg-opacity-75  mix-blend-multiply" />
-    </div>
-    <div className="container relative py-48">
-      <Center fontSize="20px">
+  <Box className="section relative bg-black">
+    {slice.variation !== 'SingleButton' ? (
+      <Center
+        textAlign="center"
+        fontFamily="sora"
+        pt={{ base: '43px', md: '192px' }}
+        pb={{ base: '44px', md: '95px' }}
+        px="22px"
+        fontSize="20px"
+      >
         <VStack>
-          <Box fontSize="50px" width="750px" textAlign="center">
-            <RichText
-              field={slice.primary.title}
-              className="text-2xl text-blue font-bold"
-            />
+          <Box
+            fontWeight="600"
+            fontSize={{ base: '20px', md: '42px' }}
+            lineHeight={{ base: '26px', md: '60px' }}
+            color="text.01"
+          >
+            <RichText field={slice.primary.title} />
           </Box>
-          <div>
-            {slice?.items?.map((item, i) => (
-              <PrismicLink field={item.cta_link}>{item.cta_text}</PrismicLink>
-            ))}
-          </div>
-          <RichText field={slice.primary.description} className="text-white" />
+          <Box
+            fontSize={{ base: '16px', md: '32px' }}
+            fontWeight="300"
+            fontStyle="italic"
+            color="text.grey02"
+            pt="12px"
+          >
+            <PrismicRichText field={slice.primary.description} />
+          </Box>
+          <Flex
+            mt="54px"
+            direction={{ base: 'column', md: 'row' }}
+            justifyContent="center"
+          >
+            <Button
+              src={slice.primary.cta_link}
+              variant="primary"
+              py="18px"
+              px="37px"
+              mt={{ base: '20px', md: '48px' }}
+              borderRadius="0px"
+            >
+              <PrismicRichText field={slice.primary.cta_text}></PrismicRichText>
+            </Button>
+          </Flex>
         </VStack>
       </Center>
-    </div>
-  </section>
+    ) : (
+      <Center
+        textAlign="center"
+        fontFamily="sora"
+        pt={{ base: '43px', md: '192px' }}
+        pb={{ base: '44px', md: '95px' }}
+        px="22px"
+        fontSize="20px"
+      >
+        <VStack>
+          <Box
+            fontWeight="600"
+            fontSize={{ base: '20px', md: '42px' }}
+            lineHeight={{ base: '26px', md: '60px' }}
+            color="text.01"
+          >
+            <RichText field={slice.primary.title} />
+          </Box>
+          <Box
+            fontSize={{ base: '16px', md: '22px' }}
+            lineHeight={{ base: '26px', md: '44px' }}
+            color="text.02"
+            mt="16px"
+          >
+            <PrismicRichText field={slice.primary.description} />
+          </Box>
+          <Flex
+            mt="54px"
+            direction={{ base: 'column', md: 'row' }}
+            justifyContent="center"
+          ></Flex>
+        </VStack>
+      </Center>
+    )}
+    ;
+  </Box>
 );
 
 export default Infobox;

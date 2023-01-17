@@ -43,6 +43,13 @@
             "placeholder": ""
           }
         },
+        "title3": {
+          "type": "Text",
+          "config": {
+            "label": "Title3",
+            "placeholder": ""
+          }
+        },
         "image": {
           "type": "Image",
           "config": {

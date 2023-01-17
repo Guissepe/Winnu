@@ -9,7 +9,7 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Single"
+              "text": "Blanket"
             }
           }
         ]
@@ -20,7 +20,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Officia non commodo consectetur excepteur dolor amet anim amet incididunt deserunt officia mollit."
+              "text": "Do proident qui sit fugiat anim sint mollit ad aute in est. Do laboris voluptate duis minim minim et duis veniam sit cillum voluptate fugiat. Nulla occaecat sit nisi."
             }
           }
         ]
@@ -36,7 +36,7 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "http://google.com"
+                "url": "https://slicemachine.dev"
               }
             }
           ],
@@ -48,13 +48,65 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Ut consectetur cillum labore enim minim mollit enim laboris officia deserunt cupidatat. Duis Lorem amet ex cupidatat quis. Lorem irure do pariatur incididunt laborum."
+                    "text": "Sit laboris culpa sunt ut tempor ullamco."
                   }
                 }
               ]
             }
           ]
         ]
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "singleButton",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Dropped"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sunt minim id ex nulla cillum non. Sunt laborum nulla quis elit adipisicing voluptate."
+            }
+          }
+        ]
+      },
+      "cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
+        }
+      },
+      "cta_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Exercitation deserunt non pariatur pariatur mollit cupidatat cillum quis dolor."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
       }
     ]
   }

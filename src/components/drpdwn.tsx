@@ -8,15 +8,12 @@ import {
     color,
     background,
   } from "@chakra-ui/react";
-
+import { VscTriangleDown } from "react-icons/vsc";
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
     { value: 'strawberry', label: 'Strawberry' },
     { value: 'vanilla', label: 'Vanilla' }
   ]
-  import { VscTriangleDown } from "react-icons/vsc";
-
-
 
 const Dropdown = (props: any) => {
 
@@ -27,7 +24,6 @@ const styles = {
     _hover: {background: '#C9A538', color: '#C9A538'},
 
 }
-
 
 return(
 

@@ -26,7 +26,6 @@ const about = () => {
                 fontFamily="sora"
                 pt={{ base: "47px", md: "94px" }}
                 pb={{ base: "26px", md: "106px" }}
-                px="22px"
             >
 
                 {

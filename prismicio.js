@@ -15,14 +15,14 @@ const routes = [
     },
 ];
 
-export function linkResolver(doc) {
-  switch (doc.type) {
-    case 'homepage':
-      return '/'
-    default:
-      return null
-  }
-}
+// export function linkResolver(doc) {
+//   switch (doc.type) {
+//     case 'homepage':
+//       return '/'
+//     default:
+//       return null
+//   }
+// }
 
 export function createClient (config = {}){
     const client = prismic.createClient(sm.apiEndpoint, {

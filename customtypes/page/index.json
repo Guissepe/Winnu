@@ -40,6 +40,9 @@
             },
             "textimg": {
               "type": "SharedSlice"
+            },
+            "button_row": {
+              "type": "SharedSlice"
             }
           }
         }

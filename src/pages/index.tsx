@@ -16,7 +16,7 @@ export default Page
 
 export async function getStaticProps({ previewData }: any) {
   const client = createClient({ previewData })
-  const page = await client.getSingle('homepage')
+  const page = await client.getByUID('homepage', "homepage")
   return {
     props: {
       page,

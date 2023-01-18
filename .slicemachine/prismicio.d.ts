@@ -136,7 +136,7 @@ interface LoginDocumentData {
  * Slice for *Login → Slice Zone*
  *
  */
-type LoginDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | Slice1Slice | NavigationItemSlice;
+type LoginDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | Slice1Slice | NavigationItemSlice | ButtonSlice | ButtonRowSlice | ImgrowSlice | TextimgSlice;
 /**
  * Login document from Prismic
  *
@@ -205,7 +205,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = InfoboxSlice | HeaderSlice | NavigationItemSlice | Slice1Slice | ButtonSlice | CustumersSlice | ImgrowSlice | TextimgSlice;
+type PageDocumentDataSlicesSlice = InfoboxSlice | HeaderSlice | NavigationItemSlice | Slice1Slice | ButtonSlice | CustumersSlice | ImgrowSlice | TextimgSlice | ButtonRowSlice;
 /**
  * Page document from Prismic
  *
@@ -265,10 +265,45 @@ interface ButtonSliceDefaultPrimary {
  */
 export type ButtonSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ButtonSliceDefaultPrimary>, never>;
 /**
+ * Primary content in Button → Primary
+ *
+ */
+interface ButtonSliceDarkPrimary {
+    /**
+     * CTA text field in *Button → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: button.primary.cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    cta_text: prismicT.RichTextField;
+    /**
+     * CTA link field in *Button → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: button.primary.cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+}
+/**
+ * Dark variation for Button Slice
+ *
+ * - **API ID**: `dark`
+ * - **Description**: `Button`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ButtonSliceDark = prismicT.SharedSliceVariation<"dark", Simplify<ButtonSliceDarkPrimary>, never>;
+/**
  * Slice variation for *Button*
  *
  */
-type ButtonSliceVariation = ButtonSliceDefault;
+type ButtonSliceVariation = ButtonSliceDefault | ButtonSliceDark;
 /**
  * Button Shared Slice
  *
@@ -278,6 +313,55 @@ type ButtonSliceVariation = ButtonSliceDefault;
  *
  */
 export type ButtonSlice = prismicT.SharedSlice<"button", ButtonSliceVariation>;
+/**
+ * Item in ButtonRow → Items
+ *
+ */
+export interface ButtonRowSliceDefaultItem {
+    /**
+     * CTA text field in *ButtonRow → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: button_row.items[].cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cta_text: prismicT.KeyTextField;
+    /**
+     * CTA link field in *ButtonRow → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: button_row.items[].cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+}
+/**
+ * Default variation for ButtonRow Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ButtonRow`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ButtonRowSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<ButtonRowSliceDefaultItem>>;
+/**
+ * Slice variation for *ButtonRow*
+ *
+ */
+type ButtonRowSliceVariation = ButtonRowSliceDefault;
+/**
+ * ButtonRow Shared Slice
+ *
+ * - **API ID**: `button_row`
+ * - **Description**: `ButtonRow`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ButtonRowSlice = prismicT.SharedSlice<"button_row", ButtonRowSliceVariation>;
 /**
  * Primary content in Custumers → Primary
  *
@@ -708,10 +792,45 @@ interface Slice1SliceDefaultPrimary {
  */
 export type Slice1SliceDefault = prismicT.SharedSliceVariation<"default", Simplify<Slice1SliceDefaultPrimary>, never>;
 /**
+ * Primary content in PageInfo → Primary
+ *
+ */
+interface Slice1SliceLoginPrimary {
+    /**
+     * Title field in *PageInfo → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: slice1.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Body field in *PageInfo → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: slice1.primary.body
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    body: prismicT.RichTextField;
+}
+/**
+ * login variation for PageInfo Slice
+ *
+ * - **API ID**: `login`
+ * - **Description**: `Slice1`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type Slice1SliceLogin = prismicT.SharedSliceVariation<"login", Simplify<Slice1SliceLoginPrimary>, never>;
+/**
  * Slice variation for *PageInfo*
  *
  */
-type Slice1SliceVariation = Slice1SliceDefault;
+type Slice1SliceVariation = Slice1SliceDefault | Slice1SliceLogin;
 /**
  * PageInfo Shared Slice
  *
@@ -870,6 +989,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceVariation, ButtonSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceSingleButtonPrimary, InfoboxSliceSingleButton, InfoboxSliceVariation, InfoboxSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceVariation, Slice1Slice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice };
+        export type { HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceDarkPrimary, ButtonSliceDark, ButtonSliceVariation, ButtonSlice, ButtonRowSliceDefaultItem, ButtonRowSliceDefault, ButtonRowSliceVariation, ButtonRowSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceSingleButtonPrimary, InfoboxSliceSingleButton, InfoboxSliceVariation, InfoboxSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceLoginPrimary, Slice1SliceLogin, Slice1SliceVariation, Slice1Slice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice };
     }
 }

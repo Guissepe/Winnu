@@ -39,7 +39,6 @@ return(
          background='#1E1E1E'
          textColor= '#ffffff'
          focusBorderColor='#C9A538'
-
          >
             <option color='#C9A538' style={styles} value={'select an option'}>Please select an option</option>
             <option style={styles} value={props.vl1}>{props.text1}</option>
@@ -52,9 +51,6 @@ return(
             <option style={styles} value={props.vl8}>{props.text8}</option>
             <option style={styles} value={props.vl9}>{props.text9}</option>
         </Select>
-        {/* <Text color='white'>
-            {value}
-        </Text> */}
     </Box>
 
 )

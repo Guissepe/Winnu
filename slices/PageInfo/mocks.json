@@ -9,7 +9,7 @@
           {
             "type": "heading2",
             "content": {
-              "text": "Paragraph"
+              "text": "Planned"
             }
           }
         ]
@@ -20,7 +20,41 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Nostrud incididunt et ullamco sit. Et ea fugiat ut."
+              "text": "Magna qui nisi aute ut cillum aliquip voluptate eu labore proident eiusmod voluptate. Sint culpa do culpa Lorem ea."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "login",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Corner"
+            }
+          }
+        ]
+      },
+      "body": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sint est voluptate exercitation officia magna ex ea in excepteur occaecat cupidatat culpa culpa. Proident ullamco exercitation anim eiusmod dolor dolore voluptate."
             }
           }
         ]

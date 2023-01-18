@@ -9,7 +9,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Nostrud velit aliqua ut eu incididunt sit incididunt consectetur laboris qui non. Magna deserunt enim duis in ad elit aliqua proident enim duis minim duis veniam reprehenderit. Aliquip quis adipisicing minim."
+              "text": "Nostrud nisi ad adipisicing occaecat fugiat fugiat. Reprehenderit tempor laborum ut qui quis aliquip deserunt. Ut velit adipisicing velit adipisicing id elit quis cillum sit dolore."
             }
           }
         ]
@@ -19,6 +19,36 @@
         "value": {
           "__TYPE__": "ExternalLink",
           "url": "http://twitter.com"
+        }
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "dark",
+    "primary": {
+      "cta_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Excepteur eu culpa dolore nulla consectetur eu cillum laboris elit non ipsum ad. Laborum incididunt quis proident Lorem aliquip in sit nisi laborum consectetur deserunt sint qui. Nostrud consectetur labore ea proident ullamco ut nisi et mollit ullamco."
+            }
+          }
+        ]
+      },
+      "cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://slicemachine.dev"
         }
       }
     },

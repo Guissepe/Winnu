@@ -16,8 +16,6 @@ const about = () => {
     const { data: session, status }: any = useSession();
 
   return (
-
-
         <Box fontFamily='Sora' background='black'>
             <Head>
             </Head>

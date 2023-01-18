@@ -2,15 +2,7 @@ import React from 'react';
 import { PrismicRichText, PrismicLink } from '@prismicio/react';
 import Head from 'next/head';
 import { FiArrowUpRight } from 'react-icons/fi';
-import {
-  Box,
-  Button,
-  Flex,
-  Show,
-  Text,
-  Center,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Button, Flex, Center } from '@chakra-ui/react';
 // import CustomLink from '../../src/components/CustomLink.tsx';
 // import RichText from '../../src/components/RichText.tsx';
 import { PrismicNextImage } from '@prismicio/next';

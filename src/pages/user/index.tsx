@@ -12,7 +12,6 @@ import  Dropdown  from "../../components/drpdwn";
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 const about = () => {
-
     const { data: session, status }: any = useSession();
 
   return (

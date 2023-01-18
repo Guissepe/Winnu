@@ -1,6 +1,6 @@
 import * as prismicH from '@prismicio/helpers'
 import { SliceZone } from '@prismicio/react'
-import { createClient, linkResolver } from '../../prismicio'
+import { createClient} from '../../prismicio'
 import { components } from '../../slices/index'
 import { Box } from '@chakra-ui/react'
 
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
   const client = createClient()
   const pages = await client.getAllByType('page')
   return {
-    paths: pages.map(page => prismicH.asLink(page, linkResolver)),
+    paths: pages.map(page => prismicH.asLink(page)),
     fallback: false,
   }
 }

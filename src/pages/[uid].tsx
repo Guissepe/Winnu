@@ -16,7 +16,7 @@ export default async function Page({ page, navigation }: any) {
 export async function getStaticProps({ params, previewData }: any) {
   const client = createClient({ previewData })
   const [navigation, page] = await Promise.all([
-   client.getByUID('page', "loginpage"),
+   client.getByUID('page', params.uid),
    client.getByUID('navigation', 'header'),
   ])
 

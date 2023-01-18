@@ -12,7 +12,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 // import CustomLink from '../../src/components/CustomLink.tsx';
-import RichText from '../../src/components/RichText.tsx';
+// import RichText from '../../src/components/RichText.tsx';
 import { PrismicNextImage } from '@prismicio/next';
 
 const Infobox = ({ slice }) => (
@@ -33,7 +33,7 @@ const Infobox = ({ slice }) => (
             lineHeight={{ base: '26px', md: '60px' }}
             color="text.01"
           >
-            <RichText field={slice.primary.title} />
+            <PrismicRichText field={slice.primary.title} />
           </Box>
           <Box
             fontSize={{ base: '16px', md: '32px' }}
@@ -80,7 +80,7 @@ const Infobox = ({ slice }) => (
             lineHeight={{ base: '26px', md: '60px' }}
             color="text.01"
           >
-            <RichText field={slice.primary.title} />
+            <PrismicRichText field={slice.primary.title} />
           </Box>
           <Box
             fontSize={{ base: '16px', md: '22px' }}

@@ -3,8 +3,6 @@ import { PrismicRichText, PrismicLink } from '@prismicio/react';
 import Head from 'next/head';
 import { FiArrowUpRight } from 'react-icons/fi';
 import { Box, Button, Flex, Center } from '@chakra-ui/react';
-// import CustomLink from '../../src/components/CustomLink.tsx';
-// import RichText from '../../src/components/RichText.tsx';
 import { PrismicNextImage } from '@prismicio/next';
 
 const Infobox = ({ slice }) => (
@@ -43,14 +41,15 @@ const Infobox = ({ slice }) => (
           >
             {slice?.items?.map((item, i) => (
               <Button
-                src={item.cta_link}
                 variant="primary"
                 py="18px"
                 px="37px"
                 mt={{ base: '20px', md: '48px' }}
                 borderRadius="0px"
               >
-                <PrismicRichText field={item.cta_text}></PrismicRichText>
+                <PrismicLink field={item.cta_link}>
+                  <PrismicRichText field={item.cta_text}></PrismicRichText>
+                </PrismicLink>
               </Button>
             ))}
           </Flex>
@@ -95,7 +94,9 @@ const Infobox = ({ slice }) => (
             mt={{ base: '20px', md: '48px' }}
             borderRadius="0px"
           >
-            <PrismicRichText field={slice.primary.cta_text} />
+            <PrismicLink field={slice.primary.cta_link}>
+              <PrismicRichText field={slice.primary.cta_text}></PrismicRichText>
+            </PrismicLink>
           </Button>
         </Box>
       </Center>

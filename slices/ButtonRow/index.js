@@ -16,13 +16,10 @@ const ButtonRow = ({ slice }) => (
               fontFamily="Sora"
               px="35px"
               borderRadius="3px"
-              src={slice.primary.cta_link}
               mt={{ base: '5px', md: '10px' }}
               color="#1E1E1E"
-            >
-              <Text>{item.cta_text}</Text>
-              <PrismicLink field={item.cta_link}>My Link</PrismicLink>
-            </Button>
+            ></Button>
+            <PrismicLink field={item.cta_link}>My Link</PrismicLink>
           </Center>
         </Box>
       ))}

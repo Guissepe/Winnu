@@ -38,10 +38,10 @@ const Btton = ({ slice }) => (
       <Link href={slice.primary.cta_link}></Link>
       <PrismicLink field={slice.primary.cta_link}></PrismicLink>
       <PrismicRichText field={slice.primary.cta_text} />
-      <PrismicLink document={slice.primary.link}>
-        {slice.primary.cta_text}
-      </PrismicLink>
     </Button>
+    <PrismicLink document={slice.primary.link}>
+      {slice.primary.cta_text}
+    </PrismicLink>
   </Center>
 );
 

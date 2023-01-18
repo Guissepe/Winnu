@@ -5,6 +5,7 @@ import {
   Text,
   Button,
   Image,
+  Center,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { InputField } from "../../components/inputfield";
@@ -19,6 +20,7 @@ const about = () => {
             <Head>
             </Head>
         {session &&
+        <Center>
             <Box
                 textAlign="center"
                 fontFamily="sora"
@@ -30,6 +32,7 @@ const about = () => {
                 {
                 session &&
                 <>
+
                     <Image src={session.user.picture}/>
                     <Text
                     color='white' >
@@ -102,7 +105,7 @@ const about = () => {
                     </Button>
                 </Box>
         </Box>
-        },
+        </Center>},
         {!session &&
             <Box>
                 <Text py='25%' textAlign='center' color = 'white'>

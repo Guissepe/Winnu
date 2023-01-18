@@ -11,7 +11,7 @@ import {
   Center,
   VStack,
 } from '@chakra-ui/react';
-import CustomLink from '../../src/components/CustomLink.tsx';
+// import CustomLink from '../../src/components/CustomLink.tsx';
 import RichText from '../../src/components/RichText.tsx';
 import { PrismicNextImage } from '@prismicio/next';
 

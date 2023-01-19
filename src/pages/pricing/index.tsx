@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 // import Head from 'next/head';
 // import { Box, Button, Flex, Text } from '@chakra-ui/react';
 // import { FiCheck } from 'react-icons/fi';

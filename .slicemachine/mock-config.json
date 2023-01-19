@@ -74,6 +74,9 @@
       "default": {
         "primary": {},
         "items": {}
+      },
+      "darkLog": {
+        "items": {}
       }
     }
   },

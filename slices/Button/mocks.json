@@ -9,7 +9,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Nostrud nisi ad adipisicing occaecat fugiat fugiat. Reprehenderit tempor laborum ut qui quis aliquip deserunt. Ut velit adipisicing velit adipisicing id elit quis cillum sit dolore."
+              "text": "Officia eiusmod magna pariatur est consectetur nisi enim laboris. Mollit aliqua aliqua amet voluptate non fugiat proident adipisicing minim est aute."
             }
           }
         ]
@@ -39,7 +39,37 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Excepteur eu culpa dolore nulla consectetur eu cillum laboris elit non ipsum ad. Laborum incididunt quis proident Lorem aliquip in sit nisi laborum consectetur deserunt sint qui. Nostrud consectetur labore ea proident ullamco ut nisi et mollit ullamco."
+              "text": "Aliquip aute amet amet est consequat. Cupidatat sit deserunt ullamco."
+            }
+          }
+        ]
+      },
+      "cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "log",
+    "primary": {
+      "cta_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Ex nostrud laborum proident aliquip consequat id consequat. Ad pariatur ullamco labore est deserunt deserunt mollit quis sit labore consectetur tempor laborum ea."
             }
           }
         ]
@@ -49,6 +79,36 @@
         "value": {
           "__TYPE__": "ExternalLink",
           "url": "https://slicemachine.dev"
+        }
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "logDark",
+    "primary": {
+      "cta_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Eiusmod quis id sint. Amet nulla velit ipsum duis pariatur mollit voluptate esse esse qui sit ex cillum Lorem in."
+            }
+          }
+        ]
+      },
+      "cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
         }
       }
     },

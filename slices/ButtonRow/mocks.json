@@ -11,7 +11,7 @@
             "cta_text",
             {
               "__TYPE__": "FieldContent",
-              "value": "highest",
+              "value": "soap",
               "type": "Text"
             }
           ],
@@ -21,8 +21,76 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "http://twitter.com"
+                "url": "https://prismic.io"
               }
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "dark",
+    "primary": {},
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "cta_text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "exchange",
+              "type": "Text"
+            }
+          ],
+          [
+            "cta_link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "darkLog",
+    "primary": {},
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "cta_text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "poor",
+              "type": "Text"
+            }
+          ],
+          [
+            "cta_link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          ],
+          [
+            "handler",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "unknown",
+              "type": "Text"
             }
           ]
         ]

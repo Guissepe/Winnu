@@ -34,15 +34,18 @@ const Btton = ({ slice }) => (
       borderRadius="3px"
       mt={{ base: '20px', md: '48px' }}
       src={slice.primary.cta_link}
+      onClick={handleGoogleSignin}
     >
-      <Link href={slice.primary.cta_link}></Link>
-      <PrismicLink field={slice.primary.cta_link}></PrismicLink>
       <PrismicRichText field={slice.primary.cta_text} />
     </Button>
-    <PrismicLink document={slice.primary.link}>
-      {slice.primary.cta_text}
-    </PrismicLink>
   </Center>
 );
 
 export default Btton;
+
+export async function getServerSideProps(context) {
+  const providers = await getProviders();
+  return {
+    props: { providers },
+  };
+}

@@ -136,7 +136,7 @@ interface LoginDocumentData {
  * Slice for *Login → Slice Zone*
  *
  */
-type LoginDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | Slice1Slice | NavigationItemSlice | ButtonSlice | ButtonRowSlice | ImgrowSlice | TextimgSlice;
+type LoginDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | Slice1Slice | NavigationItemSlice | ButtonSlice | ButtonRowSlice | ImgrowSlice | TextimgSlice | CustumersSlice;
 /**
  * Login document from Prismic
  *
@@ -300,10 +300,80 @@ interface ButtonSliceDarkPrimary {
  */
 export type ButtonSliceDark = prismicT.SharedSliceVariation<"dark", Simplify<ButtonSliceDarkPrimary>, never>;
 /**
+ * Primary content in Button → Primary
+ *
+ */
+interface ButtonSliceLogPrimary {
+    /**
+     * CTA text field in *Button → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: button.primary.cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    cta_text: prismicT.RichTextField;
+    /**
+     * CTA link field in *Button → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: button.primary.cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+}
+/**
+ * Log variation for Button Slice
+ *
+ * - **API ID**: `log`
+ * - **Description**: `Button`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ButtonSliceLog = prismicT.SharedSliceVariation<"log", Simplify<ButtonSliceLogPrimary>, never>;
+/**
+ * Primary content in Button → Primary
+ *
+ */
+interface ButtonSliceLogDarkPrimary {
+    /**
+     * CTA text field in *Button → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: button.primary.cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    cta_text: prismicT.RichTextField;
+    /**
+     * CTA link field in *Button → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: button.primary.cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+}
+/**
+ * LogDark variation for Button Slice
+ *
+ * - **API ID**: `logDark`
+ * - **Description**: `Button`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ButtonSliceLogDark = prismicT.SharedSliceVariation<"logDark", Simplify<ButtonSliceLogDarkPrimary>, never>;
+/**
  * Slice variation for *Button*
  *
  */
-type ButtonSliceVariation = ButtonSliceDefault | ButtonSliceDark;
+type ButtonSliceVariation = ButtonSliceDefault | ButtonSliceDark | ButtonSliceLog | ButtonSliceLogDark;
 /**
  * Button Shared Slice
  *
@@ -349,10 +419,90 @@ export interface ButtonRowSliceDefaultItem {
  */
 export type ButtonRowSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<ButtonRowSliceDefaultItem>>;
 /**
+ * Item in ButtonRow → Items
+ *
+ */
+export interface ButtonRowSliceDarkItem {
+    /**
+     * CTA text field in *ButtonRow → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: button_row.items[].cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cta_text: prismicT.KeyTextField;
+    /**
+     * CTA link field in *ButtonRow → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: button_row.items[].cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+}
+/**
+ * Dark variation for ButtonRow Slice
+ *
+ * - **API ID**: `dark`
+ * - **Description**: `ButtonRow`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ButtonRowSliceDark = prismicT.SharedSliceVariation<"dark", Record<string, never>, Simplify<ButtonRowSliceDarkItem>>;
+/**
+ * Item in ButtonRow → Items
+ *
+ */
+export interface ButtonRowSliceDarkLogItem {
+    /**
+     * CTA text field in *ButtonRow → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: button_row.items[].cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cta_text: prismicT.KeyTextField;
+    /**
+     * CTA link field in *ButtonRow → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: button_row.items[].cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+    /**
+     * Handler field in *ButtonRow → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: button_row.items[].handler
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    handler: prismicT.KeyTextField;
+}
+/**
+ * DarkLog variation for ButtonRow Slice
+ *
+ * - **API ID**: `darkLog`
+ * - **Description**: `ButtonRow`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ButtonRowSliceDarkLog = prismicT.SharedSliceVariation<"darkLog", Record<string, never>, Simplify<ButtonRowSliceDarkLogItem>>;
+/**
  * Slice variation for *ButtonRow*
  *
  */
-type ButtonRowSliceVariation = ButtonRowSliceDefault;
+type ButtonRowSliceVariation = ButtonRowSliceDefault | ButtonRowSliceDark | ButtonRowSliceDarkLog;
 /**
  * ButtonRow Shared Slice
  *
@@ -989,6 +1139,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceDarkPrimary, ButtonSliceDark, ButtonSliceVariation, ButtonSlice, ButtonRowSliceDefaultItem, ButtonRowSliceDefault, ButtonRowSliceVariation, ButtonRowSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceSingleButtonPrimary, InfoboxSliceSingleButton, InfoboxSliceVariation, InfoboxSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceLoginPrimary, Slice1SliceLogin, Slice1SliceVariation, Slice1Slice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice };
+        export type { HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceDarkPrimary, ButtonSliceDark, ButtonSliceLogPrimary, ButtonSliceLog, ButtonSliceLogDarkPrimary, ButtonSliceLogDark, ButtonSliceVariation, ButtonSlice, ButtonRowSliceDefaultItem, ButtonRowSliceDefault, ButtonRowSliceDarkItem, ButtonRowSliceDark, ButtonRowSliceDarkLogItem, ButtonRowSliceDarkLog, ButtonRowSliceVariation, ButtonRowSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceSingleButtonPrimary, InfoboxSliceSingleButton, InfoboxSliceVariation, InfoboxSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceLoginPrimary, Slice1SliceLogin, Slice1SliceVariation, Slice1Slice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice };
     }
 }

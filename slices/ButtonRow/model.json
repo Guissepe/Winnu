@@ -29,6 +29,65 @@
         }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "dark",
+      "name": "Dark",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ButtonRow",
+      "primary": {},
+      "items": {
+        "cta_text": {
+          "type": "Text",
+          "config": {
+            "label": "CTA text",
+            "placeholder": ""
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "darkLog",
+      "name": "DarkLog",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ButtonRow",
+      "primary": {},
+      "items": {
+        "cta_text": {
+          "type": "Text",
+          "config": {
+            "label": "CTA text",
+            "placeholder": ""
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "handler": {
+          "type": "Text",
+          "config": {
+            "label": "Handler",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

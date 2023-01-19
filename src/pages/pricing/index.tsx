@@ -12,7 +12,7 @@ import React from 'react';
 //   benefits: String[];
 // };
 
-// const pricing = () => {
+const pricing = () => {
 //   const plans: planTypes[] = [
 //     {
 //       name: 'Standard',
@@ -201,6 +201,6 @@ import React from 'react';
 //       </Box>
 //     </div>
 //   );
-// };
+};
 
-// export default pricing;
+export default pricing;

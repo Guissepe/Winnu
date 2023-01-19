@@ -34,7 +34,7 @@ const Btton = ({ slice }) => (
       borderRadius="3px"
       mt={{ base: '20px', md: '48px' }}
       src={slice.primary.cta_link}
-      onClick={handleGoogleSignin}
+      onClick={signIn}
     >
       <PrismicRichText field={slice.primary.cta_text} />
     </Button>

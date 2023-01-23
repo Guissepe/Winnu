@@ -10,19 +10,19 @@ import {
   export const LogInbutton = (props: any) => (
     <Box>
         <Button
+          borderRadius="3px"
+          mt={props.marginTop}
+          mb={props.marginBot}
+          fontSize={17}
+          width={350}
+          maxWidth={850}
+          height={55}
           color={props.color}
           background={props.backcolor}
-          width={300}
-          maxWidth={300}
-          height={45}
           fontFamily="Sora"
           variant="primary"
-          py="16px"
-          px="35px"
-          borderRadius="3px"
-          display='flex'
           onClick={ () => props.handler()}
-          mx={props.margin}>
+          mx={props.marginX}>
           {props.provname}
         </Button>
     </Box>

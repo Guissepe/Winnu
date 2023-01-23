@@ -9,7 +9,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Amet exercitation nostrud est sunt nisi tempor sunt veniam sunt tempor dolor. Aliqua id et sunt."
+              "text": "Sint consequat ipsum cillum."
             }
           }
         ]
@@ -18,7 +18,7 @@
         "__TYPE__": "LinkContent",
         "value": {
           "__TYPE__": "ExternalLink",
-          "url": "https://slicemachine.dev"
+          "url": "http://twitter.com"
         }
       }
     },
@@ -39,7 +39,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Officia labore consequat dolor elit ullamco et culpa commodo aliqua culpa nostrud. Ut officia labore eu sint reprehenderit proident. Velit fugiat minim dolore sint nulla nostrud consequat aute duis."
+              "text": "Consequat aliquip anim ea nostrud nostrud laboris commodo tempor esse dolore reprehenderit duis sint dolore. Lorem consequat deserunt voluptate eu nisi exercitation enim est pariatur dolor cupidatat proident aliqua aute occaecat."
             }
           }
         ]
@@ -69,7 +69,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Ex nostrud laborum proident aliquip consequat id consequat. Ad pariatur ullamco labore est deserunt deserunt mollit quis sit labore consectetur tempor laborum ea."
+              "text": "Ex dolore tempor qui cupidatat ipsum sit ex. Exercitation ullamco nisi amet."
             }
           }
         ]
@@ -78,13 +78,8 @@
         "__TYPE__": "LinkContent",
         "value": {
           "__TYPE__": "ExternalLink",
-          "url": "https://slicemachine.dev"
+          "url": "https://prismic.io"
         }
-      },
-      "handle": {
-        "__TYPE__": "FieldContent",
-        "value": "draw",
-        "type": "Text"
       }
     },
     "items": [
@@ -104,7 +99,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Incididunt occaecat tempor cillum qui in incididunt et tempor anim eu pariatur. Ut aliqua dolore culpa eiusmod anim laborum commodo id veniam tempor ipsum cillum cillum sint laborum. Sit aliqua minim tempor minim Lorem reprehenderit est voluptate enim ad ad nostrud occaecat in ad."
+              "text": "Duis tempor aute deserunt laboris laborum ad aliqua duis sint duis ullamco occaecat laborum proident."
             }
           }
         ]
@@ -113,7 +108,97 @@
         "__TYPE__": "LinkContent",
         "value": {
           "__TYPE__": "ExternalLink",
-          "url": "http://twitter.com"
+          "url": "https://prismic.io"
+        }
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "git",
+    "primary": {
+      "cta_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Adipisicing ullamco nulla enim reprehenderit anim cupidatat. Commodo et dolor esse dolore."
+            }
+          }
+        ]
+      },
+      "cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://google.com"
+        }
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "faceb",
+    "primary": {
+      "cta_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Consectetur labore dolor proident ipsum Lorem mollit magna cupidatat nisi ad consequat laborum."
+            }
+          }
+        ]
+      },
+      "cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://google.com"
+        }
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "goog",
+    "primary": {
+      "cta_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Aliquip sunt officia duis qui fugiat ut enim consequat dolore excepteur labore veniam excepteur in."
+            }
+          }
+        ]
+      },
+      "cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://slicemachine.dev"
         }
       }
     },

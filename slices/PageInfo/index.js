@@ -24,7 +24,7 @@ const PageInfo = ({ slice }) => (
           pb="8%"
           fontSize={{ base: '16px', md: '16px' }}
           lineHeight="24px"
-          color="text.02"
+          color="text.03"
           mt="30px"
         >
           <PrismicRichText field={slice.primary.body} />

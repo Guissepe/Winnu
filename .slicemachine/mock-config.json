@@ -19,6 +19,9 @@
             }
           }
         }
+      },
+      "log": {
+        "primary": {}
       }
     },
     "NavigationItem": {
@@ -82,6 +85,44 @@
     "TextPile": {
       "default": {
         "primary": {}
+      }
+    },
+    "LogGit": {},
+    "LogFace": {
+      "default": {
+        "primary": {
+          "logface": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "loggit": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "LogGoog": {},
+    "LogFaceGit": {
+      "default": {
+        "primary": {
+          "logface": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "loggit": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   },

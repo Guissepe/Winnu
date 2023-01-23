@@ -5,14 +5,23 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Amet exercitation nostrud est sunt nisi tempor sunt veniam sunt tempor dolor. Aliqua id et sunt.","spans":[]}],"cta_link":{"link_type":"Web","url":"https://slicemachine.dev"}},"id":"_Default","slice_type":"button"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Sint consequat ipsum cillum.","spans":[]}],"cta_link":{"link_type":"Web","url":"http://twitter.com"}},"id":"_Default","slice_type":"button"}} />
 _Default.storyName = ''
 
-export const _Dark = () => <MyComponent slice={{"variation":"dark","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Officia labore consequat dolor elit ullamco et culpa commodo aliqua culpa nostrud. Ut officia labore eu sint reprehenderit proident. Velit fugiat minim dolore sint nulla nostrud consequat aute duis.","spans":[]}],"cta_link":{"link_type":"Web","url":"https://slicemachine.dev"}},"id":"_Dark","slice_type":"button"}} />
+export const _Dark = () => <MyComponent slice={{"variation":"dark","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Consequat aliquip anim ea nostrud nostrud laboris commodo tempor esse dolore reprehenderit duis sint dolore. Lorem consequat deserunt voluptate eu nisi exercitation enim est pariatur dolor cupidatat proident aliqua aute occaecat.","spans":[]}],"cta_link":{"link_type":"Web","url":"https://slicemachine.dev"}},"id":"_Dark","slice_type":"button"}} />
 _Dark.storyName = ''
 
-export const _Log = () => <MyComponent slice={{"variation":"log","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Ex nostrud laborum proident aliquip consequat id consequat. Ad pariatur ullamco labore est deserunt deserunt mollit quis sit labore consectetur tempor laborum ea.","spans":[]}],"cta_link":{"link_type":"Web","url":"https://slicemachine.dev"},"handle":"draw"},"id":"_Log","slice_type":"button"}} />
+export const _Log = () => <MyComponent slice={{"variation":"log","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Ex dolore tempor qui cupidatat ipsum sit ex. Exercitation ullamco nisi amet.","spans":[]}],"cta_link":{"link_type":"Web","url":"https://prismic.io"}},"id":"_Log","slice_type":"button"}} />
 _Log.storyName = ''
 
-export const _LogDark = () => <MyComponent slice={{"variation":"logDark","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Incididunt occaecat tempor cillum qui in incididunt et tempor anim eu pariatur. Ut aliqua dolore culpa eiusmod anim laborum commodo id veniam tempor ipsum cillum cillum sint laborum. Sit aliqua minim tempor minim Lorem reprehenderit est voluptate enim ad ad nostrud occaecat in ad.","spans":[]}],"cta_link":{"link_type":"Web","url":"http://twitter.com"}},"id":"_LogDark","slice_type":"button"}} />
+export const _LogDark = () => <MyComponent slice={{"variation":"logDark","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Duis tempor aute deserunt laboris laborum ad aliqua duis sint duis ullamco occaecat laborum proident.","spans":[]}],"cta_link":{"link_type":"Web","url":"https://prismic.io"}},"id":"_LogDark","slice_type":"button"}} />
 _LogDark.storyName = ''
+
+export const _Git = () => <MyComponent slice={{"variation":"git","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Adipisicing ullamco nulla enim reprehenderit anim cupidatat. Commodo et dolor esse dolore.","spans":[]}],"cta_link":{"link_type":"Web","url":"http://google.com"}},"id":"_Git","slice_type":"button"}} />
+_Git.storyName = ''
+
+export const _Faceb = () => <MyComponent slice={{"variation":"faceb","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Consectetur labore dolor proident ipsum Lorem mollit magna cupidatat nisi ad consequat laborum.","spans":[]}],"cta_link":{"link_type":"Web","url":"http://google.com"}},"id":"_Faceb","slice_type":"button"}} />
+_Faceb.storyName = ''
+
+export const _Goog = () => <MyComponent slice={{"variation":"goog","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"cta_text":[{"type":"paragraph","text":"Aliquip sunt officia duis qui fugiat ut enim consequat dolore excepteur labore veniam excepteur in.","spans":[]}],"cta_link":{"link_type":"Web","url":"https://slicemachine.dev"}},"id":"_Goog","slice_type":"button"}} />
+_Goog.storyName = ''

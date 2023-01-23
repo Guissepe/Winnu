@@ -1,7 +1,7 @@
 {
-  "id": "login",
-  "label": "Login",
-  "repeatable": false,
+  "id": "page",
+  "label": "Page",
+  "repeatable": true,
   "status": true,
   "json": {
     "Main": {
@@ -12,30 +12,12 @@
           "placeholder": ""
         }
       },
-      "title": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Title",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "header": {
-              "type": "SharedSlice"
-            },
-            "infobox": {
-              "type": "SharedSlice"
-            },
             "slice1": {
-              "type": "SharedSlice"
-            },
-            "navigation_item": {
               "type": "SharedSlice"
             },
             "button": {
@@ -44,13 +26,34 @@
             "button_row": {
               "type": "SharedSlice"
             },
+            "custumers": {
+              "type": "SharedSlice"
+            },
+            "infobox": {
+              "type": "SharedSlice"
+            },
             "imgrow": {
+              "type": "SharedSlice"
+            },
+            "header": {
+              "type": "SharedSlice"
+            },
+            "navigation_item": {
               "type": "SharedSlice"
             },
             "textimg": {
               "type": "SharedSlice"
             },
-            "custumers": {
+            "log_goog": {
+              "type": "SharedSlice"
+            },
+            "log_git": {
+              "type": "SharedSlice"
+            },
+            "log_face": {
+              "type": "SharedSlice"
+            },
+            "text_pile": {
               "type": "SharedSlice"
             }
           }

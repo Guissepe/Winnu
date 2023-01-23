@@ -6,6 +6,8 @@ import Custumers from './Custumers';
 import Header from './Header';
 import Imgrow from './Imgrow';
 import Infobox from './Infobox';
+import LogFaceGit from './LogFaceGit';
+import LogGoog from './LogGoog';
 import NavigationItem from './NavigationItem';
 import PageInfo from './PageInfo';
 import Textimg from './Textimg';
@@ -18,6 +20,8 @@ export {
 	Header,
 	Imgrow,
 	Infobox,
+	LogFaceGit,
+	LogGoog,
 	NavigationItem,
 	PageInfo,
 	Textimg,
@@ -31,6 +35,8 @@ export const components = {
 	header: Header,
 	imgrow: Imgrow,
 	infobox: Infobox,
+	log_face: LogFaceGit,
+	log_goog: LogGoog,
 	navigation_item: NavigationItem,
 	slice1: PageInfo,
 	textimg: Textimg,

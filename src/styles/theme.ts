@@ -6,6 +6,9 @@ import "@fontsource/inter";
 
 export const theme = extendTheme({
   colors: {
+
+    dkgrey01: "#1e1e1e",
+    grey03: "#787878",
     brand: {
       primary: "#FCCF47",
       secondary: "#FFAFA3",

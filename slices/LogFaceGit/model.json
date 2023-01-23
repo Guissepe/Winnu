@@ -1,0 +1,37 @@
+{
+  "id": "log_face",
+  "type": "SharedSlice",
+  "name": "LogFaceGit",
+  "description": "LogFace",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "LogFace",
+      "primary": {
+        "logface": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Log Face",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "loggit": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Log Git",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

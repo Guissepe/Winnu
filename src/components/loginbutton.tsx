@@ -7,22 +7,6 @@ import {
   } from "@chakra-ui/react";
   import {  } from "../../slices";
 
-  async function handleGoogleSignin() {
-    signIn('google', {
-      callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
-    });
-  }
-  async function handleFacebookSignin() {
-    signIn('facebook', {
-      callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
-    });
-  }
-  async function handleGitHubSignin() {
-    signIn('github', {
-      callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
-    });
-  }
-
   export const LogInbutton = (props: any) => (
     <Box>
         <Button
@@ -36,8 +20,8 @@ import {
           py="16px"
           px="35px"
           borderRadius="3px"
-          onClick={() => props.handler}
           display='flex'
+          onClick={ () => props.handler()}
           mx={props.margin}>
           {props.provname}
         </Button>

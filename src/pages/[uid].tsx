@@ -11,6 +11,7 @@ const Page = ({ page, navigation, settings }:any) => {
   return <SliceZone slices={page.data.slices} components={components} />
 }
 export default Page
+
 export async function getStaticProps({ params, previewData }: any) {
   const providers = await getProviders()
   const client = createClient({ previewData })

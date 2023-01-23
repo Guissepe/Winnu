@@ -1,25 +1,10 @@
 import React from 'react';
 import { PrismicRichText, PrismicLink } from '@prismicio/react';
-import { Box, Center, Button } from '@chakra-ui/react';
+import { Box, Center, Button, Text } from '@chakra-ui/react';
 import { LogInbutton } from '../../src/components/loginbutton.tsx';
-import { getProviders, signIn } from 'next-auth/react';
 import Link from 'next/link';
-
-async function handleGoogleSignin() {
-  signIn('google', {
-    callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
-  });
-}
-async function handleFacebookSignin() {
-  signIn('facebook', {
-    callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
-  });
-}
-async function handleGitHubSignin() {
-  signIn('github', {
-    callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
-  });
-}
+import { handleGoogleSignin } from '../../src/components/Handlers.tsx';
+import { getProviders } from 'next-auth/react';
 
 const Btton = ({ slice }) => (
   <Center bg="black">
@@ -34,10 +19,9 @@ const Btton = ({ slice }) => (
       borderRadius="3px"
       mt={{ base: '20px', md: '48px' }}
       src={slice.primary.cta_link}
-      handler={signIn}
-    >
-      <PrismicRichText field={slice.primary.cta_text} />
-    </LogInbutton>
+      handler={handleGoogleSignin}
+      provname={<PrismicRichText field={slice.primary.cta_text} />}
+    ></LogInbutton>
   </Center>
 );
 

@@ -86,6 +86,13 @@
             "allowTargetBlank": false,
             "select": null
           }
+        },
+        "handle": {
+          "type": "Text",
+          "config": {
+            "label": "Handle",
+            "placeholder": ""
+          }
         }
       },
       "items": {},

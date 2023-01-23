@@ -15,6 +15,7 @@ export const theme = extendTheme({
       grey02: "#383838",
       grey03: "#787878",
       peach: "#E1B0A8",
+      white01: '#FFFFFF'
     },
   },
   fonts: {

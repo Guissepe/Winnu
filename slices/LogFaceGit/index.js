@@ -3,7 +3,10 @@ import { PrismicRichText, PrismicLink } from '@prismicio/react';
 import { Box, Center, Button, Text, Flex } from '@chakra-ui/react';
 import { LogInbutton } from '../../src/components/loginbutton.tsx';
 import Link from 'next/link';
-import { handleFacebookSignin } from '../../src/components/Handlers.tsx';
+import {
+  handleFacebookSignin,
+  handleGitHubSignin,
+} from '../../src/components/Handlers.tsx';
 import { getProviders } from 'next-auth/react';
 import { theme } from '../../src/styles/theme';
 const FaceBtton = ({ slice }) => (
@@ -23,7 +26,7 @@ const FaceBtton = ({ slice }) => (
         color={'white'}
         backcolor={'dkgrey01'}
         src={handleFacebookSignin}
-        handler={handleFacebookSignin}
+        handler={handleGitHubSignin}
         marginX={2}
         provname={<PrismicRichText field={slice.primary.loggit} />}
       ></LogInbutton>

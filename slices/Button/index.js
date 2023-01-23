@@ -3,7 +3,11 @@ import { PrismicRichText, PrismicLink } from '@prismicio/react';
 import { Box, Center, Button, Text } from '@chakra-ui/react';
 import { LogInbutton } from '../../src/components/loginbutton.tsx';
 import Link from 'next/link';
-import { handleGoogleSignin } from '../../src/components/Handlers.tsx';
+import {
+  handleGoogleSignin,
+  handleFacebookSignin,
+  handleGitHubSignin,
+} from '../../src/components/Handlers.tsx';
 import { getProviders } from 'next-auth/react';
 
 const Btton = ({ slice }) => (
@@ -19,7 +23,7 @@ const Btton = ({ slice }) => (
       borderRadius="3px"
       mt={{ base: '20px', md: '48px' }}
       src={slice.primary.cta_link}
-      handler={handleGoogleSignin}
+      handler={handleFacebookSignin}
       provname={<PrismicRichText field={slice.primary.cta_text} />}
     ></LogInbutton>
   </Center>

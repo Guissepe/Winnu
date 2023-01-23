@@ -1,7 +1,7 @@
 {
-  "id": "navigation",
-  "label": "Navigation",
-  "repeatable": true,
+  "id": "login",
+  "label": "Login",
+  "repeatable": false,
   "status": true,
   "json": {
     "Main": {
@@ -12,11 +12,13 @@
           "placeholder": ""
         }
       },
-      "name": {
-        "type": "Text",
+      "title": {
+        "type": "StructuredText",
         "config": {
-          "label": "Name",
-          "placeholder": ""
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "slices": {
@@ -24,7 +26,31 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "header": {
+              "type": "SharedSlice"
+            },
+            "infobox": {
+              "type": "SharedSlice"
+            },
+            "slice1": {
+              "type": "SharedSlice"
+            },
             "navigation_item": {
+              "type": "SharedSlice"
+            },
+            "button": {
+              "type": "SharedSlice"
+            },
+            "button_row": {
+              "type": "SharedSlice"
+            },
+            "imgrow": {
+              "type": "SharedSlice"
+            },
+            "textimg": {
+              "type": "SharedSlice"
+            },
+            "custumers": {
               "type": "SharedSlice"
             }
           }

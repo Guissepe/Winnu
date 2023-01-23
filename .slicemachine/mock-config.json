@@ -78,6 +78,11 @@
       "darkLog": {
         "items": {}
       }
+    },
+    "TextPile": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
@@ -86,6 +91,7 @@
     "homepage": {},
     "login": {},
     "header": {},
-    "navigation": {}
+    "navigation": {},
+    "a": {}
   }
 }

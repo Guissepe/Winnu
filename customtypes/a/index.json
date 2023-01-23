@@ -1,6 +1,6 @@
 {
-  "id": "testtype",
-  "label": "TestType",
+  "id": "a",
+  "label": "a",
   "repeatable": true,
   "status": true,
   "json": {

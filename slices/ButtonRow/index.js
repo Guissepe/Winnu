@@ -37,7 +37,7 @@ const ButtonRow = ({ slice }, { providers }) => (
                 px="35px"
                 borderRadius="3px"
                 mt={{ base: '5px', md: '10px' }}
-                color="#1E1E1E"
+                color="grey01"
                 // onClick={}
               >
                 <PrismicLink field={item.cta_link}>
@@ -62,9 +62,9 @@ const ButtonRow = ({ slice }, { providers }) => (
                 px="35px"
                 borderRadius="3px"
                 mt={{ base: '5px', md: '10px' }}
-                bg="#1E1E1E"
+                bg="#grey01"
                 color="white"
-                onClick={handleFacebookSignin}
+                onClick={signIn}
               >
                 <Text> {item.cta_text} </Text>
               </Button>

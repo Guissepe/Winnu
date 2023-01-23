@@ -37,7 +37,7 @@ const PageInfo = ({ slice }) => (
           fontWeight="600"
           fontSize={{ base: '20px', md: '46px' }}
           lineHeight={{ base: '26px', md: '80px' }}
-          color="#EEEFFC"
+          color="white"
           pt="5%"
         >
           <PrismicRichText field={slice.primary.title} />
@@ -49,7 +49,7 @@ const PageInfo = ({ slice }) => (
           fontFamily="sora"
           fontSize={{ base: '16px', md: '16px' }}
           lineHeight="24px"
-          color="#787878"
+          color="grey03"
           mt="30px"
         >
           <PrismicRichText field={slice.primary.body} />

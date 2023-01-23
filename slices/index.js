@@ -9,6 +9,7 @@ import Infobox from './Infobox';
 import NavigationItem from './NavigationItem';
 import PageInfo from './PageInfo';
 import Textimg from './Textimg';
+import TextPile from './TextPile';
 
 export {
 	Button,
@@ -20,6 +21,7 @@ export {
 	NavigationItem,
 	PageInfo,
 	Textimg,
+	TextPile,
 };
 
 export const components = {
@@ -32,4 +34,5 @@ export const components = {
 	navigation_item: NavigationItem,
 	slice1: PageInfo,
 	textimg: Textimg,
+	text_pile: TextPile,
 };

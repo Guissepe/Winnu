@@ -23,21 +23,21 @@ async function handleGitHubSignin() {
 
 const Btton = ({ slice }) => (
   <Center bg="black">
-    <Button
+    <LogInbutton
       fontSize={17}
       width={350}
       maxWidth={350}
       height={55}
       fontFamily="Sora"
       variant="primary"
-      px="35px"
+      margin="20"
       borderRadius="3px"
       mt={{ base: '20px', md: '48px' }}
       src={slice.primary.cta_link}
-      onClick={signIn}
+      handler={signIn}
     >
       <PrismicRichText field={slice.primary.cta_text} />
-    </Button>
+    </LogInbutton>
   </Center>
 );
 

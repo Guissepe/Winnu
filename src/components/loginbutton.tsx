@@ -7,21 +7,21 @@ import {
   } from "@chakra-ui/react";
   import {  } from "../../slices";
 
-  // async function handleGoogleSignin() {
-  //   signIn('google', {
-  //     callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
-  //   });
-  // }
-  // async function handleFacebookSignin() {
-  //   signIn('facebook', {
-  //     callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
-  //   });
-  // }
-  // async function handleGitHubSignin() {
-  //   signIn('github', {
-  //     callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
-  //   });
-  // }
+  async function handleGoogleSignin() {
+    signIn('google', {
+      callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
+    });
+  }
+  async function handleFacebookSignin() {
+    signIn('facebook', {
+      callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
+    });
+  }
+  async function handleGitHubSignin() {
+    signIn('github', {
+      callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/user',
+    });
+  }
 
   export const LogInbutton = (props: any) => (
     <Box>
@@ -44,9 +44,9 @@ import {
     </Box>
 );
 
-// export async function getServerSideProps(context: any) {
-//   const providers = await getProviders()
-//   return {
-//     props: { providers },
-//   };
-// };
+export async function getServerSideProps(context: any) {
+  const providers = await getProviders()
+  return {
+    props: { providers },
+  };
+};

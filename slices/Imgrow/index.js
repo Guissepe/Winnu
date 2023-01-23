@@ -24,10 +24,10 @@ const Imgrow = ({ slice }) => (
                 alt={item.image.alt}
               />
               <Box pt="20px" textAlign="center">
-                <Box textColor="#1E1E1E">
+                <Box textColor="grey01">
                   <PrismicRichText field={item.title} />
                 </Box>
-                <Box textColor="#787878">
+                <Box textColor="grey03">
                   <PrismicRichText field={item.description} />
                 </Box>
               </Box>

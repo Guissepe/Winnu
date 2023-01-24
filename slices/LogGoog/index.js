@@ -1,8 +1,7 @@
 import React from 'react';
-import { PrismicRichText, PrismicLink } from '@prismicio/react';
-import { Box, Center, Button, Text } from '@chakra-ui/react';
+import { PrismicRichText } from '@prismicio/react';
+import { Center } from '@chakra-ui/react';
 import { LogInbutton } from '../../src/components/loginbutton.tsx';
-import Link from 'next/link';
 import { handleGoogleSignin } from '../../src/components/Handlers.tsx';
 import { getProviders } from 'next-auth/react';
 

@@ -52,15 +52,6 @@
             },
             "custumers": {
               "type": "SharedSlice"
-            },
-            "log_git": {
-              "type": "SharedSlice"
-            },
-            "log_goog": {
-              "type": "SharedSlice"
-            },
-            "log_face": {
-              "type": "SharedSlice"
             }
           }
         }

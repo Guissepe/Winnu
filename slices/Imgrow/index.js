@@ -1,6 +1,6 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
-import { Box, Flex, Center, Text, Image } from '@chakra-ui/react';
+import { Box, Center, Text, Image } from '@chakra-ui/react';
 
 const Imgrow = ({ slice }) => (
   <Box bgGradient="linear(to-r, white, #fcd2cc, white)">

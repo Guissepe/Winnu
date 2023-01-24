@@ -53,6 +53,24 @@
             },
             "custumers": {
               "type": "SharedSlice"
+            },
+            "button_row": {
+              "type": "SharedSlice"
+            },
+            "carousell": {
+              "type": "SharedSlice"
+            },
+            "imgrow": {
+              "type": "SharedSlice"
+            },
+            "text_pile": {
+              "type": "SharedSlice"
+            },
+            "log_face": {
+              "type": "SharedSlice"
+            },
+            "log_goog": {
+              "type": "SharedSlice"
             }
           }
         }

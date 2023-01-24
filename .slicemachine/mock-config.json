@@ -124,6 +124,11 @@
           }
         }
       }
+    },
+    "Carousell": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

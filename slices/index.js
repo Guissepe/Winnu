@@ -2,6 +2,7 @@
 
 import Button from './Button';
 import ButtonRow from './ButtonRow';
+import Carousell from './Carousell';
 import Custumers from './Custumers';
 import Header from './Header';
 import Imgrow from './Imgrow';
@@ -16,6 +17,7 @@ import TextPile from './TextPile';
 export {
 	Button,
 	ButtonRow,
+	Carousell,
 	Custumers,
 	Header,
 	Imgrow,
@@ -31,6 +33,7 @@ export {
 export const components = {
 	button: Button,
 	button_row: ButtonRow,
+	carousell: Carousell,
 	custumers: Custumers,
 	header: Header,
 	imgrow: Imgrow,

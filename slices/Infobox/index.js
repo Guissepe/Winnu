@@ -1,9 +1,6 @@
 import React from 'react';
 import { PrismicRichText, PrismicLink } from '@prismicio/react';
-import Head from 'next/head';
-import { FiArrowUpRight } from 'react-icons/fi';
 import { Box, Button, Flex, Center } from '@chakra-ui/react';
-import { PrismicNextImage } from '@prismicio/next';
 
 const Infobox = ({ slice }) => (
   <Box className="section relative bg-black">

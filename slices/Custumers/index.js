@@ -1,12 +1,6 @@
 import React from 'react';
-import { PrismicRichText } from '@prismicio/react';
-import { Flex, Center, Box, Text, Image } from '@chakra-ui/react';
+import { Center, Box, Text, Image } from '@chakra-ui/react';
 
-/**
- * @typedef {import("@prismicio/client").Content.CustumersSlice} CustumersSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<CustumersSlice>} CustumersProps
- * @param { CustumersProps }
- */
 const Custumers = ({ slice }) => (
   <Box>
     <Box maxW="756px" mx="auto" textAlign="center">

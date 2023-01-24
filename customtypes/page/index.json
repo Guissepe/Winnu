@@ -17,19 +17,10 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "slice1": {
-              "type": "SharedSlice"
-            },
             "button": {
               "type": "SharedSlice"
             },
             "button_row": {
-              "type": "SharedSlice"
-            },
-            "custumers": {
-              "type": "SharedSlice"
-            },
-            "infobox": {
               "type": "SharedSlice"
             },
             "imgrow": {
@@ -38,19 +29,28 @@
             "header": {
               "type": "SharedSlice"
             },
-            "navigation_item": {
+            "custumers": {
               "type": "SharedSlice"
             },
-            "textimg": {
+            "carousell": {
+              "type": "SharedSlice"
+            },
+            "infobox": {
+              "type": "SharedSlice"
+            },
+            "log_face": {
               "type": "SharedSlice"
             },
             "log_goog": {
               "type": "SharedSlice"
             },
-            "log_git": {
+            "textimg": {
               "type": "SharedSlice"
             },
-            "log_face": {
+            "slice1": {
+              "type": "SharedSlice"
+            },
+            "navigation_item": {
               "type": "SharedSlice"
             },
             "text_pile": {

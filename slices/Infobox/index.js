@@ -38,18 +38,18 @@ const Infobox = ({ slice }) => (
           >
             {slice?.items?.map((item, i) => (
               <Box px="10px">
-                <Button
-                  width="199px"
-                  height=" 60px"
-                  variant="primary"
-                  py="18px"
-                  mt={{ base: '20px', md: '48px' }}
-                  borderRadius="0px"
-                >
-                  <PrismicLink field={item.cta_link}>
+                <PrismicLink field={item.cta_link}>
+                  <Button
+                    width="199px"
+                    height=" 60px"
+                    variant="primary"
+                    py="18px"
+                    mt={{ base: '20px', md: '48px' }}
+                    borderRadius="0px"
+                  >
                     <PrismicRichText field={item.cta_text}></PrismicRichText>
-                  </PrismicLink>
-                </Button>
+                  </Button>
+                </PrismicLink>
               </Box>
             ))}
           </Flex>
@@ -86,20 +86,20 @@ const Infobox = ({ slice }) => (
             direction={{ base: 'column', md: 'row' }}
             justifyContent="center"
           ></Flex>
-          <Button
-            src={slice.primary.cta_link}
-            variant="primary"
-            width="199px"
-            height=" 60px"
-            py="18px"
-            px="37px"
-            mt={{ base: '20px', md: '48px' }}
-            borderRadius="0px"
-          >
-            <PrismicLink field={slice.primary.cta_link}>
+          <PrismicLink field={slice.primary.cta_link}>
+            <Button
+              src={slice.primary.cta_link}
+              variant="primary"
+              width="199px"
+              height=" 60px"
+              py="18px"
+              px="37px"
+              mt={{ base: '20px', md: '48px' }}
+              borderRadius="0px"
+            >
               <PrismicRichText field={slice.primary.cta_text}></PrismicRichText>
-            </PrismicLink>
-          </Button>
+            </Button>
+          </PrismicLink>
         </Box>
       </Center>
     )}

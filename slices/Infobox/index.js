@@ -8,23 +8,18 @@ const Infobox = ({ slice }) => (
       <Center
         textAlign="center"
         fontFamily="sora"
-        pt={{ base: '43px', md: '192px' }}
-        pb={{ base: '44px', md: '95px' }}
-        px="22px"
-        fontSize="20px"
+        pt={{ base: 23, md: 192 }}
+        pb={{ base: 44, md: 95 }}
+        px={22}
+        fontSize={20}
       >
         <Box>
-          <Box
-            fontWeight="600"
-            fontSize={{ base: '20px', md: '42px' }}
-            lineHeight={{ base: '26px', md: '60px' }}
-            color="text.01"
-          >
+          <Box fontWeight={600} fontSize={{ base: 20, md: 42 }} color="text.01">
             <PrismicRichText field={slice.primary.title} />
           </Box>
           <Box
-            fontSize={{ base: '16px', md: '32px' }}
-            fontWeight="300"
+            fontSize={{ base: 11, md: 22 }}
+            fontWeight={300}
             fontStyle="italic"
             color="text.grey02"
             pt="12px"
@@ -32,20 +27,19 @@ const Infobox = ({ slice }) => (
             <PrismicRichText field={slice.primary.description} />
           </Box>
           <Flex
-            mt="54px"
+            mt={34}
             direction={{ base: 'column', md: 'row' }}
             justifyContent="center"
           >
             {slice?.items?.map((item, i) => (
-              <Box px="10px">
+              <Box pt={10} px="10px">
                 <PrismicLink field={item.cta_link}>
                   <Button
-                    width="199px"
-                    height=" 60px"
+                    width={199}
+                    height="60%"
                     variant="primary"
-                    py="18px"
-                    mt={{ base: '20px', md: '48px' }}
-                    borderRadius="0px"
+                    py="15%"
+                    borderRadius="0"
                   >
                     <PrismicRichText field={item.cta_text}></PrismicRichText>
                   </Button>
@@ -59,47 +53,39 @@ const Infobox = ({ slice }) => (
       <Center
         textAlign="center"
         fontFamily="sora"
-        pt={{ base: '43px', md: '192px' }}
-        pb={{ base: '44px', md: '95px' }}
-        px="22px"
-        fontSize="20px"
+        pt={{ base: 23, md: 192 }}
+        pb={{ base: 44, md: 95 }}
+        px={22}
+        fontSize={20}
       >
         <Box>
-          <Box
-            fontWeight="600"
-            fontSize={{ base: '20px', md: '42px' }}
-            lineHeight={{ base: '26px', md: '60px' }}
-            color="text.01"
-          >
+          <Box fontWeight={200} fontSize={{ base: 20, md: 42 }} color="text.01">
             <PrismicRichText field={slice.primary.title} />
           </Box>
-          <Box
-            fontSize={{ base: '16px', md: '22px' }}
-            lineHeight={{ base: '26px', md: '44px' }}
-            color="text.02"
-            mt="16px"
-          >
+          <Box fontSize={{ base: 16, md: 22 }} color="text.02" mt={3}>
             <PrismicRichText field={slice.primary.description} />
           </Box>
           <Flex
-            mt="54px"
+            mt={34}
             direction={{ base: 'column', md: 'row' }}
             justifyContent="center"
-          ></Flex>
-          <PrismicLink field={slice.primary.cta_link}>
-            <Button
-              src={slice.primary.cta_link}
-              variant="primary"
-              width="199px"
-              height=" 60px"
-              py="18px"
-              px="37px"
-              mt={{ base: '20px', md: '48px' }}
-              borderRadius="0px"
-            >
-              <PrismicRichText field={slice.primary.cta_text}></PrismicRichText>
-            </Button>
-          </PrismicLink>
+          >
+            <Box pt={10} px="10px">
+              <PrismicLink field={slice.primary.cta_link}>
+                <Button
+                  width={199}
+                  height="60%"
+                  variant="primary"
+                  py="15%"
+                  borderRadius="0"
+                >
+                  <PrismicRichText
+                    field={slice.primary.cta_text}
+                  ></PrismicRichText>
+                </Button>
+              </PrismicLink>
+            </Box>
+          </Flex>
         </Box>
       </Center>
     )}

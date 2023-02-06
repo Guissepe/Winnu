@@ -1,26 +1,15 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
+import { Box, Text } from '@chakra-ui/react';
 
-/**
- * @typedef {import("@prismicio/client").Content.TextPileSlice} TextPileSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<TextPileSlice>} TextPileProps
- * @param { TextPileProps }
- */
 const TextPile = ({ slice }) => (
-  <section>
-    <span className="title">
-      {slice.primary.title ? (
-        <PrismicRichText field={slice.primary.title} />
-      ) : (
-        <h2>Template slice, update me!</h2>
-      )}
-    </span>
-    {slice.primary.description ? (
-      <PrismicRichText field={slice.primary.description} />
-    ) : (
-      <p>start by editing this slice from inside Slice Machine!</p>
-    )}
-  </section>
+  <Box px="20" display="flex">
+
+    <Box px="20"><PrismicRichText field={slice.primary.aaaaaa} /></Box>
+    {slice?.items?.map((item, i) => (
+      <Text>{item.text}</Text>
+    ))}
+  </Box>
 );
 
 export default TextPile;

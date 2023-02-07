@@ -217,7 +217,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ButtonSlice | ButtonRowSlice | ImgrowSlice | HeaderSlice | CustumersSlice | CarousellSlice | InfoboxSlice | LogFaceSlice | LogGoogSlice | TextimgSlice | Slice1Slice | NavigationItemSlice | TextPileSlice;
+type PageDocumentDataSlicesSlice = ButtonSlice | ButtonRowSlice | ImgrowSlice | HeaderSlice | CustumersSlice | CarousellSlice | InfoboxSlice | LogFaceSlice | LogGoogSlice | TextimgSlice | Slice1Slice | NavigationItemSlice | TextPileSlice | PriceplanSlice | QuicknoteSlice;
 /**
  * Page document from Prismic
  *
@@ -655,10 +655,35 @@ export interface CarousellSliceDefaultItem {
  */
 export type CarousellSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<CarousellSliceDefaultItem>>;
 /**
+ * Item in Carousell → Items
+ *
+ */
+export interface CarousellSliceSimpleItem {
+    /**
+     * Image field in *Carousell → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousell.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Simple variation for Carousell Slice
+ *
+ * - **API ID**: `simple`
+ * - **Description**: `Carousell`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CarousellSliceSimple = prismicT.SharedSliceVariation<"simple", Record<string, never>, Simplify<CarousellSliceSimpleItem>>;
+/**
  * Slice variation for *Carousell*
  *
  */
-type CarousellSliceVariation = CarousellSliceDefault;
+type CarousellSliceVariation = CarousellSliceDefault | CarousellSliceSimple;
 /**
  * Carousell Shared Slice
  *
@@ -974,10 +999,45 @@ interface InfoboxSliceSingleButtonPrimary {
  */
 export type InfoboxSliceSingleButton = prismicT.SharedSliceVariation<"singleButton", Simplify<InfoboxSliceSingleButtonPrimary>, never>;
 /**
+ * Primary content in Infobox → Primary
+ *
+ */
+interface InfoboxSlicePricingPrimary {
+    /**
+     * Title field in *Infobox → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: infobox.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Infobox → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: infobox.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Pricing variation for Infobox Slice
+ *
+ * - **API ID**: `pricing`
+ * - **Description**: `Infobox`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type InfoboxSlicePricing = prismicT.SharedSliceVariation<"pricing", Simplify<InfoboxSlicePricingPrimary>, never>;
+/**
  * Slice variation for *Infobox*
  *
  */
-type InfoboxSliceVariation = InfoboxSliceDefault | InfoboxSliceSingleButton;
+type InfoboxSliceVariation = InfoboxSliceDefault | InfoboxSliceSingleButton | InfoboxSlicePricing;
 /**
  * Infobox Shared Slice
  *
@@ -1245,6 +1305,362 @@ type Slice1SliceVariation = Slice1SliceDefault | Slice1SliceLogin;
  */
 export type Slice1Slice = prismicT.SharedSlice<"slice1", Slice1SliceVariation>;
 /**
+ * Item in Priceplan → Items
+ *
+ */
+export interface PriceplanSliceDefaultItem {
+    /**
+     * Name field in *Priceplan → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * Price field in *Priceplan → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].price
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    price: prismicT.KeyTextField;
+    /**
+     * Description field in *Priceplan → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    description: prismicT.KeyTextField;
+    /**
+     * Button field in *Priceplan → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].button
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    button: prismicT.LinkField;
+    /**
+     * item1 field in *Priceplan → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].item1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    item1: prismicT.KeyTextField;
+    /**
+     * item2 field in *Priceplan → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].item2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    item2: prismicT.KeyTextField;
+    /**
+     * item3 field in *Priceplan → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].item3
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    item3: prismicT.KeyTextField;
+    /**
+     * item4 field in *Priceplan → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].item4
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    item4: prismicT.KeyTextField;
+    /**
+     * item5 field in *Priceplan → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].item5
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    item5: prismicT.KeyTextField;
+    /**
+     * item6 field in *Priceplan → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].item6
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    item6: prismicT.KeyTextField;
+    /**
+     * item7 field in *Priceplan → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].item7
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    item7: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Priceplan Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Priceplan`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PriceplanSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<PriceplanSliceDefaultItem>>;
+/**
+ * Primary content in Priceplan → Primary
+ *
+ */
+interface PriceplanSliceCenterPrimary {
+    /**
+     * Namec field in *Priceplan → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.primary.namec
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    namec: prismicT.KeyTextField;
+    /**
+     * Pricec field in *Priceplan → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.primary.pricec
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    pricec: prismicT.KeyTextField;
+    /**
+     * Descriptionc field in *Priceplan → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.primary.descriptionc
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    descriptionc: prismicT.RichTextField;
+    /**
+     * Buttonc field in *Priceplan → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.primary.buttonc
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    buttonc: prismicT.LinkField;
+}
+/**
+ * Item in Priceplan → Items
+ *
+ */
+export interface PriceplanSliceCenterItem {
+    /**
+     * Specificationsc field in *Priceplan → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].specificationsc
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    specificationsc: prismicT.RichTextField;
+}
+/**
+ * center variation for Priceplan Slice
+ *
+ * - **API ID**: `center`
+ * - **Description**: `Priceplan`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PriceplanSliceCenter = prismicT.SharedSliceVariation<"center", Simplify<PriceplanSliceCenterPrimary>, Simplify<PriceplanSliceCenterItem>>;
+/**
+ * Primary content in Priceplan → Primary
+ *
+ */
+interface PriceplanSliceRightPrimary {
+    /**
+     * Namer field in *Priceplan → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.primary.namer
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    namer: prismicT.KeyTextField;
+    /**
+     * Pricer field in *Priceplan → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.primary.pricer
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    pricer: prismicT.KeyTextField;
+    /**
+     * Descriptionr field in *Priceplan → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.primary.descriptionr
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    descriptionr: prismicT.RichTextField;
+    /**
+     * Buttonr field in *Priceplan → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.primary.buttonr
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    buttonr: prismicT.LinkField;
+}
+/**
+ * Item in Priceplan → Items
+ *
+ */
+export interface PriceplanSliceRightItem {
+    /**
+     * Specificationsr field in *Priceplan → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: priceplan.items[].specificationsr
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    specificationsr: prismicT.RichTextField;
+}
+/**
+ * right variation for Priceplan Slice
+ *
+ * - **API ID**: `right`
+ * - **Description**: `Priceplan`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PriceplanSliceRight = prismicT.SharedSliceVariation<"right", Simplify<PriceplanSliceRightPrimary>, Simplify<PriceplanSliceRightItem>>;
+/**
+ * Slice variation for *Priceplan*
+ *
+ */
+type PriceplanSliceVariation = PriceplanSliceDefault | PriceplanSliceCenter | PriceplanSliceRight;
+/**
+ * Priceplan Shared Slice
+ *
+ * - **API ID**: `priceplan`
+ * - **Description**: `Priceplan`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PriceplanSlice = prismicT.SharedSlice<"priceplan", PriceplanSliceVariation>;
+/**
+ * Primary content in Quicknote → Primary
+ *
+ */
+interface QuicknoteSliceDefaultPrimary {
+    /**
+     * Title field in *Quicknote → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: quicknote.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Finaldec field in *Quicknote → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: quicknote.primary.finaldec
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    finaldec: prismicT.KeyTextField;
+}
+/**
+ * Item in Quicknote → Items
+ *
+ */
+export interface QuicknoteSliceDefaultItem {
+    /**
+     * Notes field in *Quicknote → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: quicknote.items[].notes
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    notes: prismicT.KeyTextField;
+    /**
+     * Icon field in *Quicknote → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: quicknote.items[].icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    icon: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for Quicknote Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Quicknote`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type QuicknoteSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<QuicknoteSliceDefaultPrimary>, Simplify<QuicknoteSliceDefaultItem>>;
+/**
+ * Slice variation for *Quicknote*
+ *
+ */
+type QuicknoteSliceVariation = QuicknoteSliceDefault;
+/**
+ * Quicknote Shared Slice
+ *
+ * - **API ID**: `quicknote`
+ * - **Description**: `Quicknote`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type QuicknoteSlice = prismicT.SharedSlice<"quicknote", QuicknoteSliceVariation>;
+/**
  * Primary content in Textimg → Primary
  *
  */
@@ -1389,22 +1805,6 @@ type TextimgSliceVariation = TextimgSliceDefault | TextimgSliceTextimgImgBottom;
  */
 export type TextimgSlice = prismicT.SharedSlice<"textimg", TextimgSliceVariation>;
 /**
- * Primary content in TextPile → Primary
- *
- */
-interface TextPileSliceDefaultPrimary {
-    /**
-     * AAAAAA field in *TextPile → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text_pile.primary.aaaaaa
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    aaaaaa: prismicT.RichTextField;
-}
-/**
  * Item in TextPile → Items
  *
  */
@@ -1428,7 +1828,7 @@ export interface TextPileSliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type TextPileSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextPileSliceDefaultPrimary>, Simplify<TextPileSliceDefaultItem>>;
+export type TextPileSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<TextPileSliceDefaultItem>>;
 /**
  * Slice variation for *TextPile*
  *
@@ -1448,6 +1848,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ADocumentData, ADocument, HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceDarkPrimary, ButtonSliceDark, ButtonSliceLogPrimary, ButtonSliceLog, ButtonSliceLogDarkPrimary, ButtonSliceLogDark, ButtonSliceGitPrimary, ButtonSliceGit, ButtonSliceFacebPrimary, ButtonSliceFaceb, ButtonSliceGoogPrimary, ButtonSliceGoog, ButtonSliceVariation, ButtonSlice, ButtonRowSliceDefaultItem, ButtonRowSliceDefault, ButtonRowSliceDarkItem, ButtonRowSliceDark, ButtonRowSliceDarkLogItem, ButtonRowSliceDarkLog, ButtonRowSliceVariation, ButtonRowSlice, CarousellSliceDefaultItem, CarousellSliceDefault, CarousellSliceVariation, CarousellSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceSingleButtonPrimary, InfoboxSliceSingleButton, InfoboxSliceVariation, InfoboxSlice, LogFaceSliceDefaultPrimary, LogFaceSliceDefault, LogFaceSliceVariation, LogFaceSlice, LogGoogSliceDefaultPrimary, LogGoogSliceDefault, LogGoogSliceVariation, LogGoogSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceLoginPrimary, Slice1SliceLogin, Slice1SliceVariation, Slice1Slice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice, TextPileSliceDefaultPrimary, TextPileSliceDefaultItem, TextPileSliceDefault, TextPileSliceVariation, TextPileSlice };
+        export type { ADocumentData, ADocument, HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceDarkPrimary, ButtonSliceDark, ButtonSliceLogPrimary, ButtonSliceLog, ButtonSliceLogDarkPrimary, ButtonSliceLogDark, ButtonSliceGitPrimary, ButtonSliceGit, ButtonSliceFacebPrimary, ButtonSliceFaceb, ButtonSliceGoogPrimary, ButtonSliceGoog, ButtonSliceVariation, ButtonSlice, ButtonRowSliceDefaultItem, ButtonRowSliceDefault, ButtonRowSliceDarkItem, ButtonRowSliceDark, ButtonRowSliceDarkLogItem, ButtonRowSliceDarkLog, ButtonRowSliceVariation, ButtonRowSlice, CarousellSliceDefaultItem, CarousellSliceDefault, CarousellSliceSimpleItem, CarousellSliceSimple, CarousellSliceVariation, CarousellSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceSingleButtonPrimary, InfoboxSliceSingleButton, InfoboxSlicePricingPrimary, InfoboxSlicePricing, InfoboxSliceVariation, InfoboxSlice, LogFaceSliceDefaultPrimary, LogFaceSliceDefault, LogFaceSliceVariation, LogFaceSlice, LogGoogSliceDefaultPrimary, LogGoogSliceDefault, LogGoogSliceVariation, LogGoogSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceLoginPrimary, Slice1SliceLogin, Slice1SliceVariation, Slice1Slice, PriceplanSliceDefaultItem, PriceplanSliceDefault, PriceplanSliceCenterPrimary, PriceplanSliceCenterItem, PriceplanSliceCenter, PriceplanSliceRightPrimary, PriceplanSliceRightItem, PriceplanSliceRight, PriceplanSliceVariation, PriceplanSlice, QuicknoteSliceDefaultPrimary, QuicknoteSliceDefaultItem, QuicknoteSliceDefault, QuicknoteSliceVariation, QuicknoteSlice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice, TextPileSliceDefaultItem, TextPileSliceDefault, TextPileSliceVariation, TextPileSlice };
     }
 }

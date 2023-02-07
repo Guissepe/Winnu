@@ -4,7 +4,6 @@ export function Navigation({ navigation }: any) {
   return (
     <nav>
       <ul>
-        {/* Renders top-level links. */}
         {navigation.data.slices.map((slice: any) => {
           return (
             <li key={slice.id}>
@@ -12,7 +11,6 @@ export function Navigation({ navigation }: any) {
                 <PrismicText field={slice.primary.name} />
               </PrismicLink>
 
-              {/* Renders child links, if present. */}
               {slice.items.length > 0 && (
                 <ul>
                   {slice.items.map((item: any) => {

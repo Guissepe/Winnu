@@ -1,9 +1,6 @@
 export const buttonStyles = {
-
   baseStyle: {},
-
   sizes: {},
-
   variants: {
     primary: {
       bg: "#EBC142",
@@ -20,6 +17,5 @@ export const buttonStyles = {
       fontFamily: "inter",
     },
   },
-  // The default `size` or `variant` values
   defaultProps: {},
 };

@@ -9,7 +9,7 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Blanket"
+              "text": "Alike"
             }
           }
         ]
@@ -20,7 +20,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Do proident qui sit fugiat anim sint mollit ad aute in est. Do laboris voluptate duis minim minim et duis veniam sit cillum voluptate fugiat. Nulla occaecat sit nisi."
+              "text": "Fugiat laborum deserunt commodo aute nulla exercitation consequat in nostrud quis sit cillum occaecat incididunt occaecat. Laborum pariatur quis excepteur proident pariatur in sunt aute aliquip culpa excepteur consectetur. Quis esse ad aliquip commodo voluptate consequat cillum occaecat duis et."
             }
           }
         ]
@@ -36,7 +36,7 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "https://slicemachine.dev"
+                "url": "http://google.com"
               }
             }
           ],
@@ -48,7 +48,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Sit laboris culpa sunt ut tempor ullamco."
+                    "text": "Ipsum dolor aute cillum. Adipisicing officia proident dolor sint elit aliquip quis mollit non. Voluptate aliquip elit excepteur fugiat ea mollit pariatur ad consectetur cillum culpa dolore in do reprehenderit."
                   }
                 }
               ]
@@ -68,7 +68,7 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Dropped"
+              "text": "Round"
             }
           }
         ]
@@ -79,7 +79,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Sunt minim id ex nulla cillum non. Sunt laborum nulla quis elit adipisicing voluptate."
+              "text": "Id pariatur duis in nulla cupidatat ad."
             }
           }
         ]
@@ -88,7 +88,7 @@
         "__TYPE__": "LinkContent",
         "value": {
           "__TYPE__": "ExternalLink",
-          "url": "https://prismic.io"
+          "url": "http://google.com"
         }
       },
       "cta_text": {
@@ -97,7 +97,41 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Exercitation deserunt non pariatur pariatur mollit cupidatat cillum quis dolor."
+              "text": "Officia veniam ad consectetur ex adipisicing occaecat ullamco dolore. Esse id excepteur ipsum nisi veniam ad proident occaecat deserunt aute."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "pricing",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Farmer"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Commodo occaecat exercitation in aliqua qui pariatur ad culpa veniam."
             }
           }
         ]

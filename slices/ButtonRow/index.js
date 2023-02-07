@@ -9,7 +9,7 @@ const ButtonRow = ({ slice }, { providers }) => (
     {slice.variation === 'DarkLog' ? (
       <Flex pb="15%" mx="34%">
         {slice?.items?.map((item, i) => (
-          <Box px="1%" width="300px">
+          <Box px="1%" width={300}>
             <Center>
               <Button
                 fontSize={17}
@@ -17,9 +17,9 @@ const ButtonRow = ({ slice }, { providers }) => (
                 maxWidth={500}
                 height={55}
                 fontFamily="Sora"
-                px="35px"
-                borderRadius="3px"
-                mt={{ base: '5px', md: '10px' }}
+                px={35}
+                borderRadius={3}
+                mt={{ base: 5, md: 10 }}
                 color="grey01"
               >
                 <PrismicLink field={item.cta_link}>
@@ -33,12 +33,13 @@ const ButtonRow = ({ slice }, { providers }) => (
     ) : (
       <Flex pb="15%" mx="34%">
         {slice?.items?.map((item, i) => (
-          <Box px="1%" width="300px">
+          <Box px="1%">
             <Center>
               <Rowbutton
-                bgcolor="#yellow"
                 colors="black"
                 text={item.cta_text}
+                bkg="yellow"
+                Padx=""
               ></Rowbutton>
             </Center>
           </Box>

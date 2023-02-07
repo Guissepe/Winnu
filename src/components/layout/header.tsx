@@ -31,7 +31,6 @@ const header = () => {
     { name: "About Us", route: "/about" },
   ];
 
-
   return (
     <Box bg="black" py="24px" pl="12px" pr="22px">
       <Flex align="center" justify="space-between" maxW="1280px" mx="auto">
@@ -41,7 +40,6 @@ const header = () => {
           height={27}
           alt="winnu logo"
         />
-
         <Show above="md">
           <Flex color="white" fontFamily="sora" fontWeight="600" gridGap="55px">
             {navs.map((nav) => {
@@ -53,7 +51,6 @@ const header = () => {
             })}
           </Flex>
         </Show>
-
         <Show above="lg">
           <Flex align="center">
           {!session &&
@@ -68,7 +65,6 @@ const header = () => {
               Get started
             </Button>
             }
-            {/* Log ing / Log ou button */}
         <Box>
                 {session && <Button onClick={handleSignout} className="btn-signin">Sign out</Button>  }
         </Box>
@@ -87,8 +83,6 @@ const header = () => {
               </>
            }
          </Box>
-        {/*  */}
-
           </Flex>
         </Show>
         <Hide above="md">

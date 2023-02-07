@@ -6,7 +6,7 @@ import "@fontsource/inter";
 
 export const theme = extendTheme({
   colors: {
-
+    border01: "#FFBDB4",
     dkgrey01: "#1e1e1e",
     grey03: "#787878",
     brand: {
@@ -37,4 +37,3 @@ export const theme = extendTheme({
     Button,
   },
 });
-

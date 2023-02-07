@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
-import { PrismicRichText } from '@prismicio/react';
-import { Center, Flex, Image, Box } from '@chakra-ui/react';
-import { Carousel } from 'react-responsive-carousel';
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { motion } from 'framer-motion';
-import Flicking, { ViewportSlot } from '@egjs/react-flicking';
+import React from 'react';
+import { Center, Flex, Box, Image } from '@chakra-ui/react';
+import Flicking from '@egjs/react-flicking';
 import '@egjs/react-flicking/dist/flicking.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const updateform = e => {
   e.currentTarget.panels.forEach(panel => {
@@ -15,30 +12,61 @@ const updateform = e => {
     panel.element.style.transform = `translateZ(-${depth}px) rotateX(${rotateVal}deg)`;
   });
 };
+const updateform2 = e => {
+  e.currentTarget.panels.forEach(panel => {
+    const rotateVal = 1;
+    const depth = 1;
+    panel.element.style.transform = `translateZ(-${depth}px) rotateX(${rotateVal}deg)`;
+  });
+};
 
 const Carousell = ({ slice }) => (
-  <Center>
-    <carouselComp />
-    <Flex pb={200}>
-      <Box className="slide" px={5}>
-        <Flicking horizontal={true} onReady={updateform} onMove={updateform}>
-          {slice?.items?.map((item, i) => (
-            <img
-              width={1100}
-              height={1100}
-              src={item.image.url}
-              alt={item.image.alt}
-            />
-          ))}
-          <ViewportSlot>
-            <div className="date-panel-border"></div>
-            <div className="shadow-top"></div>
-            <div className="shadow-bottom"></div>
-          </ViewportSlot>
-        </Flicking>
-      </Box>
-    </Flex>
-  </Center>
+  <Box>
+    {slice.variation !== 'simple' ? (
+      <Center>
+        <Flex pb={200}>
+          <Box className="slide" px={5}>
+            <Flicking
+              horizontal={true}
+              onReady={updateform}
+              onMove={updateform}
+            >
+              {slice?.items?.map(item => (
+                <img
+                  width={1100}
+                  height={1100}
+                  src={item.image.url}
+                  alt={item.image.alt}
+                />
+              ))}
+            </Flicking>
+          </Box>
+        </Flex>
+      </Center>
+    ) : (
+      <Center>
+        <Flex bg="black" pb={200}>
+          <Box className="slide" px={5}>
+            <Flicking
+              horizontal={true}
+              onReady={updateform2}
+              onMove={updateform2}
+            >
+              {slice?.items?.map(item => (
+                <Image
+                  width={900}
+                  height={800}
+                  src={item.image.url}
+                  alt={item.image.alt}
+                  px={20}
+                />
+              ))}
+            </Flicking>
+          </Box>
+        </Flex>
+      </Center>
+    )}
+  </Box>
 );
 
 export default Carousell;

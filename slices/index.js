@@ -11,6 +11,8 @@ import LogFaceGit from './LogFaceGit';
 import LogGoog from './LogGoog';
 import NavigationItem from './NavigationItem';
 import PageInfo from './PageInfo';
+import Priceplan from './Priceplan';
+import Quicknote from './Quicknote';
 import Textimg from './Textimg';
 import TextPile from './TextPile';
 
@@ -26,6 +28,8 @@ export {
 	LogGoog,
 	NavigationItem,
 	PageInfo,
+	Priceplan,
+	Quicknote,
 	Textimg,
 	TextPile,
 };
@@ -42,6 +46,8 @@ export const components = {
 	log_goog: LogGoog,
 	navigation_item: NavigationItem,
 	slice1: PageInfo,
+	priceplan: Priceplan,
+	quicknote: Quicknote,
 	textimg: Textimg,
 	text_pile: TextPile,
 };

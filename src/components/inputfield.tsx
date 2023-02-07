@@ -1,10 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import {
-  Box,
-  Input,
-} from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Input } from "@chakra-ui/react";
 
 export const InputField = (props: any) => {
 

@@ -55,6 +55,12 @@
             },
             "text_pile": {
               "type": "SharedSlice"
+            },
+            "priceplan": {
+              "type": "SharedSlice"
+            },
+            "quicknote": {
+              "type": "SharedSlice"
             }
           }
         }

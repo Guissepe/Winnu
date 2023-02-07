@@ -1,21 +1,24 @@
 import React from 'react';
-import { Box, Center, Flex, Text, Button } from '@chakra-ui/react';
+import { Center, Text, Button } from '@chakra-ui/react';
 
 const Rowbutton = (props: any) => (
-  <Box px={40}>
-          <Button
-          fontSize={17}
-          width={700}
-          maxWidth={700}
-          height={55}
-          fontFamily="Sora"
-          borderRadius="3px"
-          mt={{ base: '5px', md: '10px' }}
-          background={'black'}
-          color= {props.colors}
-          >
-          <Text> {props.text} </Text>
-        </Button>
-      </Box>
+  <Center  px={props.Padx}>
+    <Button
+      borderRadius={1}
+      my={props.My}
+      mx={props.Mx}
+      fontSize={17}
+      width={250}
+      height={75}
+      color={props.color}
+      background={props.backcolor}
+      fontFamily="Sora"
+      variant="primary">
+        <Text fontSize={20}>
+          {props.Placehold}
+        </Text>
+
+    </Button>
+  </Center>
 )
 export default Rowbutton

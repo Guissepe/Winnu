@@ -3,10 +3,6 @@ import React from "react";
 import {
     Box,
     Select,
-    Text,
-    Button,
-    color,
-    background,
   } from "@chakra-ui/react";
 import { VscTriangleDown } from "react-icons/vsc";
   const options = [

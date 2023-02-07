@@ -1,6 +1,6 @@
 import React from 'react';
 import { PrismicRichText, PrismicLink } from '@prismicio/react';
-import { Box, Button, Flex, Center } from '@chakra-ui/react';
+import { Box, Button, Flex, Center, Image } from '@chakra-ui/react';
 
 const Infobox = ({ slice }) => (
   <Box className="section relative bg-black">
@@ -8,37 +8,38 @@ const Infobox = ({ slice }) => (
       <Center
         textAlign="center"
         fontFamily="sora"
-        pt={{ base: 23, md: 192 }}
+        pt={{ base: 43, md: 192 }}
         pb={{ base: 44, md: 95 }}
         px={22}
         fontSize={20}
       >
         <Box>
-          <Box fontWeight={600} fontSize={{ base: 20, md: 42 }} color="text.01">
+          <Box fontWeight="600" fontSize={{ base: 20, md: 42 }} color="text.01">
             <PrismicRichText field={slice.primary.title} />
           </Box>
           <Box
-            fontSize={{ base: 11, md: 22 }}
-            fontWeight={300}
+            fontSize={{ base: 16, md: 32 }}
+            fontWeight="300"
             fontStyle="italic"
             color="text.grey02"
-            pt="12px"
+            pt={2}
           >
             <PrismicRichText field={slice.primary.description} />
           </Box>
           <Flex
-            mt={34}
+            mt={54}
             direction={{ base: 'column', md: 'row' }}
             justifyContent="center"
           >
             {slice?.items?.map((item, i) => (
-              <Box pt={10} px="10px">
+              <Box height="10%" px={2}>
                 <PrismicLink field={item.cta_link}>
                   <Button
+                    height="10%"
                     width={199}
-                    height="60%"
                     variant="primary"
-                    py="15%"
+                    py={4}
+                    mt={{ base: 20, md: 20 }}
                     borderRadius="0"
                   >
                     <PrismicRichText field={item.cta_text}></PrismicRichText>
@@ -53,39 +54,41 @@ const Infobox = ({ slice }) => (
       <Center
         textAlign="center"
         fontFamily="sora"
-        pt={{ base: 23, md: 192 }}
+        pt={{ base: 43, md: 192 }}
         pb={{ base: 44, md: 95 }}
         px={22}
         fontSize={20}
       >
         <Box>
-          <Box fontWeight={200} fontSize={{ base: 20, md: 42 }} color="text.01">
+          <Box fontWeight="600" fontSize={{ base: 20, md: 42 }} color="text.01">
             <PrismicRichText field={slice.primary.title} />
           </Box>
-          <Box fontSize={{ base: 16, md: 22 }} color="text.02" mt={3}>
+          <Box fontSize={{ base: 16, md: 22 }} color="text.02" mt="16px">
             <PrismicRichText field={slice.primary.description} />
           </Box>
           <Flex
-            mt={34}
+            mt="54px"
             direction={{ base: 'column', md: 'row' }}
             justifyContent="center"
-          >
-            <Box pt={10} px="10px">
-              <PrismicLink field={slice.primary.cta_link}>
-                <Button
-                  width={199}
-                  height="60%"
-                  variant="primary"
-                  py="15%"
-                  borderRadius="0"
-                >
-                  <PrismicRichText
-                    field={slice.primary.cta_text}
-                  ></PrismicRichText>
-                </Button>
-              </PrismicLink>
+          ></Flex>
+          <PrismicLink field={slice.primary.cta_link}>
+            <Box height="15%">
+              <Button
+                src={slice.primary.cta_link}
+                variant="primary"
+                width={199}
+                height="15%"
+                py={18}
+                px={37}
+                mt={{ base: 10, md: 20 }}
+                borderRadius="0"
+              >
+                <PrismicRichText
+                  field={slice.primary.cta_text}
+                ></PrismicRichText>
+              </Button>
             </Box>
-          </Flex>
+          </PrismicLink>
         </Box>
       </Center>
     )}

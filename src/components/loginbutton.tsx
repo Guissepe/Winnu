@@ -1,9 +1,7 @@
-import { getProviders, signIn } from "next-auth/react"
+import { getProviders } from "next-auth/react"
 import {
     Box,
     Button,
-    Flex,
-    Image,
   } from "@chakra-ui/react";
   import {  } from "../../slices";
 

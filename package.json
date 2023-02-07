@@ -13,6 +13,7 @@
   "dependencies": {
     "@calmdownval/eslint-import-resolver-typescript": "^1.1.2",
     "@chakra-ui/react": "^2.4.3",
+    "@egjs/flicking-plugins": "^4.7.0",
     "@egjs/react-flicking": "^4.10.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -30,7 +31,6 @@
     "framer-motion": "^6.5.1",
     "next": "^13.0.6",
     "next-auth": "^4.18.7",
-    "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",

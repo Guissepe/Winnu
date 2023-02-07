@@ -7,6 +7,9 @@
       },
       "singleButton": {
         "items": {}
+      },
+      "pricing": {
+        "items": {}
       }
     },
     "Button": {
@@ -126,6 +129,53 @@
       }
     },
     "Carousell": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Priceplan": {
+      "default": {
+        "primary": {},
+        "items": {}
+      },
+      "center": {
+        "primary": {
+          "descriptionc": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "specificationsc": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      },
+      "right": {
+        "primary": {
+          "descriptionr": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "specificationsr": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Quicknote": {
       "default": {
         "primary": {}
       }

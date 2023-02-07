@@ -2,17 +2,9 @@ import React from "react";
 import Head from "next/head";
 import {
   Box,
-  Button,
-  Flex,
-  Grid,
-  GridItem,
-  Show,
   Input,
-  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
-
-const title = ''
 
 export const InputField = (props: any) => {
 

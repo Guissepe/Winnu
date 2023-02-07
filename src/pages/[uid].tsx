@@ -2,12 +2,12 @@ import * as prismicH from '@prismicio/helpers'
 import { SliceZone } from '@prismicio/react'
 import { createClient} from '../../prismicio'
 import { components } from '../../slices/index'
-import { getProviders, signIn } from "next-auth/react"
-import type { InferGetStaticPropsType, GetStaticPropsContext } from 'next'
+import { getProviders } from "next-auth/react"
+import type { InferGetStaticPropsType } from 'next'
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 type PageParams = { uid: string }
 
-const Page = ({ page, navigation, settings }:any) => {
+const Page = ({ page }:any) => {
   return <SliceZone slices={page.data.slices} components={components} />
 }
 export default Page

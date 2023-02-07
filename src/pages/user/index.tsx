@@ -10,7 +10,7 @@ import {
 import Link from "next/link";
 import { InputField } from "../../components/inputfield";
 import  Dropdown  from "../../components/drpdwn";
-import { useSession, signIn, signOut } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
 
 const about = () => {
     const { data: session, status }: any = useSession();
@@ -35,7 +35,8 @@ const about = () => {
                 color='white' >
                     {session.user.name ?? session.user.email}!
                 </Text>
-            <Text mb='10px'> </Text> <br />
+            <Text mb='10px'> </Text>
+            <br />
             </>
             }
             <Box>

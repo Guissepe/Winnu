@@ -2,7 +2,6 @@ import React from 'react';
 import { Center, Flex, Box, Image } from '@chakra-ui/react';
 import Flicking from '@egjs/react-flicking';
 import '@egjs/react-flicking/dist/flicking.css';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const updateform = e => {
   e.currentTarget.panels.forEach(panel => {

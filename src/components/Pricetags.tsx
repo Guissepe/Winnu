@@ -12,11 +12,10 @@ const Priceplans = (props :any) => (
               <PrismicRichText field={props.description} />
             </Box>
           </Center>
-
           <Box>
             {props.items}
           </Box>
-          <PrismicLink field={props.button}>My Link</PrismicLink>
+          <PrismicLink field={props.button}></PrismicLink>
         </Box>
   </Flex>
 );

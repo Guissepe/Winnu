@@ -1,6 +1,6 @@
 import React from 'react';
 import { PrismicLink } from '@prismicio/react';
-import { Flex, Image, Text, Button, Center, Box } from '@chakra-ui/react';
+import { Flex, Image, Text, Button, Center } from '@chakra-ui/react';
 
 const Header = ({ slice }) => (
   <Center display={'flex'} background={'black'}>

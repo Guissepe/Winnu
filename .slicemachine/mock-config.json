@@ -29,14 +29,8 @@
     },
     "NavigationItem": {
       "default": {
-        "items": {
-          "child_name": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          }
-        }
+        "items": {},
+        "primary": {}
       }
     },
     "PageInfo": {
@@ -176,6 +170,17 @@
       }
     },
     "Quicknote": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Footer": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "LogoButton": {
       "default": {
         "primary": {}
       }

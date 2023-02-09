@@ -1,0 +1,49 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "support": {
+        "__TYPE__": "FieldContent",
+        "value": "courage",
+        "type": "Text"
+      },
+      "winnuhelp": {
+        "__TYPE__": "FieldContent",
+        "value": "layers",
+        "type": "Text"
+      },
+      "contactus": {
+        "__TYPE__": "FieldContent",
+        "value": "crop",
+        "type": "Text"
+      },
+      "company": {
+        "__TYPE__": "FieldContent",
+        "value": "late",
+        "type": "Text"
+      },
+      "about_us": {
+        "__TYPE__": "FieldContent",
+        "value": "invented",
+        "type": "Text"
+      },
+      "careers": {
+        "__TYPE__": "FieldContent",
+        "value": "something",
+        "type": "Text"
+      },
+      "terms_and_policies": {
+        "__TYPE__": "FieldContent",
+        "value": "golden",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

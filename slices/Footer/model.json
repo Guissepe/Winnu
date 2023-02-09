@@ -1,0 +1,68 @@
+{
+  "id": "footer",
+  "type": "SharedSlice",
+  "name": "Footer",
+  "description": "Footer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Footer",
+      "primary": {
+        "support": {
+          "type": "Text",
+          "config": {
+            "label": "Support",
+            "placeholder": ""
+          }
+        },
+        "winnuhelp": {
+          "type": "Text",
+          "config": {
+            "label": "Winnuhelp",
+            "placeholder": ""
+          }
+        },
+        "contactus": {
+          "type": "Text",
+          "config": {
+            "label": "ContactUs",
+            "placeholder": ""
+          }
+        },
+        "company": {
+          "type": "Text",
+          "config": {
+            "label": "Company",
+            "placeholder": ""
+          }
+        },
+        "about_us": {
+          "type": "Text",
+          "config": {
+            "label": "About Us",
+            "placeholder": ""
+          }
+        },
+        "careers": {
+          "type": "Text",
+          "config": {
+            "label": "Careers",
+            "placeholder": ""
+          }
+        },
+        "terms_and_policies": {
+          "type": "Text",
+          "config": {
+            "label": "Terms and Policies",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

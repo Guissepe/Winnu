@@ -19,24 +19,54 @@
             "thumbnails": []
           }
         },
-        "button": {
-          "type": "Link",
+        "login": {
+          "type": "Text",
           "config": {
-            "label": "Button",
-            "placeholder": "",
-            "select": "media"
+            "label": "Login",
+            "placeholder": ""
           }
         },
-        "normalbutton": {
+        "loglink": {
           "type": "Link",
           "config": {
-            "label": "Normalbutton",
+            "label": "Loglink",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "getstarted": {
+          "type": "Text",
+          "config": {
+            "label": "Getstarted",
+            "placeholder": ""
+          }
+        },
+        "startedlink": {
+          "type": "Link",
+          "config": {
+            "label": "Startedlink",
             "placeholder": "",
             "select": null
           }
         }
       },
-      "items": {},
+      "items": {
+        "buttonname": {
+          "type": "Text",
+          "config": {
+            "label": "Buttonname",
+            "placeholder": ""
+          }
+        },
+        "buttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "Buttonlink",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

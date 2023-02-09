@@ -61,6 +61,12 @@
             },
             "quicknote": {
               "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
+            },
+            "logo_button": {
+              "type": "SharedSlice"
             }
           }
         }

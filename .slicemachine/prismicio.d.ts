@@ -108,7 +108,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | NavigationItemSlice | Slice1Slice | ButtonSlice | TextimgSlice | CustumersSlice | ButtonRowSlice | CarousellSlice | ImgrowSlice | TextPileSlice | LogFaceSlice | LogGoogSlice;
+type HomepageDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | NavigationItemSlice | Slice1Slice | ButtonSlice | TextimgSlice | CustumersSlice | ButtonRowSlice | CarousellSlice | ImgrowSlice | TextPileSlice | LogFaceSlice | LogGoogSlice | FooterSlice | LogoButtonSlice | PriceplanSlice | QuicknoteSlice;
 /**
  * Homepage document from Prismic
  *
@@ -217,7 +217,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ButtonSlice | ButtonRowSlice | ImgrowSlice | HeaderSlice | CustumersSlice | CarousellSlice | InfoboxSlice | LogFaceSlice | LogGoogSlice | TextimgSlice | Slice1Slice | NavigationItemSlice | TextPileSlice | PriceplanSlice | QuicknoteSlice;
+type PageDocumentDataSlicesSlice = ButtonSlice | ButtonRowSlice | ImgrowSlice | HeaderSlice | CustumersSlice | CarousellSlice | InfoboxSlice | LogFaceSlice | LogGoogSlice | TextimgSlice | Slice1Slice | NavigationItemSlice | TextPileSlice | PriceplanSlice | QuicknoteSlice | FooterSlice | LogoButtonSlice;
 /**
  * Page document from Prismic
  *
@@ -749,6 +749,105 @@ type CustumersSliceVariation = CustumersSliceDefault;
  */
 export type CustumersSlice = prismicT.SharedSlice<"custumers", CustumersSliceVariation>;
 /**
+ * Primary content in Footer → Primary
+ *
+ */
+interface FooterSliceDefaultPrimary {
+    /**
+     * Support field in *Footer → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.primary.support
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    support: prismicT.KeyTextField;
+    /**
+     * Winnuhelp field in *Footer → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.primary.winnuhelp
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    winnuhelp: prismicT.KeyTextField;
+    /**
+     * ContactUs field in *Footer → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.primary.contactus
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    contactus: prismicT.KeyTextField;
+    /**
+     * Company field in *Footer → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.primary.company
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    company: prismicT.KeyTextField;
+    /**
+     * About Us field in *Footer → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.primary.about_us
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    about_us: prismicT.KeyTextField;
+    /**
+     * Careers field in *Footer → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.primary.careers
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    careers: prismicT.KeyTextField;
+    /**
+     * Terms and Policies field in *Footer → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.primary.terms_and_policies
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    terms_and_policies: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Footer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Footer`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FooterSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Footer*
+ *
+ */
+type FooterSliceVariation = FooterSliceDefault;
+/**
+ * Footer Shared Slice
+ *
+ * - **API ID**: `footer`
+ * - **Description**: `Footer`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterSlice = prismicT.SharedSlice<"footer", FooterSliceVariation>;
+/**
  * Primary content in Header → Primary
  *
  */
@@ -764,25 +863,71 @@ interface HeaderSliceDefaultPrimary {
      */
     logo: prismicT.ImageField<never>;
     /**
-     * Button field in *Header → Primary*
+     * Login field in *Header → Primary*
      *
-     * - **Field Type**: Link to Media
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: header.primary.button
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     * - **API ID Path**: header.primary.login
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    button: prismicT.LinkToMediaField;
+    login: prismicT.KeyTextField;
     /**
-     * Normalbutton field in *Header → Primary*
+     * Loglink field in *Header → Primary*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: header.primary.normalbutton
+     * - **API ID Path**: header.primary.loglink
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    normalbutton: prismicT.LinkField;
+    loglink: prismicT.LinkField;
+    /**
+     * Getstarted field in *Header → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.primary.getstarted
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    getstarted: prismicT.KeyTextField;
+    /**
+     * Startedlink field in *Header → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.primary.startedlink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    startedlink: prismicT.LinkField;
+}
+/**
+ * Item in Header → Items
+ *
+ */
+export interface HeaderSliceDefaultItem {
+    /**
+     * Buttonname field in *Header → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.items[].buttonname
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    buttonname: prismicT.KeyTextField;
+    /**
+     * Buttonlink field in *Header → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.items[].buttonlink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    buttonlink: prismicT.LinkField;
 }
 /**
  * Default variation for Header Slice
@@ -792,7 +937,7 @@ interface HeaderSliceDefaultPrimary {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type HeaderSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeaderSliceDefaultPrimary>, never>;
+export type HeaderSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeaderSliceDefaultPrimary>, Simplify<HeaderSliceDefaultItem>>;
 /**
  * Slice variation for *Header*
  *
@@ -1146,30 +1291,135 @@ type LogGoogSliceVariation = LogGoogSliceDefault;
  */
 export type LogGoogSlice = prismicT.SharedSlice<"log_goog", LogGoogSliceVariation>;
 /**
+ * Primary content in LogoButton → Primary
+ *
+ */
+interface LogoButtonSliceDefaultPrimary {
+    /**
+     * Logo field in *LogoButton → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: logo_button.primary.logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
+     * Follow field in *LogoButton → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: logo_button.primary.follow
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    follow: prismicT.KeyTextField;
+}
+/**
+ * Item in LogoButton → Items
+ *
+ */
+export interface LogoButtonSliceDefaultItem {
+    /**
+     * Icon field in *LogoButton → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: logo_button.items[].icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    icon: prismicT.ImageField<never>;
+    /**
+     * Link field in *LogoButton → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: logo_button.items[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Default variation for LogoButton Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `LogoButton`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type LogoButtonSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<LogoButtonSliceDefaultPrimary>, Simplify<LogoButtonSliceDefaultItem>>;
+/**
+ * Slice variation for *LogoButton*
+ *
+ */
+type LogoButtonSliceVariation = LogoButtonSliceDefault;
+/**
+ * LogoButton Shared Slice
+ *
+ * - **API ID**: `logo_button`
+ * - **Description**: `LogoButton`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type LogoButtonSlice = prismicT.SharedSlice<"logo_button", LogoButtonSliceVariation>;
+/**
  * Primary content in NavigationItem → Primary
  *
  */
 interface NavigationItemSliceDefaultPrimary {
     /**
-     * Name field in *NavigationItem → Primary*
+     * Login field in *NavigationItem → Primary*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: navigation_item.primary.name
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **API ID Path**: navigation_item.primary.login
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    name: prismicT.RichTextField;
+    login: prismicT.KeyTextField;
     /**
-     * Link field in *NavigationItem → Primary*
+     * loglink field in *NavigationItem → Primary*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: navigation_item.primary.link
+     * - **API ID Path**: navigation_item.primary.loglink
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    link: prismicT.LinkField;
+    loglink: prismicT.LinkField;
+    /**
+     * Getstarted field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.getstarted
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    getstarted: prismicT.RichTextField;
+    /**
+     * Gtstarted field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.gtstarted
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    gtstarted: prismicT.LinkField;
+    /**
+     * Logo field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
 }
 /**
  * Item in NavigationItem → Items
@@ -1177,15 +1427,15 @@ interface NavigationItemSliceDefaultPrimary {
  */
 export interface NavigationItemSliceDefaultItem {
     /**
-     * Child Name field in *NavigationItem → Items*
+     * Name field in *NavigationItem → Items*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: navigation_item.items[].child_name
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **API ID Path**: navigation_item.items[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    child_name: prismicT.TitleField;
+    name: prismicT.KeyTextField;
     /**
      * Child Link field in *NavigationItem → Items*
      *
@@ -1848,6 +2098,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ADocumentData, ADocument, HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceDarkPrimary, ButtonSliceDark, ButtonSliceLogPrimary, ButtonSliceLog, ButtonSliceLogDarkPrimary, ButtonSliceLogDark, ButtonSliceGitPrimary, ButtonSliceGit, ButtonSliceFacebPrimary, ButtonSliceFaceb, ButtonSliceGoogPrimary, ButtonSliceGoog, ButtonSliceVariation, ButtonSlice, ButtonRowSliceDefaultItem, ButtonRowSliceDefault, ButtonRowSliceDarkItem, ButtonRowSliceDark, ButtonRowSliceDarkLogItem, ButtonRowSliceDarkLog, ButtonRowSliceVariation, ButtonRowSlice, CarousellSliceDefaultItem, CarousellSliceDefault, CarousellSliceSimpleItem, CarousellSliceSimple, CarousellSliceVariation, CarousellSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, HeaderSliceDefaultPrimary, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceSingleButtonPrimary, InfoboxSliceSingleButton, InfoboxSlicePricingPrimary, InfoboxSlicePricing, InfoboxSliceVariation, InfoboxSlice, LogFaceSliceDefaultPrimary, LogFaceSliceDefault, LogFaceSliceVariation, LogFaceSlice, LogGoogSliceDefaultPrimary, LogGoogSliceDefault, LogGoogSliceVariation, LogGoogSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceLoginPrimary, Slice1SliceLogin, Slice1SliceVariation, Slice1Slice, PriceplanSliceDefaultItem, PriceplanSliceDefault, PriceplanSliceCenterPrimary, PriceplanSliceCenterItem, PriceplanSliceCenter, PriceplanSliceRightPrimary, PriceplanSliceRightItem, PriceplanSliceRight, PriceplanSliceVariation, PriceplanSlice, QuicknoteSliceDefaultPrimary, QuicknoteSliceDefaultItem, QuicknoteSliceDefault, QuicknoteSliceVariation, QuicknoteSlice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice, TextPileSliceDefaultItem, TextPileSliceDefault, TextPileSliceVariation, TextPileSlice };
+        export type { ADocumentData, ADocument, HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceDarkPrimary, ButtonSliceDark, ButtonSliceLogPrimary, ButtonSliceLog, ButtonSliceLogDarkPrimary, ButtonSliceLogDark, ButtonSliceGitPrimary, ButtonSliceGit, ButtonSliceFacebPrimary, ButtonSliceFaceb, ButtonSliceGoogPrimary, ButtonSliceGoog, ButtonSliceVariation, ButtonSlice, ButtonRowSliceDefaultItem, ButtonRowSliceDefault, ButtonRowSliceDarkItem, ButtonRowSliceDark, ButtonRowSliceDarkLogItem, ButtonRowSliceDarkLog, ButtonRowSliceVariation, ButtonRowSlice, CarousellSliceDefaultItem, CarousellSliceDefault, CarousellSliceSimpleItem, CarousellSliceSimple, CarousellSliceVariation, CarousellSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceSingleButtonPrimary, InfoboxSliceSingleButton, InfoboxSlicePricingPrimary, InfoboxSlicePricing, InfoboxSliceVariation, InfoboxSlice, LogFaceSliceDefaultPrimary, LogFaceSliceDefault, LogFaceSliceVariation, LogFaceSlice, LogGoogSliceDefaultPrimary, LogGoogSliceDefault, LogGoogSliceVariation, LogGoogSlice, LogoButtonSliceDefaultPrimary, LogoButtonSliceDefaultItem, LogoButtonSliceDefault, LogoButtonSliceVariation, LogoButtonSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceLoginPrimary, Slice1SliceLogin, Slice1SliceVariation, Slice1Slice, PriceplanSliceDefaultItem, PriceplanSliceDefault, PriceplanSliceCenterPrimary, PriceplanSliceCenterItem, PriceplanSliceCenter, PriceplanSliceRightPrimary, PriceplanSliceRightItem, PriceplanSliceRight, PriceplanSliceVariation, PriceplanSlice, QuicknoteSliceDefaultPrimary, QuicknoteSliceDefaultItem, QuicknoteSliceDefault, QuicknoteSliceVariation, QuicknoteSlice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice, TextPileSliceDefaultItem, TextPileSliceDefault, TextPileSliceVariation, TextPileSlice };
     }
 }

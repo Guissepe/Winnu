@@ -3,23 +3,56 @@
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
     "primary": {
-      "name": {
+      "login": {
+        "__TYPE__": "FieldContent",
+        "value": "ability",
+        "type": "Text"
+      },
+      "loglink": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
+      },
+      "getstarted": {
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
             "type": "paragraph",
             "content": {
-              "text": "Aliquip ea ad labore amet. Commodo exercitation minim consequat occaecat consectetur sit officia sit officia nulla."
+              "text": "Ad sunt minim qui laboris ad occaecat esse aliquip laboris occaecat."
             }
           }
         ]
       },
-      "link": {
+      "gtstarted": {
         "__TYPE__": "LinkContent",
         "value": {
           "__TYPE__": "ExternalLink",
-          "url": "https://slicemachine.dev"
+          "url": "https://prismic.io"
         }
+      },
+      "logo": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+          "width": 4480,
+          "height": 4480
+        },
+        "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+        "width": 4480,
+        "height": 4480,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
       }
     },
     "items": [
@@ -27,17 +60,11 @@
         "__TYPE__": "GroupItemContent",
         "value": [
           [
-            "child_name",
+            "name",
             {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "heading1",
-                  "content": {
-                    "text": "Wonderful"
-                  }
-                }
-              ]
+              "__TYPE__": "FieldContent",
+              "value": "pig",
+              "type": "Text"
             }
           ],
           [

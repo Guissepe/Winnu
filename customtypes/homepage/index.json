@@ -71,6 +71,18 @@
             },
             "log_goog": {
               "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
+            },
+            "logo_button": {
+              "type": "SharedSlice"
+            },
+            "priceplan": {
+              "type": "SharedSlice"
+            },
+            "quicknote": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -26,29 +26,54 @@
         "__TYPE__": "ImageContent",
         "thumbnails": {}
       },
-      "button": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "id": "mock_Media_link",
-          "kind": "image/jpeg",
-          "name": "mock_name",
-          "url": "https://source.unsplash.com/daily",
-          "size": "0",
-          "__TYPE__": "FileLink"
-        }
+      "login": {
+        "__TYPE__": "FieldContent",
+        "value": "beautiful",
+        "type": "Text"
       },
-      "normalbutton": {
+      "loglink": {
         "__TYPE__": "LinkContent",
         "value": {
           "__TYPE__": "ExternalLink",
-          "url": "https://prismic.io"
+          "url": "http://google.com"
+        }
+      },
+      "getstarted": {
+        "__TYPE__": "FieldContent",
+        "value": "fully",
+        "type": "Text"
+      },
+      "startedlink": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://google.com"
         }
       }
     },
     "items": [
       {
         "__TYPE__": "GroupItemContent",
-        "value": []
+        "value": [
+          [
+            "buttonname",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "such",
+              "type": "Text"
+            }
+          ],
+          [
+            "buttonlink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            }
+          ]
+        ]
       }
     ]
   }

@@ -4,11 +4,13 @@ import Button from './Button';
 import ButtonRow from './ButtonRow';
 import Carousell from './Carousell';
 import Custumers from './Custumers';
+import Footer from './Footer';
 import Header from './Header';
 import Imgrow from './Imgrow';
 import Infobox from './Infobox';
 import LogFaceGit from './LogFaceGit';
 import LogGoog from './LogGoog';
+import LogoButton from './LogoButton';
 import NavigationItem from './NavigationItem';
 import PageInfo from './PageInfo';
 import Priceplan from './Priceplan';
@@ -21,11 +23,13 @@ export {
 	ButtonRow,
 	Carousell,
 	Custumers,
+	Footer,
 	Header,
 	Imgrow,
 	Infobox,
 	LogFaceGit,
 	LogGoog,
+	LogoButton,
 	NavigationItem,
 	PageInfo,
 	Priceplan,
@@ -39,11 +43,13 @@ export const components = {
 	button_row: ButtonRow,
 	carousell: Carousell,
 	custumers: Custumers,
+	footer: Footer,
 	header: Header,
 	imgrow: Imgrow,
 	infobox: Infobox,
 	log_face: LogFaceGit,
 	log_goog: LogGoog,
+	logo_button: LogoButton,
 	navigation_item: NavigationItem,
 	slice1: PageInfo,
 	priceplan: Priceplan,

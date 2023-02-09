@@ -6,7 +6,6 @@ import { SessionProvider } from "next-auth/react"
 import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName, linkResolver } from "../../prismicio";
-import Layout from "../components/layout/layout";
 import React from "react";
 
 function App({ Component, pageProps }: { Component: any; pageProps: any }) {
@@ -20,9 +19,7 @@ function App({ Component, pageProps }: { Component: any; pageProps: any }) {
       <PrismicPreview repositoryName={repositoryName}>
         <ChakraProvider theme={theme}>
         <SessionProvider session={pageProps.session}>
-          <Layout>
                 <Component {...pageProps} />
-          </Layout>
           </SessionProvider>
         </ChakraProvider>
       </PrismicPreview>

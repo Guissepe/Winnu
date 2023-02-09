@@ -5,10 +5,10 @@ import { LogInbutton } from '../../src/components/loginbutton.tsx';
 import { handleGoogleSignin } from '../../src/components/Handlers.tsx';
 import { getProviders } from 'next-auth/react';
 
-const GoogBtton = ({ slice }) => (
-  <Center bg="black">
+const GoogleButton = ({ slice }) => (
+  <Center fontFamily={'sora'} bg="black">
     <LogInbutton
-      marginTop={115}
+      marginTop={'7rem'}
       classname={slice.variation}
       variant="primary"
       src={handleGoogleSignin}
@@ -18,7 +18,7 @@ const GoogBtton = ({ slice }) => (
   </Center>
 );
 
-export default GoogBtton;
+export default GoogleButton;
 
 export async function getServerSideProps(context) {
   const providers = await getProviders();

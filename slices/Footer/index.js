@@ -1,30 +1,29 @@
 import React from 'react';
-import { PrismicRichText } from '@prismicio/react';
-import { Box, Text, Flex, Center } from '@chakra-ui/react';
+import { Box, Text, Flex, Center, HStack, VStack } from '@chakra-ui/react';
 
 const Footer = ({ slice }) => (
-  <Box fontFamily={'Sora'} background={'black'}>
-    <Center mr={20}>
+  <Box fontFamily={'sora'} background={'black'}>
+    <Center mr={'9rem'}>
       <Flex>
-        <Box px={140} display={'Box'}>
+        <Box px={'9rem'}>
           <Text color="white" my={4}>
             {slice.primary.support}
           </Text>
-          <Box color={'text.peach'}>
-            <Text my={4}>{slice.primary.winnuhelp}</Text>
-            <Text my={4}>{slice.primary.contactus}</Text>
-          </Box>
+          <VStack spacing={4} color={'text.peach'}>
+            <Text>{slice.primary.winnuhelp}</Text>
+            <Text>{slice.primary.contactus}</Text>
+          </VStack>
         </Box>
-        <Box display={'Box'}>
+        <VStack pb={'3.5rem'} display={'Box'}>
           <Text color="white" my={4}>
             {slice.primary.company}
           </Text>
-          <Box color="text.peach">
-            <Text my={4}>{slice.primary.about_us}</Text>
-            <Text my={4}>{slice.primary.careers}</Text>
-            <Text my={4}>{slice.primary.terms_and_policies}</Text>
-          </Box>
-        </Box>
+          <VStack align={'start'} spacing={4} color="text.peach">
+            <Text>{slice.primary.about_us}</Text>
+            <Text>{slice.primary.careers}</Text>
+            <Text>{slice.primary.terms_and_policies}</Text>
+          </VStack>
+        </VStack>
       </Flex>
     </Center>
   </Box>

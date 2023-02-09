@@ -32,6 +32,7 @@ const Carousell = ({ slice }) => (
             >
               {slice?.items?.map(item => (
                 <img
+                  title="Website builder example screen"
                   width={1100}
                   height={1100}
                   src={item.image.url}
@@ -44,7 +45,7 @@ const Carousell = ({ slice }) => (
       </Center>
     ) : (
       <Center>
-        <Flex bg="black" pb={200}>
+        <Flex bg="black" pb={'12rem'}>
           <Box className="slide" px={5}>
             <Flicking
               horizontal={true}
@@ -57,7 +58,7 @@ const Carousell = ({ slice }) => (
                   height={800}
                   src={item.image.url}
                   alt={item.image.alt}
-                  px={20}
+                  px={'1.25rem'}
                 />
               ))}
             </Flicking>

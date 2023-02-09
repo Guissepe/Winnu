@@ -9,9 +9,9 @@ import {
 } from '../../src/components/Handlers.tsx';
 import { getProviders } from 'next-auth/react';
 
-const Btton = ({ slice }) => (
+const Button = ({ slice }) => (
   <Center bg="black">
-    {slice.variation === 'goog' ? (
+    {slice.variation === 'google' ? (
       <LogInbutton
         classname={slice.variation}
         variant="primary"
@@ -22,7 +22,7 @@ const Btton = ({ slice }) => (
     ) : (
       <Box />
     )}
-    {slice.variation === 'git' ? (
+    {slice.variation === 'github' ? (
       <LogInbutton
         classname={slice.variation}
         variant="primary"
@@ -33,7 +33,7 @@ const Btton = ({ slice }) => (
     ) : (
       <Box />
     )}
-    {slice.variation === 'face' ? (
+    {slice.variation === 'facebook' ? (
       <LogInbutton
         classname={slice.variation}
         variant="primary"
@@ -47,7 +47,7 @@ const Btton = ({ slice }) => (
   </Center>
 );
 
-export default Btton;
+export default Button;
 
 export async function getServerSideProps(context) {
   const providers = await getProviders();

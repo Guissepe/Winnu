@@ -43,7 +43,8 @@ return (
      {
       session &&
         <>
-          <Text color='white' >{session.user.name ?? session.user.email}!</Text>
+          <Text color='white' >{session.user.name}!</Text>
+          <Text color='white' >{session.user.email}!</Text>
          <Text mb='10px'> </Text> <br />
         </>
       }

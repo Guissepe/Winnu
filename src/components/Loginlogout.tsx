@@ -3,9 +3,7 @@ import { Box, Button, Flex, Hide, Show, Text } from "@chakra-ui/react";
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Image from "next/image";
 import Link from "next/link";
-import { any } from "io-ts";
 const Loginfunction = () => {
-
 
 const handleSignin = (e: any) => {
   e.preventDefault()
@@ -18,7 +16,6 @@ const handleSignout = (e: any) => {
 }
 const { data: session, status }: any = useSession();
 const loading = status === "loading"
-
 
 return (
 <Box bg="black" py="24px" pl="12px" pr="22px">

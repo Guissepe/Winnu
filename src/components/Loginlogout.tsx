@@ -16,8 +16,10 @@ const handleSignout = (e: any) => {
 }
 const { data: session, status }: any = useSession();
 const loading = status === "loading"
+console.log(session)
 
 return (
+
 <Box bg="black" py="24px" pl="12px" pr="22px">
 <Flex align="center" justify="space-between" maxW="1280px" mx="auto">
 

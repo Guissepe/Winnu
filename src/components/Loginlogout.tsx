@@ -47,6 +47,7 @@ return (
         <>
           <Text color='white' >{session.user.name}!</Text>
           <Text color='white' >{session.user.email}!</Text>
+          <img src={session.user.image}></img>
          <Text mb='10px'> </Text> <br />
         </>
       }

@@ -2376,6 +2376,16 @@ interface WelcomSliceDefaultPrimary {
      *
      */
     welcome: prismicT.KeyTextField;
+    /**
+     * Button field in *Welcom → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: welcom.primary.button
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    button: prismicT.KeyTextField;
 }
 /**
  * Default variation for Welcom Slice

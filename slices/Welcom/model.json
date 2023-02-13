@@ -144,6 +144,13 @@
             "label": "Welcome",
             "placeholder": ""
           }
+        },
+        "button": {
+          "type": "Text",
+          "config": {
+            "label": "Button",
+            "placeholder": ""
+          }
         }
       },
       "items": {},

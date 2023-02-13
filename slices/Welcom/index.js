@@ -59,7 +59,7 @@ const Welcom = ({ slice }) => (
           variant="primary"
           placeholder={'Create an account'}
         >
-          Create an account
+          {slice.primary.button}
         </Button>
       </Center>
     </VStack>

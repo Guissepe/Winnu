@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, Center, VStack, Image, HStack } from '@chakra-ui/react';
+import { Text, Center, VStack, Image, HStack, Button } from '@chakra-ui/react';
 import BigDropdown from '../../src/components/Bigdropdown copy.tsx';
 import SmallDropdown from '../../src/components/Smalldropdown.tsx';
 import { InputField } from '../../src/components/inputfield.tsx';
 import Username from '../../src/components/Username.tsx';
 import Userimage from '../../src/components/Userimage.tsx';
+import Rowbutton from '../../src/components/Rowbutton.tsx';
 
 const Welcom = ({ slice }) => (
   <Center fontFamily={'sora'} background={'black'}>
@@ -50,6 +51,17 @@ const Welcom = ({ slice }) => (
           text4="Other"
         ></SmallDropdown>
       </VStack>
+      <Center pt={'2rem'}>
+        <Button
+          borderRadius={'0.25rem'}
+          height={'3rem'}
+          width={'16rem'}
+          variant="primary"
+          placeholder={'Create an account'}
+        >
+          Create an account
+        </Button>
+      </Center>
     </VStack>
   </Center>
 );

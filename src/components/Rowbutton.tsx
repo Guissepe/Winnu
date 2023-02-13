@@ -15,7 +15,7 @@ const Rowbutton = (props: any) => (
       fontFamily="Sora"
       variant="primary">
         <Text fontSize={20}>
-          {props.Placehold}
+          {props.placehold}
         </Text>
 
     </Button>

@@ -9,7 +9,9 @@ import username from '../../src/components/Username.tsx';
 const Welcome = ({ slice }) => (
   <Box>
     <VStack>
-      <span>{slice.primary.welcome}, {username}</span>
+      <span>
+        {slice.primary.welcome}, {username}
+      </span>
       <Text>{slice.primary.username}</Text>
       <InputField></InputField>
       <Text>{slice.primary.displayname}</Text>

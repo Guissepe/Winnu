@@ -27,7 +27,7 @@ const Username = () => {
            {
             session &&
               <>
-                <Text color='white' >{session.user.name ?? session.user.email}!</Text>
+                <Text fontSize={'3rem'} color='white' >{session.user.name ?? session.user.email}!</Text>
                <Text mb='0.625rem'> </Text> <br />
               </>
             }

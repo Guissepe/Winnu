@@ -1,0 +1,138 @@
+{
+  "id": "welcom",
+  "type": "SharedSlice",
+  "name": "Welcom",
+  "description": "Welcom",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Welcom",
+      "primary": {
+        "username": {
+          "type": "Text",
+          "config": {
+            "label": "Username",
+            "placeholder": ""
+          }
+        },
+        "display_name": {
+          "type": "Text",
+          "config": {
+            "label": "Display Name",
+            "placeholder": ""
+          }
+        },
+        "describe_your_role": {
+          "type": "Text",
+          "config": {
+            "label": "Describe your role",
+            "placeholder": ""
+          }
+        },
+        "how_do_want_to_use_winnu": {
+          "type": "Text",
+          "config": {
+            "label": "How do want to use Winnu",
+            "placeholder": ""
+          }
+        },
+        "role1": {
+          "type": "Text",
+          "config": {
+            "label": "Role1",
+            "placeholder": ""
+          }
+        },
+        "role2": {
+          "type": "Text",
+          "config": {
+            "label": "Role2",
+            "placeholder": ""
+          }
+        },
+        "role3": {
+          "type": "Text",
+          "config": {
+            "label": "Role3",
+            "placeholder": ""
+          }
+        },
+        "role4": {
+          "type": "Text",
+          "config": {
+            "label": "Role4",
+            "placeholder": ""
+          }
+        },
+        "role5": {
+          "type": "Text",
+          "config": {
+            "label": "Role5",
+            "placeholder": ""
+          }
+        },
+        "role6": {
+          "type": "Text",
+          "config": {
+            "label": "Role6",
+            "placeholder": ""
+          }
+        },
+        "role7": {
+          "type": "Text",
+          "config": {
+            "label": "Role7",
+            "placeholder": ""
+          }
+        },
+        "role8": {
+          "type": "Text",
+          "config": {
+            "label": "Role8",
+            "placeholder": ""
+          }
+        },
+        "role9": {
+          "type": "Text",
+          "config": {
+            "label": "Role9",
+            "placeholder": ""
+          }
+        },
+        "use1": {
+          "type": "Text",
+          "config": {
+            "label": "Use1",
+            "placeholder": ""
+          }
+        },
+        "use2": {
+          "type": "Text",
+          "config": {
+            "label": "Use2",
+            "placeholder": ""
+          }
+        },
+        "use3": {
+          "type": "Text",
+          "config": {
+            "label": "Use3",
+            "placeholder": ""
+          }
+        },
+        "use4": {
+          "type": "Text",
+          "config": {
+            "label": "Use4",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

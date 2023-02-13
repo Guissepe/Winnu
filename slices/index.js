@@ -17,6 +17,7 @@ import Priceplan from './Priceplan';
 import Quicknote from './Quicknote';
 import Textimage from './Textimage';
 import TextPile from './TextPile';
+import Welcom from './Welcom';
 
 export {
 	Button,
@@ -36,6 +37,7 @@ export {
 	Quicknote,
 	Textimage,
 	TextPile,
+	Welcom,
 };
 
 export const components = {
@@ -56,4 +58,5 @@ export const components = {
 	quicknote: Quicknote,
 	textimg: Textimage,
 	text_pile: TextPile,
+	welcom: Welcom,
 };

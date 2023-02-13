@@ -189,6 +189,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "Welcom": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

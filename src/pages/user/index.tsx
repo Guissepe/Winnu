@@ -12,7 +12,7 @@
 // import  Dropdown  from "../../components/drpdwn";
 // import { useSession } from 'next-auth/react'
 
-// const about = () => {
+const a = () => {
 //     const { data: session, status }: any = useSession();
 
 //   return (
@@ -114,6 +114,6 @@
 //         }
 //     </Box>
 //     );
-//     };
+    };
 
-// export default about;
+export default a;

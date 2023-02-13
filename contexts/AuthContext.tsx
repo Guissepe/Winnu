@@ -27,7 +27,7 @@ import { createContext, ReactNode, useEffect, useState } from "react";
 
 // let authChannel: BroadcastChannel;
 
-// export function signOut() {
+export function signOut() {
 //   destroyCookie(undefined, 'nextauth.token');
 //   destroyCookie(undefined, 'nextauth.refreshToken');
 
@@ -109,4 +109,4 @@ import { createContext, ReactNode, useEffect, useState } from "react";
 //       {children}
 //     </AuthContext.Provider>
 //   )
-// }
+}

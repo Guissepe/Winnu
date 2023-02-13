@@ -11,28 +11,28 @@ import { VscTriangleDown } from "react-icons/vsc";
     { value: 'vanilla', label: 'Vanilla' }
   ]
 
-const BigDropdown = (props: any) => {
+const Dropdown = (props: any) => {
 
 const [value, setValue] = useState('values');
 const styles = {
-    background: 'grey01' ,
-    color: 'white',
-    _hover: {background: 'Yellow02', color: 'Yellow02'},
+    background: '#1E1E1E' ,
+    color: '#FFFFFF',
+    _hover: {background: '#C9A538', color: '#C9A538'},
 
 }
 
 return(
 
-    <Box width='519px'  background='grey01'>
+    <Box width='519px'  background='#1E1E1E'>
         <Select
          onChange={(e) => setValue(e.target.value)}
-         iconColor='Lightgrey'
+         iconColor='#A3A3A3'
          icon={<VscTriangleDown />}
-         background='grey01'
-         textColor= 'white'
-         focusBorderColor='Yellow02'
+         background='#1E1E1E'
+         textColor= '#ffffff'
+         focusBorderColor='#C9A538'
          >
-            <option color='Yellow02' style={styles} value={'select an option'}>Please select an option</option>
+            <option color='#C9A538' style={styles} value={'select an option'}>Please select an option</option>
             <option style={styles} value={props.vl1}>{props.text1}</option>
             <option style={styles} value={props.vl2}>{props.text2}</option>
             <option style={styles} value={props.vl3}>{props.text3}</option>
@@ -47,4 +47,4 @@ return(
 
 )
 };
-  export default BigDropdown;
+  export default Dropdown;

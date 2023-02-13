@@ -3,6 +3,7 @@
 import Button from './Button';
 import ButtonRow from './ButtonRow';
 import Carousell from './Carousell';
+import Clickwords from './Clickwords';
 import Custumers from './Custumers';
 import Footer from './Footer';
 import Header from './Header';
@@ -17,12 +18,14 @@ import Priceplan from './Priceplan';
 import Quicknote from './Quicknote';
 import Textimage from './Textimage';
 import TextPile from './TextPile';
+import Therms from './Therms';
 import Welcom from './Welcom';
 
 export {
 	Button,
 	ButtonRow,
 	Carousell,
+	Clickwords,
 	Custumers,
 	Footer,
 	Header,
@@ -37,6 +40,7 @@ export {
 	Quicknote,
 	Textimage,
 	TextPile,
+	Therms,
 	Welcom,
 };
 
@@ -44,6 +48,7 @@ export const components = {
 	button: Button,
 	button_row: ButtonRow,
 	carousell: Carousell,
+	clickwords: Clickwords,
 	custumers: Custumers,
 	footer: Footer,
 	header: Header,
@@ -58,5 +63,6 @@ export const components = {
 	quicknote: Quicknote,
 	textimg: Textimage,
 	text_pile: TextPile,
+	therms: Therms,
 	welcom: Welcom,
 };

@@ -185,12 +185,13 @@
         "primary": {}
       }
     },
-    "Welcome": {
+    "Welcom": {},
+    "Therms": {
       "default": {
         "primary": {}
       }
     },
-    "Welcom": {
+    "Clickwords": {
       "default": {
         "primary": {}
       }

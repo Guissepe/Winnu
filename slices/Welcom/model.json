@@ -11,6 +11,14 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Welcom",
       "primary": {
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "username": {
           "type": "Text",
           "config": {
@@ -127,6 +135,13 @@
           "type": "Text",
           "config": {
             "label": "Use4",
+            "placeholder": ""
+          }
+        },
+        "welcome": {
+          "type": "Text",
+          "config": {
+            "label": "Welcome",
             "placeholder": ""
           }
         }

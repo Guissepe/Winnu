@@ -24,7 +24,7 @@ const Priceplan = ({ slice }) => (
             </Center>
           </Box>
           <VStack
-            spacing={'0.375rem'}
+            spacing={'2.5rem'}
             py={'1.5rem'}
             px={'1.25rem'}
             fontSize={'1.25rem'}

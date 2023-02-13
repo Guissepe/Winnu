@@ -9,10 +9,9 @@
 // } from "@chakra-ui/react";
 // import Link from "next/link";
 // import { InputField } from "../../components/inputfield";
-// import  Dropdown  from "../../components/drpdwn";
 // import { useSession } from 'next-auth/react'
 
-const a = () => {
+// const about = () => {
 //     const { data: session, status }: any = useSession();
 
 //   return (
@@ -114,6 +113,6 @@ const a = () => {
 //         }
 //     </Box>
 //     );
-    };
+//     };
 
-export default a;
+// export default about;

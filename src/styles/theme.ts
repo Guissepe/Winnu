@@ -6,10 +6,14 @@ import "@fontsource/inter";
 
 export const theme = extendTheme({
   colors: {
+    Lightgrey: "#A3A3A3",
+    Yellow01: "#EBC142",
+    Yellow02: "#C9A538",
     border01: "#FFBDB4",
     dkgrey01: "#1e1e1e",
+    grey01: "#1E1E1E",
+    grey02: "#383838",
     grey03: "#787878",
-    peach01: "#FCD2CC",
     brand: {
       primary: "#FCCF47",
       secondary: "#FFAFA3",

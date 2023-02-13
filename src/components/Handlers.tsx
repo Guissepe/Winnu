@@ -1,4 +1,4 @@
-import { signIn } from 'next-auth/react';
+import { getProviders, signIn } from 'next-auth/react';
 
 export function handleGoogleSignin() {
   signIn('google', {

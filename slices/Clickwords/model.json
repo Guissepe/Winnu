@@ -1,0 +1,34 @@
+{
+  "id": "clickwords",
+  "type": "SharedSlice",
+  "name": "Clickwords",
+  "description": "Clickwords",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Clickwords",
+      "primary": {
+        "word": {
+          "type": "Text",
+          "config": {
+            "label": "Word",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

@@ -33,7 +33,9 @@
     "next-auth": "^4.18.7",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.7.1"
+    "react-icons": "^4.7.1",
+    "react-responsive-carousel": "^3.2.23",
+    "swiper": "^8.4.6"
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.4",

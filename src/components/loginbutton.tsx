@@ -11,10 +11,10 @@ import {
           borderRadius="3px"
           mt={props.marginTop}
           mb={props.marginBot}
-          fontSize={'1REM'}
-          width={'20rem	'}
+          fontSize={17}
+          width={350}
           maxWidth={850}
-          height={'3.5rem'}
+          height={55}
           color={props.color}
           background={props.backcolor}
           fontFamily="Sora"

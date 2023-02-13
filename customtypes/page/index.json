@@ -68,7 +68,13 @@
             "logo_button": {
               "type": "SharedSlice"
             },
-            "welcome": {
+            "welcom": {
+              "type": "SharedSlice"
+            },
+            "therms": {
+              "type": "SharedSlice"
+            },
+            "clickwords": {
               "type": "SharedSlice"
             }
           }

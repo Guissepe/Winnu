@@ -7,9 +7,8 @@ import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName, linkResolver } from "../../prismicio";
 import React from "react";
-import Loginfunction from "../components/Loginlogout";
 
-function App({ Component, pageProps, session }: { Component: any; pageProps: any; session: any }) {
+function App({ Component, pageProps }: { Component: any; pageProps: any }) {
   return (
     <PrismicProvider
       linkResolver={linkResolver}
@@ -19,8 +18,7 @@ function App({ Component, pageProps, session }: { Component: any; pageProps: any
     >
       <PrismicPreview repositoryName={repositoryName}>
         <ChakraProvider theme={theme}>
-        <SessionProvider session={session}>
-          <Loginfunction/>
+        <SessionProvider session={pageProps.session}>
                 <Component {...pageProps} />
           </SessionProvider>
         </ChakraProvider>

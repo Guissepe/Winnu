@@ -8,13 +8,13 @@ const Rowbutton = (props: any) => (
       my={props.My}
       mx={props.Mx}
       fontSize={17}
-      width={'16rem'}
-      height={'5rem'}
+      width={250}
+      height={75}
       color={props.color}
       background={props.backcolor}
       fontFamily="Sora"
       variant="primary">
-        <Text fontSize={'1.25rem'}>
+        <Text fontSize={20}>
           {props.Placehold}
         </Text>
 

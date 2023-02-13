@@ -1,19 +1,20 @@
 import React from 'react';
 import { PrismicLink } from '@prismicio/react';
-import { Flex, Image, Text, Button, Center } from '@chakra-ui/react';
+import { Flex, Image, Text, Button, Center, Box } from '@chakra-ui/react';
 
 const Header = ({ slice }) => (
-  <Center fontFamily={'sora'} display={'flex'} background={'black'}>
-    <Center height={70}>
-      <Image
-        pr={'6rem'}
-        height={'2rem'}
-        width={'100%'}
-        src={slice.primary.logo.url}
-        alt={slice.primary.logo.alt}
-      />
-    </Center>
-    <Flex pl={'23%'}>
+  <Center background={'black'}>
+    <Flex>
+      <Center>
+        <Image
+          pr={40}
+          height={8}
+          width={'100%'}
+          src={slice.primary.logo.url}
+          alt={slice.primary.logo.alt}
+        />
+      </Center>
+
       {slice?.items?.map((item, i) => (
         <Center ml={5}>
           <PrismicLink field={item.buttonlink}>

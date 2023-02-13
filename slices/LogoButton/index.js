@@ -6,8 +6,8 @@ const LogoButton = ({ slice }) => (
   <Center fontFamily={'Sora'} pb={10} background={'black'}>
     <Flex>
       <Image
-        height={'1.5rem'}
-        pr={'7rem'}
+        height={8}
+        pr={115}
         src={slice.primary.logo.url}
         alt={slice.primary.logo.alt}
       />

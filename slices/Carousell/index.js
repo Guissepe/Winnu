@@ -2,6 +2,7 @@ import React from 'react';
 import { Center, Flex, Box, Image } from '@chakra-ui/react';
 import Flicking from '@egjs/react-flicking';
 import '@egjs/react-flicking/dist/flicking.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const updateform = e => {
   e.currentTarget.panels.forEach(panel => {
@@ -32,7 +33,6 @@ const Carousell = ({ slice }) => (
             >
               {slice?.items?.map(item => (
                 <img
-                  title="Website builder example screen"
                   width={1100}
                   height={1100}
                   src={item.image.url}
@@ -45,7 +45,7 @@ const Carousell = ({ slice }) => (
       </Center>
     ) : (
       <Center>
-        <Flex bg="black" pb={'12rem'}>
+        <Flex bg="black" pb={200}>
           <Box className="slide" px={5}>
             <Flicking
               horizontal={true}
@@ -58,7 +58,7 @@ const Carousell = ({ slice }) => (
                   height={800}
                   src={item.image.url}
                   alt={item.image.alt}
-                  px={'1.25rem'}
+                  px={20}
                 />
               ))}
             </Flicking>

@@ -9,17 +9,17 @@ const ButtonRow = ({ slice }, { providers }) => (
     {slice.variation === 'DarkLog' ? (
       <Flex pb="15%" mx="34%">
         {slice?.items?.map((item, i) => (
-          <Box px="1%" width={'18rem'}>
+          <Box px="1%" width={300}>
             <Center>
               <Button
-                fontSize={'1rem'}
+                fontSize={17}
                 width={500}
                 maxWidth={500}
-                height={'3.5rem'}
-                fontFamily="sora"
-                px={'2.25rem'}
+                height={55}
+                fontFamily="Sora"
+                px={35}
                 borderRadius={3}
-                mt={{ base: '0.25rem', md: '0.625rem' }}
+                mt={{ base: 5, md: 10 }}
                 color="grey01"
               >
                 <PrismicLink field={item.cta_link}>

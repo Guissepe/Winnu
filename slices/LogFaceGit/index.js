@@ -8,9 +8,9 @@ import {
 } from '../../src/components/Handlers.tsx';
 import { getProviders } from 'next-auth/react';
 
-const FaceButton = ({ slice }) => (
-  <Center fontFamily={'sora'} bg="black">
-    <Flex mb={435} mt={'1rem'}>
+const FaceBtton = ({ slice }) => (
+  <Center bg="black">
+    <Flex mb={435} mt={15}>
       <LogInbutton
         classname={slice.variation}
         color={'white'}
@@ -33,7 +33,7 @@ const FaceButton = ({ slice }) => (
   </Center>
 );
 
-export default FaceButton;
+export default FaceBtton;
 
 export async function getServerSideProps(context) {
   const providers = await getProviders();

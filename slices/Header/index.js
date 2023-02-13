@@ -1,31 +1,31 @@
 import React from 'react';
 import { PrismicLink } from '@prismicio/react';
-import { Flex, Image, Text, Button, Center, Box } from '@chakra-ui/react';
+import { Flex, Image, Text, Button, Center, HStack } from '@chakra-ui/react';
 
 const Header = ({ slice }) => (
-  <Center background={'black'}>
+  <Center py={'1rem'} background={'black'}>
     <Flex>
       <Center>
         <Image
-          pr={'2.5rem'}
-          height={'0.5rem'}
-          width={'100%'}
+          pr={'24rem'}
+          height={'1.25rem'}
           src={slice.primary.logo.url}
           alt={slice.primary.logo.alt}
         />
       </Center>
-
-      {slice?.items?.map((item, i) => (
-        <Center ml={'0.375rem'}>
-          <PrismicLink field={item.buttonlink}>
-            <Button background={'black'} color={'white'}>
-              <Text>{item.buttonname}</Text>
-            </Button>
-          </PrismicLink>
-        </Center>
-      ))}
+      <Center mx={'11rem'}>
+        {slice?.items?.map((item, i) => (
+          <HStack>
+            <PrismicLink field={item.buttonlink}>
+              <Button background={'black'} color={'white'}>
+                <Text>{item.buttonname}</Text>
+              </Button>
+            </PrismicLink>
+          </HStack>
+        ))}
+      </Center>
     </Flex>
-    <Center pl={520}>
+    <Center ml={'16rem'}>
       <PrismicLink field={slice.primary.loglink}>
         <Button borderRadius={1} background={'black'} color={'white'}>
           <Text>{slice.primary.login}</Text>

@@ -1,9 +1,6 @@
 import React from "react";
-import { Box, Button, Flex, Hide, Show, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Show, Text } from "@chakra-ui/react";
 import { useSession, signIn, signOut } from 'next-auth/react'
-import Image from "next/image";
-import Link from "next/link";
-import { any } from "io-ts";
 const Username = () => {
 
     const handleSignin = (e: any) => {
@@ -28,7 +25,7 @@ const Username = () => {
             session &&
               <>
                 <Text fontSize={'3rem'} color='white' >{session.user.name ?? session.user.email}!</Text>
-               <Text mb='0.625rem'> </Text> <br />
+                <Image border={'90'}>{session.user.image}</Image>
               </>
             }
            {

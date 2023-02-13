@@ -1,18 +1,10 @@
 import React from 'react';
-import { PrismicRichText } from '@prismicio/react';
-import {
-  Text,
-  Flex,
-  Box,
-  Center,
-  VStack,
-  Image,
-  HStack,
-} from '@chakra-ui/react';
+import { Text, Center, VStack, Image, HStack } from '@chakra-ui/react';
 import BigDropdown from '../../src/components/Bigdropdown copy.tsx';
 import SmallDropdown from '../../src/components/Smalldropdown.tsx';
 import { InputField } from '../../src/components/inputfield.tsx';
 import Username from '../../src/components/Username.tsx';
+import Userimage from '../../src/components/Userimage.tsx';
 
 const Welcom = ({ slice }) => (
   <Center fontFamily={'sora'} background={'black'}>
@@ -24,6 +16,9 @@ const Welcom = ({ slice }) => (
         src={slice.primary.logo.url}
         alt={slice.primary.logo.alt}
       />
+      <Center borderRadius={'360'}>
+        <Userimage />
+      </Center>
       <HStack>
         <Text color={'white'} fontSize={'3rem'}>
           {slice.primary.welcome}

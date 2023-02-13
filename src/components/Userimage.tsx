@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Flex, Image, Show, Text } from "@chakra-ui/react";
 import { useSession, signIn, signOut } from 'next-auth/react'
-const Username = () => {
+const Userimage = () => {
     const { data: session, status }: any = useSession();
     const loading = status === "loading"
 
@@ -15,7 +15,6 @@ const Username = () => {
             session &&
               <>
                 <Image src={session.user.image} border={'90'}></Image>
-                <Text fontSize={'3rem'} color='white' >{session.user.name ?? session.user.email}!</Text>
               </>
             }
            {
@@ -30,4 +29,4 @@ const Username = () => {
   );
 };
 
-export default Username;
+export default Userimage;

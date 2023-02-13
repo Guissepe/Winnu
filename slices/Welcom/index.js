@@ -16,7 +16,7 @@ const Welcom = ({ slice }) => (
         src={slice.primary.logo.url}
         alt={slice.primary.logo.alt}
       />
-      <Center borderRadius={'360'}>
+      <Center>
         <Userimage />
       </Center>
       <HStack>

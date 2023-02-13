@@ -14,7 +14,7 @@ const Userimage = () => {
            {
             session &&
               <>
-                <Image src={session.user.image} border={'90'}></Image>
+                <Image borderRadius={'360px'} src={session.user.image}></Image>
               </>
             }
            {

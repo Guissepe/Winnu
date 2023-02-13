@@ -14,7 +14,6 @@ const Username = () => {
            {
             session &&
               <>
-                <Image src={session.user.image} border={'90'}></Image>
                 <Text fontSize={'3rem'} color='white' >{session.user.name ?? session.user.email}!</Text>
               </>
             }

@@ -4,7 +4,7 @@ import { Text, Flex, Box, Center, VStack, Image } from '@chakra-ui/react';
 import BigDropdown from '../../src/components/Bigdropdown copy.tsx';
 import SmallDropdown from '../../src/components/Smalldropdown.tsx';
 import { InputField } from '../../src/components/inputfield.tsx';
-import username from '../../src/components/Username.tsx';
+import Username from '../../src/components/Username.tsx';
 
 const Welcom = ({ slice }) => (
   <Center fontFamily={'sora'} background={'black'}>
@@ -16,8 +16,9 @@ const Welcom = ({ slice }) => (
         src={slice.primary.logo.url}
         alt={slice.primary.logo.alt}
       />
+      <Username />
       <Text color={'white'} fontSize={'3rem'}>
-        {slice.primary.welcome} {username}
+        {slice.primary.welcome}
       </Text>
       <VStack spacing={'1rem'} color={'grey03'} align={'start'}>
         <Text>{slice.primary.username}</Text>

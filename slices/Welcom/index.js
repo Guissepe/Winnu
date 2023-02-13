@@ -20,7 +20,7 @@ const Welcom = ({ slice }) => (
         <Userimage />
       </Center>
       <HStack>
-        <Text color={'white'} fontSize={'3rem'}>
+        <Text color={'white'} fontSize={'1.75rem'}>
           {slice.primary.welcome}
         </Text>
         <Username />

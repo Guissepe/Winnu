@@ -6,16 +6,16 @@ import Carousell from './Carousell';
 import Custumers from './Custumers';
 import Footer from './Footer';
 import Header from './Header';
-import Imgrow from './Imgrow';
+import Imagerow from './Imagerow';
 import Infobox from './Infobox';
-import LogFaceGit from './LogFaceGit';
-import LogGoog from './LogGoog';
+import LoginFacebookGithub from './LoginFacebookGithub';
+import LoginGoogle from './LoginGoogle';
 import LogoButton from './LogoButton';
 import NavigationItem from './NavigationItem';
 import PageInfo from './PageInfo';
 import Priceplan from './Priceplan';
 import Quicknote from './Quicknote';
-import Textimg from './Textimg';
+import Textimage from './Textimage';
 import TextPile from './TextPile';
 
 export {
@@ -25,16 +25,16 @@ export {
 	Custumers,
 	Footer,
 	Header,
-	Imgrow,
+	Imagerow,
 	Infobox,
-	LogFaceGit,
-	LogGoog,
+	LoginFacebookGithub,
+	LoginGoogle,
 	LogoButton,
 	NavigationItem,
 	PageInfo,
 	Priceplan,
 	Quicknote,
-	Textimg,
+	Textimage,
 	TextPile,
 };
 
@@ -45,15 +45,15 @@ export const components = {
 	custumers: Custumers,
 	footer: Footer,
 	header: Header,
-	imgrow: Imgrow,
+	imgrow: Imagerow,
 	infobox: Infobox,
-	log_face: LogFaceGit,
-	log_goog: LogGoog,
+	log_face: LoginFacebookGithub,
+	log_goog: LoginGoogle,
 	logo_button: LogoButton,
 	navigation_item: NavigationItem,
 	slice1: PageInfo,
 	priceplan: Priceplan,
 	quicknote: Quicknote,
-	textimg: Textimg,
+	textimg: Textimage,
 	text_pile: TextPile,
 };

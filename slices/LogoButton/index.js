@@ -3,11 +3,11 @@ import { PrismicLink } from '@prismicio/react';
 import { Button, Center, Text, Image, Flex } from '@chakra-ui/react';
 
 const LogoButton = ({ slice }) => (
-  <Center fontFamily={'Sora'} pb={10} background={'black'}>
+  <Center fontFamily={'Sora'} pb={'0.625rem'} background={'black'}>
     <Flex>
       <Image
-        height={8}
-        pr={115}
+        height={'0.5rem'}
+        pr={'7rem'}
         src={slice.primary.logo.url}
         alt={slice.primary.logo.alt}
       />

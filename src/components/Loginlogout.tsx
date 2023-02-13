@@ -20,20 +20,20 @@ console.log(session)
 
 return (
 
-<Box bg="black" py="24px" pl="12px" pr="22px">
+<Box bg="black" py="1.5rem" pl="12px" pr="1.5rem">
 <Flex align="center" justify="space-between" maxW="1280px" mx="auto">
 
   <Show above="lg">
     <Flex align="center">
     {!session &&
       <Link href={"/auth/login"} >
-          <Button color="white" px="29px" variant="transparent">
+          <Button color="white" px="1.75rem" variant="transparent">
               Login
           </Button>
       </Link>
       }
       {!session &&
-       <Button variant="primary" py="16px" px="35px" borderRadius="3px">
+       <Button variant="primary" py="1.25rem" px="2.25rem" borderRadius="3px">
         Get started
       </Button>
       }
@@ -48,7 +48,7 @@ return (
           <Text color='white' >{session.user.name}!</Text>
           <Text color='white' >{session.user.email}!</Text>
           <img src={session.user.image}></img>
-         <Text mb='10px'> </Text> <br />
+         <Text mb='0.625rem'> </Text> <br />
         </>
       }
      {

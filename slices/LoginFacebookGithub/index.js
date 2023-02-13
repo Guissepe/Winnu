@@ -10,7 +10,7 @@ import { getProviders } from 'next-auth/react';
 
 const FaceBtton = ({ slice }) => (
   <Center bg="black">
-    <Flex mb={435} mt={15}>
+    <Flex mb={435} mt={'1rem'}>
       <LogInbutton
         classname={slice.variation}
         color={'white'}

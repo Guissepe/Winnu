@@ -1,7 +1,7 @@
 {
   "id": "log_goog",
   "type": "SharedSlice",
-  "name": "LogGoog",
+  "name": "LoginGoogle",
   "description": "LogGoog",
   "variations": [
     {

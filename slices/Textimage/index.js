@@ -6,22 +6,27 @@ const Textimg = ({ slice }) => (
   <Box pt="10%">
     {slice.variation !== 'textimgImgBottom' ? (
       <Center>
-        <Flex gridGap="70px">
+        <Flex gridGap="4rem">
           <Box maxW={450}>
-            <Box fontWeight="600" fontSize={42}>
+            <Box fontWeight="600" fontSize={'2.5rem'}>
               <PrismicRichText field={slice.primary.title} />
             </Box>
-            <Box fontSize={30} fontWeight="500">
+            <Box fontSize={'2rem'} fontWeight="500">
               <PrismicRichText field={slice.primary.subtitle} />
             </Box>
             <Box>
               <PrismicRichText field={slice.primary.description} />
             </Box>
-            <Box borderWidth={1.5} borderColor="black" mt={8} mb={10}></Box>
-            <Text fontWeight="600" fontSize={42}>
+            <Box
+              borderWidth={1.5}
+              borderColor="black"
+              mt={'0.5rem'}
+              mb={'0.625rem'}
+            ></Box>
+            <Text fontWeight="600" fontSize={'2.5rem'}>
               {slice.primary.title2}
             </Text>
-            <Text fontWeight="600" fontSize={42}>
+            <Text fontWeight="600" fontSize={'2.5rem'}>
               {slice.primary.title3}
             </Text>
           </Box>
@@ -36,23 +41,30 @@ const Textimg = ({ slice }) => (
     ) : (
       <Box
         bg="brand.secondary"
-        pt={40}
+        pt={'2.5rem'}
         fontFamily="sora"
         textAlign="center"
-        px={22}
+        px={'1.5rem'}
       >
         <Center>
           <Box>
-            <Box fontWeight="600" fontSize={{ base: 14, md: 35 }}>
+            <Box
+              fontWeight="600"
+              fontSize={{ base: '0.875rem', md: '2.25rem' }}
+            >
               <PrismicRichText field={slice.primary.title} />
             </Box>
-            <Box fontWeight="500" fontSize={{ base: 16, md: 30 }} mt={5}>
+            <Box
+              fontWeight="500"
+              fontSize={{ base: '1rem', md: '2rem' }}
+              mt={5}
+            >
               <PrismicRichText field={slice.primary.subtitle} />
             </Box>
             <Box
               color="text.grey02"
               mt={{ base: 3, md: 6 }}
-              fontSize={{ base: 14, md: 22 }}
+              fontSize={{ base: '0.875rem', md: '1.5rem' }}
               maxW={618}
               mx="auto"
             >
@@ -60,7 +72,7 @@ const Textimg = ({ slice }) => (
             </Box>
           </Box>
         </Center>
-        <Center mt={20}>
+        <Center mt={'1.25rem'}>
           <Image
             width={840}
             height={500}

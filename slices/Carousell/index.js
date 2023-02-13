@@ -23,8 +23,8 @@ const Carousell = ({ slice }) => (
   <Box>
     {slice.variation !== 'simple' ? (
       <Center>
-        <Flex pb={200}>
-          <Box className="slide" px={5}>
+        <Flex pb={'12rem'}>
+          <Box className="slide" px={'0.375rem'}>
             <Flicking
               horizontal={true}
               onReady={updateform}
@@ -44,8 +44,8 @@ const Carousell = ({ slice }) => (
       </Center>
     ) : (
       <Center>
-        <Flex bg="black" pb={200}>
-          <Box className="slide" px={5}>
+        <Flex bg="black" pb={'12rem'}>
+          <Box className="slide" px={'0.375rem'}>
             <Flicking
               horizontal={true}
               onReady={updateform2}
@@ -57,7 +57,7 @@ const Carousell = ({ slice }) => (
                   height={800}
                   src={item.image.url}
                   alt={item.image.alt}
-                  px={20}
+                  px={'1.25rem'}
                 />
               ))}
             </Flicking>

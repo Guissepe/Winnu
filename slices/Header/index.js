@@ -7,8 +7,8 @@ const Header = ({ slice }) => (
     <Flex>
       <Center>
         <Image
-          pr={40}
-          height={8}
+          pr={'2.5rem'}
+          height={'0.5rem'}
           width={'100%'}
           src={slice.primary.logo.url}
           alt={slice.primary.logo.alt}
@@ -16,7 +16,7 @@ const Header = ({ slice }) => (
       </Center>
 
       {slice?.items?.map((item, i) => (
-        <Center ml={5}>
+        <Center ml={'0.375rem'}>
           <PrismicLink field={item.buttonlink}>
             <Button background={'black'} color={'white'}>
               <Text>{item.buttonname}</Text>

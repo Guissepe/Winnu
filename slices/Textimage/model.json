@@ -1,7 +1,7 @@
 {
   "id": "textimg",
   "type": "SharedSlice",
-  "name": "Textimg",
+  "name": "Textimage",
   "description": "Textimg",
   "variations": [
     {

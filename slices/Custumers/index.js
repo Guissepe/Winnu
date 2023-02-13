@@ -4,7 +4,7 @@ import { Center, Box, Text, Image } from '@chakra-ui/react';
 const Custumers = ({ slice }) => (
   <Box>
     <Box maxW={756} mx="auto" textAlign="center">
-      <Text fontWeight="600" fontSize={{ base: 20, sm: 24 }}>
+      <Text fontWeight="600" fontSize={{ base: '1.25rem	', sm: '1.5rem' }}>
         {slice.primary.title}
       </Text>
     </Box>
@@ -12,7 +12,7 @@ const Custumers = ({ slice }) => (
       {slice?.items?.map((item, i) => (
         <Image
           px="3%"
-          mt={18}
+          mt={'1.25rem'}
           src={item.custumer.url}
           alt={item.custumer.alt}
         />

@@ -7,15 +7,19 @@ const Imgrow = ({ slice }) => (
     <Text textAlign="center" fontFamily="Sora" fontSize="32px">
       {slice.primary.main_title}
     </Text>
-    <Box fontFamily="sora" pt={{ base: 47, md: 94 }} pb={{ base: 26, md: 106 }}>
+    <Box
+      fontFamily="sora"
+      pt={{ base: '3rem', md: '6rem' }}
+      pb={{ base: '1.75rem', md: '7rem' }}
+    >
       <Box>
-        <Center max height={30}>
+        <Center max height={'2rem'}>
           {slice?.items?.map((item, i) => (
             <Box>
               <Image
                 px="13%"
-                width={150}
-                heigth={150}
+                width={'9rem'}
+                heigth={'9rem'}
                 src={item.image.url}
                 alt={item.image.alt}
               />

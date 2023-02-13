@@ -9,7 +9,7 @@ const PageInfo = ({ slice }) => (
         <Box
           textAlign="center"
           fontWeight="600"
-          fontSize={{ base: 20, md: 48 }}
+          fontSize={{ base: '1.25rem', md: '3rem' }}
           color="text.01"
           pt="5%"
         >
@@ -21,9 +21,9 @@ const PageInfo = ({ slice }) => (
           textAlign="center"
           fontFamily="sora"
           pb="8%"
-          fontSize={16}
+          fontSize={'1rem'}
           color="text.03"
-          mt={30}
+          mt={'2rem'}
         >
           <PrismicRichText field={slice.primary.body} />
         </Box>
@@ -33,7 +33,7 @@ const PageInfo = ({ slice }) => (
         <Box
           textAlign="center"
           fontWeight="600"
-          fontSize={{ base: 20, md: 46 }}
+          fontSize={{ base: '1.25rem', md: '3rem' }}
           color="white"
           pt="5%"
         >
@@ -44,7 +44,7 @@ const PageInfo = ({ slice }) => (
           width="100%"
           textAlign="center"
           fontFamily="sora"
-          fontSize={16}
+          fontSize={'1rem'}
           color="grey03"
           mt="30px"
         >

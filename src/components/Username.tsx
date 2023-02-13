@@ -19,7 +19,7 @@ const username = () => {
     const loading = status === "loading"
 
   return (
-    <Box bg="black" py="24px" pl="12px" pr="22px">
+    <Box bg="black" py="1.5rem" pl="0.75rem" pr="1.5rem">
       <Flex align="center" justify="space-between" maxW="1280px" mx="auto">
         <Show above="lg">
         <Box>
@@ -28,7 +28,7 @@ const username = () => {
             session &&
               <>
                 <Text color='white' >{session.user.name ?? session.user.email}!</Text>
-               <Text mb='10px'> </Text> <br />
+               <Text mb='0.625rem'> </Text> <br />
               </>
             }
            {
@@ -38,14 +38,6 @@ const username = () => {
            }
          </Box>
         </Show>
-        <Hide above="md">
-          <Image
-            src="/assets/icons/menu.svg"
-            width={24}
-            height={10}
-            alt="menu"
-          />
-        </Hide>
       </Flex>
     </Box>
   );

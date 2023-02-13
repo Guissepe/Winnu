@@ -1,7 +1,7 @@
 {
   "id": "imgrow",
   "type": "SharedSlice",
-  "name": "Imgrow",
+  "name": "Imagerow",
   "description": "Imgrow",
   "variations": [
     {

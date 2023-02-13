@@ -8,7 +8,7 @@ import { getProviders } from 'next-auth/react';
 const GoogBtton = ({ slice }) => (
   <Center bg="black">
     <LogInbutton
-      marginTop={115}
+      marginTop={'7rem'}
       classname={slice.variation}
       variant="primary"
       src={handleGoogleSignin}

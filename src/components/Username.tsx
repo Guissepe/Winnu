@@ -6,7 +6,7 @@ const Username = () => {
     const loading = status === "loading"
 
   return (
-    <Box bg="black" py="1.5rem" pl="0.75rem" pr="1.5rem">
+    <Box bg="black">
       <Flex align="center" justify="space-between" maxW="1280px" mx="auto">
         <Show above="lg">
         <Box>

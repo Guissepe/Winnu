@@ -6,10 +6,7 @@ import Carousell from './Carousell';
 import Custumers from './Custumers';
 import Footer from './Footer';
 import Header from './Header';
-import Imagerow from './Imagerow';
 import Infobox from './Infobox';
-import LogFaceGit from './LoginFacebookGithub';
-import LogGoog from './LogGoogle';
 import LogoButton from './LogoButton';
 import NavigationItem from './NavigationItem';
 import PageInfo from './PageInfo';
@@ -17,6 +14,7 @@ import Priceplan from './Priceplan';
 import Quicknote from './Quicknote';
 import Textimg from './Textimg';
 import TextPile from './TextPile';
+import Welcome from './Welcome';
 
 export {
 	Button,
@@ -25,10 +23,7 @@ export {
 	Custumers,
 	Footer,
 	Header,
-	Imagerow,
 	Infobox,
-	LogFaceGit,
-	LogGoog,
 	LogoButton,
 	NavigationItem,
 	PageInfo,
@@ -36,6 +31,7 @@ export {
 	Quicknote,
 	Textimg,
 	TextPile,
+	Welcome,
 };
 
 export const components = {
@@ -45,10 +41,7 @@ export const components = {
 	custumers: Custumers,
 	footer: Footer,
 	header: Header,
-	imgrow: Imagerow,
 	infobox: Infobox,
-	log_face: LogFaceGit,
-	log_goog: LogGoog,
 	logo_button: LogoButton,
 	navigation_item: NavigationItem,
 	slice1: PageInfo,
@@ -56,4 +49,5 @@ export const components = {
 	quicknote: Quicknote,
 	textimg: Textimg,
 	text_pile: TextPile,
+	welcome: Welcome,
 };

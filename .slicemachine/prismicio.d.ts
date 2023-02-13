@@ -217,7 +217,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ButtonSlice | ButtonRowSlice | ImgrowSlice | HeaderSlice | CustumersSlice | CarousellSlice | InfoboxSlice | LogFaceSlice | LogGoogSlice | TextimgSlice | Slice1Slice | NavigationItemSlice | TextPileSlice | PriceplanSlice | QuicknoteSlice | FooterSlice | LogoButtonSlice;
+type PageDocumentDataSlicesSlice = ButtonSlice | ButtonRowSlice | ImgrowSlice | HeaderSlice | CustumersSlice | CarousellSlice | InfoboxSlice | LogFaceSlice | LogGoogSlice | TextimgSlice | Slice1Slice | NavigationItemSlice | TextPileSlice | PriceplanSlice | QuicknoteSlice | FooterSlice | LogoButtonSlice | WelcomeSlice;
 /**
  * Page document from Prismic
  *
@@ -1193,55 +1193,6 @@ type InfoboxSliceVariation = InfoboxSliceDefault | InfoboxSliceSingleButton | In
  */
 export type InfoboxSlice = prismicT.SharedSlice<"infobox", InfoboxSliceVariation>;
 /**
- * Primary content in LogFaceGit → Primary
- *
- */
-interface LogFaceSliceDefaultPrimary {
-    /**
-     * Log Face field in *LogFaceGit → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: log_face.primary.logface
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    logface: prismicT.TitleField;
-    /**
-     * Log Git field in *LogFaceGit → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: log_face.primary.loggit
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    loggit: prismicT.TitleField;
-}
-/**
- * Default variation for LogFaceGit Slice
- *
- * - **API ID**: `default`
- * - **Description**: `LogFace`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type LogFaceSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<LogFaceSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *LogFaceGit*
- *
- */
-type LogFaceSliceVariation = LogFaceSliceDefault;
-/**
- * LogFaceGit Shared Slice
- *
- * - **API ID**: `log_face`
- * - **Description**: `LogFace`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type LogFaceSlice = prismicT.SharedSlice<"log_face", LogFaceSliceVariation>;
-/**
  * Primary content in LogGoog → Primary
  *
  */
@@ -1290,6 +1241,55 @@ type LogGoogSliceVariation = LogGoogSliceDefault;
  *
  */
 export type LogGoogSlice = prismicT.SharedSlice<"log_goog", LogGoogSliceVariation>;
+/**
+ * Primary content in LogFaceGit → Primary
+ *
+ */
+interface LogFaceSliceDefaultPrimary {
+    /**
+     * Log Face field in *LogFaceGit → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: log_face.primary.logface
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    logface: prismicT.TitleField;
+    /**
+     * Log Git field in *LogFaceGit → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: log_face.primary.loggit
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    loggit: prismicT.TitleField;
+}
+/**
+ * Default variation for LogFaceGit Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `LogFace`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type LogFaceSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<LogFaceSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *LogFaceGit*
+ *
+ */
+type LogFaceSliceVariation = LogFaceSliceDefault;
+/**
+ * LogFaceGit Shared Slice
+ *
+ * - **API ID**: `log_face`
+ * - **Description**: `LogFace`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type LogFaceSlice = prismicT.SharedSlice<"log_face", LogFaceSliceVariation>;
 /**
  * Primary content in LogoButton → Primary
  *
@@ -2093,11 +2093,116 @@ type TextPileSliceVariation = TextPileSliceDefault;
  *
  */
 export type TextPileSlice = prismicT.SharedSlice<"text_pile", TextPileSliceVariation>;
+/**
+ * Primary content in Welcome → Primary
+ *
+ */
+interface WelcomeSliceDefaultPrimary {
+    /**
+     * Username field in *Welcome → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: welcome.primary.username
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    username: prismicT.KeyTextField;
+    /**
+     * Displayname field in *Welcome → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: welcome.primary.displayname
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    displayname: prismicT.KeyTextField;
+    /**
+     * Describeyourrole field in *Welcome → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: welcome.primary.describeyourrole
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    describeyourrole: prismicT.KeyTextField;
+    /**
+     * HowWinnu field in *Welcome → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: welcome.primary.howwinnu
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    howwinnu: prismicT.KeyTextField;
+    /**
+     * Welcome field in *Welcome → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: welcome.primary.welcome
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    welcome: prismicT.KeyTextField;
+}
+/**
+ * Item in Welcome → Items
+ *
+ */
+export interface WelcomeSliceDefaultItem {
+    /**
+     * Roles field in *Welcome → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: welcome.items[].roles
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    roles: prismicT.KeyTextField;
+    /**
+     * Use field in *Welcome → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: welcome.items[].use
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    use: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Welcome Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Welcome`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type WelcomeSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<WelcomeSliceDefaultPrimary>, Simplify<WelcomeSliceDefaultItem>>;
+/**
+ * Slice variation for *Welcome*
+ *
+ */
+type WelcomeSliceVariation = WelcomeSliceDefault;
+/**
+ * Welcome Shared Slice
+ *
+ * - **API ID**: `welcome`
+ * - **Description**: `Welcome`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type WelcomeSlice = prismicT.SharedSlice<"welcome", WelcomeSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ADocumentData, ADocument, HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceDarkPrimary, ButtonSliceDark, ButtonSliceLogPrimary, ButtonSliceLog, ButtonSliceLogDarkPrimary, ButtonSliceLogDark, ButtonSliceGitPrimary, ButtonSliceGit, ButtonSliceFacebPrimary, ButtonSliceFaceb, ButtonSliceGoogPrimary, ButtonSliceGoog, ButtonSliceVariation, ButtonSlice, ButtonRowSliceDefaultItem, ButtonRowSliceDefault, ButtonRowSliceDarkItem, ButtonRowSliceDark, ButtonRowSliceDarkLogItem, ButtonRowSliceDarkLog, ButtonRowSliceVariation, ButtonRowSlice, CarousellSliceDefaultItem, CarousellSliceDefault, CarousellSliceSimpleItem, CarousellSliceSimple, CarousellSliceVariation, CarousellSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceSingleButtonPrimary, InfoboxSliceSingleButton, InfoboxSlicePricingPrimary, InfoboxSlicePricing, InfoboxSliceVariation, InfoboxSlice, LogFaceSliceDefaultPrimary, LogFaceSliceDefault, LogFaceSliceVariation, LogFaceSlice, LogGoogSliceDefaultPrimary, LogGoogSliceDefault, LogGoogSliceVariation, LogGoogSlice, LogoButtonSliceDefaultPrimary, LogoButtonSliceDefaultItem, LogoButtonSliceDefault, LogoButtonSliceVariation, LogoButtonSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceLoginPrimary, Slice1SliceLogin, Slice1SliceVariation, Slice1Slice, PriceplanSliceDefaultItem, PriceplanSliceDefault, PriceplanSliceCenterPrimary, PriceplanSliceCenterItem, PriceplanSliceCenter, PriceplanSliceRightPrimary, PriceplanSliceRightItem, PriceplanSliceRight, PriceplanSliceVariation, PriceplanSlice, QuicknoteSliceDefaultPrimary, QuicknoteSliceDefaultItem, QuicknoteSliceDefault, QuicknoteSliceVariation, QuicknoteSlice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice, TextPileSliceDefaultItem, TextPileSliceDefault, TextPileSliceVariation, TextPileSlice };
+        export type { ADocumentData, ADocument, HeaderDocumentData, HeaderDocumentDataMenuItemsItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LoginDocumentData, LoginDocumentDataSlicesSlice, LoginDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TesttypeDocumentData, TesttypeDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceDarkPrimary, ButtonSliceDark, ButtonSliceLogPrimary, ButtonSliceLog, ButtonSliceLogDarkPrimary, ButtonSliceLogDark, ButtonSliceGitPrimary, ButtonSliceGit, ButtonSliceFacebPrimary, ButtonSliceFaceb, ButtonSliceGoogPrimary, ButtonSliceGoog, ButtonSliceVariation, ButtonSlice, ButtonRowSliceDefaultItem, ButtonRowSliceDefault, ButtonRowSliceDarkItem, ButtonRowSliceDark, ButtonRowSliceDarkLogItem, ButtonRowSliceDarkLog, ButtonRowSliceVariation, ButtonRowSlice, CarousellSliceDefaultItem, CarousellSliceDefault, CarousellSliceSimpleItem, CarousellSliceSimple, CarousellSliceVariation, CarousellSlice, CustumersSliceDefaultPrimary, CustumersSliceDefaultItem, CustumersSliceDefault, CustumersSliceVariation, CustumersSlice, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, ImgrowSliceDefaultPrimary, ImgrowSliceDefaultItem, ImgrowSliceDefault, ImgrowSliceVariation, ImgrowSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefaultItem, InfoboxSliceDefault, InfoboxSliceSingleButtonPrimary, InfoboxSliceSingleButton, InfoboxSlicePricingPrimary, InfoboxSlicePricing, InfoboxSliceVariation, InfoboxSlice, LogGoogSliceDefaultPrimary, LogGoogSliceDefault, LogGoogSliceVariation, LogGoogSlice, LogFaceSliceDefaultPrimary, LogFaceSliceDefault, LogFaceSliceVariation, LogFaceSlice, LogoButtonSliceDefaultPrimary, LogoButtonSliceDefaultItem, LogoButtonSliceDefault, LogoButtonSliceVariation, LogoButtonSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, Slice1SliceDefaultPrimary, Slice1SliceDefault, Slice1SliceLoginPrimary, Slice1SliceLogin, Slice1SliceVariation, Slice1Slice, PriceplanSliceDefaultItem, PriceplanSliceDefault, PriceplanSliceCenterPrimary, PriceplanSliceCenterItem, PriceplanSliceCenter, PriceplanSliceRightPrimary, PriceplanSliceRightItem, PriceplanSliceRight, PriceplanSliceVariation, PriceplanSlice, QuicknoteSliceDefaultPrimary, QuicknoteSliceDefaultItem, QuicknoteSliceDefault, QuicknoteSliceVariation, QuicknoteSlice, TextimgSliceDefaultPrimary, TextimgSliceDefault, TextimgSliceTextimgImgBottomPrimary, TextimgSliceTextimgImgBottom, TextimgSliceVariation, TextimgSlice, TextPileSliceDefaultItem, TextPileSliceDefault, TextPileSliceVariation, TextPileSlice, WelcomeSliceDefaultPrimary, WelcomeSliceDefaultItem, WelcomeSliceDefault, WelcomeSliceVariation, WelcomeSlice };
     }
 }

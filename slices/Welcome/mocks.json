@@ -1,0 +1,56 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "username": {
+        "__TYPE__": "FieldContent",
+        "value": "consist",
+        "type": "Text"
+      },
+      "displayname": {
+        "__TYPE__": "FieldContent",
+        "value": "experience",
+        "type": "Text"
+      },
+      "describeyourrole": {
+        "__TYPE__": "FieldContent",
+        "value": "that",
+        "type": "Text"
+      },
+      "howwinnu": {
+        "__TYPE__": "FieldContent",
+        "value": "quick",
+        "type": "Text"
+      },
+      "welcome": {
+        "__TYPE__": "FieldContent",
+        "value": "strip",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "roles",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "grain",
+              "type": "Text"
+            }
+          ],
+          [
+            "use",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "shaking",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

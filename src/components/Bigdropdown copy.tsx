@@ -11,7 +11,7 @@ import { VscTriangleDown } from "react-icons/vsc";
     { value: 'vanilla', label: 'Vanilla' }
   ]
 
-const Dropdown = (props: any) => {
+const BigDropdown = (props: any) => {
 
 const [value, setValue] = useState('values');
 const styles = {
@@ -47,4 +47,4 @@ return(
 
 )
 };
-  export default Dropdown;
+  export default BigDropdown;

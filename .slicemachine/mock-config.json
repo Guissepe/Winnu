@@ -184,6 +184,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "Welcome": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

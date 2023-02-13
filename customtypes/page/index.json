@@ -67,6 +67,9 @@
             },
             "logo_button": {
               "type": "SharedSlice"
+            },
+            "welcome": {
+              "type": "SharedSlice"
             }
           }
         }

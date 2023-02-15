@@ -11,7 +11,7 @@ export const theme = extendTheme({
     Yellow02: "#C9A538",
     border01: "#FFBDB4",
     dkgrey01: "#1e1e1e",
-    grey01: "#1E1E1E",
+    grey01: '#1E1E1E',
     grey02: "#383838",
     grey03: "#787878",
     brand: {
@@ -19,10 +19,9 @@ export const theme = extendTheme({
       secondary: "#FFAFA3",
     },
     text: {
-      grey01: "#1E1E1E",
-      grey02: "#383838",
-      grey03: "#787878",
-      grey04: "#949292",
+      grey2: "#383838",
+      grey3: "#787878",
+      grey4: "#949292",
       peach: "#E1B0A8",
       white01: '#FFFFFF'
 

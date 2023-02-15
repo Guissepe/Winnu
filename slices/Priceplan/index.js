@@ -47,7 +47,7 @@ const Priceplan = ({ slice }) => (
               <Rowbutton
                 variant="primary"
                 text={item.cta_text}
-                Placehold="Get Started"
+                placehold="Get Started"
                 My={'1.5rem'}
                 Mx={5}
               ></Rowbutton>

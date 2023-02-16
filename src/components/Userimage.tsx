@@ -4,7 +4,7 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 const Userimage = () => {
     const { data: session, status }: any = useSession();
     const loading = status === "loading"
-
+    console.log('Session: ' + session)
   return (
     <Box bg="black" py="1.5rem" pl="0.75rem" pr="1.5rem">
       <Flex align="center" justify="space-between" maxW="1280px" mx="auto">

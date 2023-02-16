@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import * as prismicH from '@prismicio/helpers'
 import { SliceZone } from '@prismicio/react'
 import { createClient} from '../../prismicio'

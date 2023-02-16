@@ -6,24 +6,27 @@ import { SessionProvider } from "next-auth/react"
 import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName, linkResolver } from "../../prismicio";
-import React from "react";
+import React, { useContext } from "react";
+import { AuthProvider } from "../contexts/auth";
 
 function App({ Component, pageProps }: { Component: any; pageProps: any }) {
   return (
-    <PrismicProvider
-      linkResolver={linkResolver}
-      internalLinkComponent={({ href, ...props }) => (
-        <Link href={href} {...props}/>
-      )}
-    >
-      <PrismicPreview repositoryName={repositoryName}>
-        <ChakraProvider theme={theme}>
-        <SessionProvider session={pageProps.session}>
-                <Component {...pageProps} />
-          </SessionProvider>
-        </ChakraProvider>
-      </PrismicPreview>
-    </PrismicProvider>
+    <AuthProvider>
+      <PrismicProvider
+        linkResolver={linkResolver}
+        internalLinkComponent={({ href, ...props }) => (
+          <Link href={href} {...props}/>
+        )}
+      >
+        <PrismicPreview repositoryName={repositoryName}>
+          <ChakraProvider theme={theme}>
+          <SessionProvider session={pageProps.session}>
+                  <Component {...pageProps} />
+            </SessionProvider>
+          </ChakraProvider>
+        </PrismicPreview>
+      </PrismicProvider>
+    </AuthProvider>
   );
 }
 

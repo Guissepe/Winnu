@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { PrismicLink } from '@prismicio/react';
 import { Flex, Image, Text, Button, Center, HStack } from '@chakra-ui/react';
 
@@ -15,7 +15,7 @@ const Header = ({ slice }) => (
       </Center>
       <Center mx={'11rem'}>
         {slice?.items?.map((item, i) => (
-          <HStack>
+          <HStack key={i}>
             <PrismicLink field={item.buttonlink}>
               <Button background={'black'} color={'white'}>
                 <Text>{item.buttonname}</Text>

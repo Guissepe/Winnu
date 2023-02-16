@@ -2,9 +2,9 @@ import React from "react";
 import { Box, Flex, Image, Show, Text } from "@chakra-ui/react";
 import { useSession, getSession, getProviders, getCsrfToken } from 'next-auth/react'
 const Userimage = () => {
-    const { data: session, status }: any = useSession();
+  const { data: session, status }: any = useSession();
     const loading = status === "loading"
-    console.log('Session: ' + session, status, getCsrfToken, getProviders, getSession)
+    console.log('Session: ' + session, status, )
 
 
   return (

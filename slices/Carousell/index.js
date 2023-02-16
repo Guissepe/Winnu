@@ -30,8 +30,9 @@ const Carousell = ({ slice }) => (
               onReady={updateform}
               onMove={updateform}
             >
-              {slice?.items?.map(item => (
+              {slice?.items?.map((item, i) => (
                 <img
+                  key={i}
                   width={1100}
                   height={1100}
                   src={item.image.url}
@@ -51,8 +52,9 @@ const Carousell = ({ slice }) => (
               onReady={updateform2}
               onMove={updateform2}
             >
-              {slice?.items?.map(item => (
+              {slice?.items?.map((item, i) => (
                 <Image
+                  key={i}
                   width={900}
                   height={800}
                   src={item.image.url}

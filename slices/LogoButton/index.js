@@ -18,7 +18,7 @@ const LogoButton = ({ slice }) => (
           </Text>
         </Center>
         {slice?.items?.map((item, i) => (
-          <Center>
+          <Center key={i}>
             <Image height={5} px={1} src={item.icon.url} alt={item.icon.alt} />
             <PrismicLink field={item.link}>{item.icon.url}</PrismicLink>
           </Center>

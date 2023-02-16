@@ -11,6 +11,7 @@ const Custumers = ({ slice }) => (
     <Center>
       {slice?.items?.map((item, i) => (
         <Image
+          key={i}
           px="3%"
           mt={'1.25rem'}
           src={item.custumer.url}

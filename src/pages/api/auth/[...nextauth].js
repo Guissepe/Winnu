@@ -29,10 +29,16 @@ const options = {
     async signIn({ baseUrl }) {
       return [baseUrl, true];
     },
-    async session({ session }) {
+    async session({ session, token, user }) {
+      session.accessToken = token.accessToken;
+      session.user.id = token.id;
       return session;
     },
-    async jwt({ token }) {
+    async jwt({ token, account, profile }) {
+      if (account) {
+        token.accessToken = account.access_token;
+        token.id = profile.id;
+      }
       return token;
     },
     async redirect({ url, baseUrl }) {

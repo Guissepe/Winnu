@@ -36,7 +36,7 @@ const Infobox = ({ slice }) => (
             justifyContent="center"
           >
             {slice?.items?.map((item, i) => (
-              <Box height="10%" px={2}>
+              <Box key={i} height="10%" px={2}>
                 <PrismicLink field={item.cta_link}>
                   <Button
                     height="10%"

@@ -124,7 +124,8 @@
     },
     "Carousell": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "Priceplan": {
@@ -196,7 +197,7 @@
         "primary": {}
       }
     },
-    "Topimage": {
+    "WelcomeCarousel": {
       "default": {
         "primary": {}
       }

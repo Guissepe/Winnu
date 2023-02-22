@@ -77,7 +77,7 @@
             "clickwords": {
               "type": "SharedSlice"
             },
-            "topimage": {
+            "welcome_carousel": {
               "type": "SharedSlice"
             }
           }

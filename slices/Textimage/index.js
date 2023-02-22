@@ -6,7 +6,7 @@ const Textimg = ({ slice }) => (
   <Box pt="10%">
     {slice.variation !== 'textimgImgBottom' ? (
       <Center>
-        <Flex gridGap="4rem">
+        <Flex gridGap="4rem" direction={{base: 'column', lg: 'row'}}>
           <Box maxW={450}>
             <Box fontWeight="600" fontSize={'2.5rem'}>
               <PrismicRichText field={slice.primary.title} />

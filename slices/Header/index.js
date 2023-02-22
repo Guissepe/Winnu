@@ -21,13 +21,6 @@ const Header = ({ slice }) => {
   const loading = status === 'loading';
   return (
     <Center py={'1rem'} background={'black'}>
-      {loading && <Box>Loading...</Box>}
-      {session && (
-        <>
-          <Image borderRadius={'360px'} src={session.user.image}></Image>
-        </>
-      )}
-      {!session && <></>}
       <Flex>
         <Center>
           <Image
@@ -49,18 +42,29 @@ const Header = ({ slice }) => {
           ))}
         </Center>
       </Flex>
-      <Center ml={'16rem'}>
-        <PrismicLink field={slice.primary.loglink}>
-          <Button borderRadius={1} background={'black'} color={'white'}>
-            <Text>{slice.primary.login}</Text>
-          </Button>
-        </PrismicLink>
-        <PrismicLink field={slice.primary.startedlink}>
-          <Button borderRadius={1} variant={'primary'} color={'Black'}>
-            <Text>{slice.primary.getstarted}</Text>
-          </Button>
-        </PrismicLink>
-      </Center>
+
+      {loading && <Box>Loading...</Box>}
+      {session && (
+        <>
+          <Image borderRadius={'360px'} src={session.user.image}></Image>
+        </>
+      )}
+      {!session && (
+        <>
+          <Center ml={'16rem'}>
+            <PrismicLink field={slice.primary.loglink}>
+              <Button borderRadius={1} background={'black'} color={'white'}>
+                <Text>{slice.primary.login}</Text>
+              </Button>
+            </PrismicLink>
+            <PrismicLink field={slice.primary.startedlink}>
+              <Button borderRadius={1} variant={'primary'} color={'Black'}>
+                <Text>{slice.primary.getstarted}</Text>
+              </Button>
+            </PrismicLink>
+          </Center>
+        </>
+      )}
     </Center>
   );
 };

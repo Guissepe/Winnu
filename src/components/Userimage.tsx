@@ -13,7 +13,7 @@ const Testes = () => {
   <button onClick={HandleLogin}>Click me please</button>
  );
 }
-function Userimage () {
+const Userimage = () => {
   const { data: session, status }: any = useSession();
     const loading = status === "loading"
 

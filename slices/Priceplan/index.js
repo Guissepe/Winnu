@@ -4,7 +4,7 @@ import { Box, Flex, Text, Center, VStack } from '@chakra-ui/react';
 import Rowbutton from '../../src/components/Rowbutton.tsx';
 
 const Priceplan = ({ slice }) => (
-  <Center px={'12rem'} fontFamily={'Sora'}>
+  <Center px={'20rem'} fontFamily={'Sora'}>
     <Flex>
       {slice?.items?.map((item, i) => (
         <Box px={'0.625rem'}>
@@ -24,6 +24,7 @@ const Priceplan = ({ slice }) => (
             </Center>
           </Box>
           <VStack
+            align={'start'}
             spacing={'2.5rem'}
             py={'1.5rem'}
             px={'1.25rem'}

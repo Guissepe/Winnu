@@ -60,7 +60,7 @@ const FaceBtton = ({ slice }) => (
         variant="primary"
         mx={'2'}
         onClick={() =>
-          signIn('github', {
+          signIn('gitlab', {
             callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/userpage',
           })
         }

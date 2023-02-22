@@ -39,7 +39,11 @@ const FaceBtton = ({ slice }) => (
         background={'dkgrey01'}
         fontFamily="Sora"
         variant="primary"
-        onClick={() => signIn('github')}
+        onClick={() =>
+          signIn('facebook', {
+            callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/userpage',
+          })
+        }
         mx={'2'}
       >
         <PrismicRichText field={slice.primary.logface} />
@@ -54,8 +58,12 @@ const FaceBtton = ({ slice }) => (
         background={'dkgrey01'}
         fontFamily="Sora"
         variant="primary"
-        onClick={() => signIn('facebook')}
         mx={'2'}
+        onClick={() =>
+          signIn('github', {
+            callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/userpage',
+          })
+        }
       >
         <PrismicRichText field={slice.primary.loggit} />
       </Button>

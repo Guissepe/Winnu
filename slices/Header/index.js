@@ -1,6 +1,14 @@
 import React, { useContext } from 'react';
 import { PrismicLink } from '@prismicio/react';
-import { Flex, Image, Text, Button, Center, HStack } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Image,
+  Text,
+  Button,
+  Center,
+  HStack,
+} from '@chakra-ui/react';
 import {
   useSession,
   getSession,
@@ -9,10 +17,17 @@ import {
 } from 'next-auth/react';
 
 const Header = ({ slice }) => {
-  const { data: session, status }: any = useSession();
+  const { data: session, status } = useSession();
   const loading = status === 'loading';
   return (
     <Center py={'1rem'} background={'black'}>
+      {loading && <Box>Loading...</Box>}
+      {session && (
+        <>
+          <Image borderRadius={'360px'} src={session.user.image}></Image>
+        </>
+      )}
+      {!session && <></>}
       <Flex>
         <Center>
           <Image

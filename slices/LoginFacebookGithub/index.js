@@ -1,12 +1,12 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
-import { Center, Flex } from '@chakra-ui/react';
+import { Center, Flex, Button } from '@chakra-ui/react';
 import { LogInbutton } from '../../src/components/loginbutton.tsx';
 import {
   handleFacebookSignin,
   handleGitHubSignin,
 } from '../../src/components/Handlers.tsx';
-import { getProviders } from 'next-auth/react';
+import { getProviders, signIn } from 'next-auth/react';
 
 const FaceBtton = ({ slice }) => (
   <Center bg="black">
@@ -17,18 +17,33 @@ const FaceBtton = ({ slice }) => (
         marginX={2}
         backcolor={'dkgrey01'}
         src={handleFacebookSignin}
-        handler={handleFacebookSignin}
+        click={handleFacebookSignin}
         provname={<PrismicRichText field={slice.primary.logface} />}
       ></LogInbutton>
-      <LogInbutton
+      {/* <LogInbutton
         classname={slice.variation}
         color={'white'}
         backcolor={'dkgrey01'}
         src={handleFacebookSignin}
-        handler={handleGitHubSignin}
+        click={handleGitHubSignin}
         marginX={2}
         provname={<PrismicRichText field={slice.primary.loggit} />}
-      ></LogInbutton>
+      ></LogInbutton> */}
+      <Button
+        borderRadius="3px"
+        fontSize={17}
+        width={350}
+        maxWidth={850}
+        height={55}
+        color={'white'}
+        background={'dkgrey01'}
+        fontFamily="Sora"
+        variant="primary"
+        onClick={() => signIn()}
+        mx={'2'}
+      >
+        <PrismicRichText field={slice.primary.title} />
+      </Button>
     </Flex>
   </Center>
 );

@@ -11,24 +11,6 @@ import { getProviders, signIn } from 'next-auth/react';
 const FaceBtton = ({ slice }) => (
   <Center bg="black">
     <Flex mb={435} mt={'1rem'}>
-      {/* <LogInbutton
-        classname={slice.variation}
-        color={'white'}
-        marginX={2}
-        backcolor={'dkgrey01'}
-        src={handleFacebookSignin}
-        click={handleFacebookSignin}
-        provname={<PrismicRichText field={slice.primary.logface} />}
-      ></LogInbutton> */}
-      {/* <LogInbutton
-        classname={slice.variation}
-        color={'white'}
-        backcolor={'dkgrey01'}
-        src={handleFacebookSignin}
-        click={handleGitHubSignin}
-        marginX={2}
-        provname={<PrismicRichText field={slice.primary.loggit} />}
-      ></LogInbutton> */}
       <Button
         borderRadius="3px"
         fontSize={17}
@@ -39,7 +21,11 @@ const FaceBtton = ({ slice }) => (
         background={'dkgrey01'}
         fontFamily="Sora"
         variant="primary"
-        onClick={() => signIn('facebook')}
+        onClick={() =>
+          signIn('facebook', {
+            callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/userpage',
+          })
+        }
         mx={'2'}
       >
         <PrismicRichText field={slice.primary.logface} />

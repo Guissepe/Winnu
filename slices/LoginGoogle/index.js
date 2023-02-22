@@ -16,9 +16,8 @@ const GoogBtton = ({ slice }) => (
       height={55}
       variant="primary"
       fontFamily="Sora"
-      onClick={
-        (() => signIn('google'),
-        {
+      onClick={() =>
+        signIn('google', {
           callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/userpage',
         })
       }

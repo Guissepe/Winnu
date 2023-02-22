@@ -1,4 +1,5 @@
 import { getProviders } from "next-auth/react"
+import { signIn } from "next-auth/react";
 import {
     Box,
     Button,
@@ -19,7 +20,7 @@ import {
           background={props.backcolor}
           fontFamily="Sora"
           variant="primary"
-          onClick={ () => props.click()}
+          onClick={ () => signIn()}
           mx={props.marginX}>
           {props.provname}
         </Button>

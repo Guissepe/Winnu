@@ -12,7 +12,7 @@ const GoogBtton = ({ slice }) => (
       classname={slice.variation}
       variant="primary"
       src={handleGoogleSignin}
-      click={signIn('google')}
+      click={'google'}
       provname={<PrismicRichText field={slice.primary.title} />}
     ></LogInbutton>
   </Center>

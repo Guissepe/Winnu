@@ -39,7 +39,7 @@ const FaceBtton = ({ slice }) => (
         background={'dkgrey01'}
         fontFamily="Sora"
         variant="primary"
-        onClick={() => signIn('facebook')}
+        onClick={() => signIn('github')}
         mx={'2'}
       >
         <PrismicRichText field={slice.primary.logface} />
@@ -54,7 +54,7 @@ const FaceBtton = ({ slice }) => (
         background={'dkgrey01'}
         fontFamily="Sora"
         variant="primary"
-        onClick={() => signIn('github')}
+        onClick={() => signIn('facebook')}
         mx={'2'}
       >
         <PrismicRichText field={slice.primary.loggit} />

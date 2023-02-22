@@ -41,7 +41,11 @@ const FaceBtton = ({ slice }) => (
         fontFamily="Sora"
         variant="primary"
         mx={'2'}
-        onClick={() => handleGitHubSignin()}
+        onClick={() =>
+          signIn('github', {
+            callbackUrl: 'https://winnu-git-auth-guissepe.vercel.app/userpage',
+          })
+        }
       >
         <PrismicRichText field={slice.primary.loggit} />
       </Button>

@@ -3,7 +3,7 @@ import { PrismicRichText } from '@prismicio/react';
 import { Center } from '@chakra-ui/react';
 import { LogInbutton } from '../../src/components/loginbutton.tsx';
 import { handleGoogleSignin } from '../../src/components/Handlers.tsx';
-import { getProviders } from 'next-auth/react';
+import { getProviders, signIn } from 'next-auth/react';
 
 const GoogBtton = ({ slice }) => (
   <Center bg="black">
@@ -12,7 +12,7 @@ const GoogBtton = ({ slice }) => (
       classname={slice.variation}
       variant="primary"
       src={handleGoogleSignin}
-      handler={handleGoogleSignin}
+      click={signIn('google')}
       provname={<PrismicRichText field={slice.primary.title} />}
     ></LogInbutton>
   </Center>

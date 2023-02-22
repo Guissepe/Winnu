@@ -19,7 +19,7 @@ import {
           background={props.backcolor}
           fontFamily="Sora"
           variant="primary"
-          onClick={ () => props.handler()}
+          onClick={ () => props.click()}
           mx={props.marginX}>
           {props.provname}
         </Button>

@@ -51,6 +51,7 @@ const Header = ({ slice }) => {
           </Text>
           <PrismicLink field={slice.primary.userlink}>
             <Image
+              pl={'1rem'}
               height={'3rem'}
               borderRadius={'360px'}
               src={session.user.image}

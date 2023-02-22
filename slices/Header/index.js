@@ -45,7 +45,7 @@ const Header = ({ slice }) => {
 
       {loading && <Box>Loading...</Box>}
       {session && (
-        <>
+        <Center ml={'16rem'}>
           <PrismicLink field={slice.primary.userlink}>
             <Image
               height={'3rem'}
@@ -59,7 +59,7 @@ const Header = ({ slice }) => {
               <Text>{slice.primary.user}</Text>
             </Button>
           </PrismicLink>
-        </>
+        </Center>
       )}
       {!session && (
         <>

@@ -47,22 +47,26 @@ const Header = ({ slice }) => {
         {loading && <Box>Loading...</Box>}
         {session && (
           <Flex gap={'1rem'}>
-            <Text fontSize={'1rem'} color="white" pr={'1rem'}>
-              {session.user.name ?? session.user.email}!
-            </Text>
-            <PrismicLink field={slice.primary.userlink}>
-              <Image
-                height={'3rem'}
-                borderRadius={'360px'}
-                src={session.user.image}
-              ></Image>
-            </PrismicLink>
-
+            <Show above="md">
+              <Text fontSize={'1rem'} color="white" pr={'1rem'}>
+                {session.user.name ?? session.user.email}!
+              </Text>
+              <PrismicLink field={slice.primary.userlink}>
+                <Image
+                  height={'3rem'}
+                  borderRadius={'360px'}
+                  src={session.user.image}
+                ></Image>
+              </PrismicLink>
+            </Show>
             <PrismicLink field={slice.primary.logoutuser}>
               <Button borderRadius={1} background={'black'} color={'white'}>
                 <Text>{slice.primary.user}</Text>
               </Button>
             </PrismicLink>
+            <Hide above="md">
+              <Image src="/assets/icons/menu.svg" alt="menu" />
+            </Hide>
           </Flex>
         )}
         {!session && (

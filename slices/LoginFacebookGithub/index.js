@@ -41,7 +41,7 @@ const FaceBtton = ({ slice }) => (
         fontFamily="Sora"
         variant="primary"
         mx={'2'}
-        onClick={() => signIn('github')}
+        onClick={() => handleGitHubSignin()}
       >
         <PrismicRichText field={slice.primary.loggit} />
       </Button>

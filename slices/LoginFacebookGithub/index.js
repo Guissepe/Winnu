@@ -11,7 +11,7 @@ import { getProviders, signIn } from 'next-auth/react';
 const FaceBtton = ({ slice }) => (
   <Center bg="black">
     <Flex mb={435} mt={'1rem'}>
-      <LogInbutton
+      {/* <LogInbutton
         classname={slice.variation}
         color={'white'}
         marginX={2}
@@ -19,7 +19,7 @@ const FaceBtton = ({ slice }) => (
         src={handleFacebookSignin}
         click={handleFacebookSignin}
         provname={<PrismicRichText field={slice.primary.logface} />}
-      ></LogInbutton>
+      ></LogInbutton> */}
       {/* <LogInbutton
         classname={slice.variation}
         color={'white'}
@@ -39,10 +39,25 @@ const FaceBtton = ({ slice }) => (
         background={'dkgrey01'}
         fontFamily="Sora"
         variant="primary"
-        onClick={() => signIn()}
+        onClick={() => signIn('facebook')}
         mx={'2'}
       >
-        <PrismicRichText field={slice.primary.title} />
+        <PrismicRichText field={slice.primary.logface} />
+      </Button>
+      <Button
+        borderRadius="3px"
+        fontSize={17}
+        width={350}
+        maxWidth={850}
+        height={55}
+        color={'white'}
+        background={'dkgrey01'}
+        fontFamily="Sora"
+        variant="primary"
+        onClick={() => signIn('github')}
+        mx={'2'}
+      >
+        <PrismicRichText field={slice.primary.loggit} />
       </Button>
     </Flex>
   </Center>

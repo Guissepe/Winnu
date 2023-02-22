@@ -19,6 +19,7 @@ import Quicknote from './Quicknote';
 import Textimage from './Textimage';
 import TextPile from './TextPile';
 import Therms from './Therms';
+import Topimage from './Topimage';
 import Welcom from './Welcom';
 
 export {
@@ -41,6 +42,7 @@ export {
 	Textimage,
 	TextPile,
 	Therms,
+	Topimage,
 	Welcom,
 };
 
@@ -64,5 +66,6 @@ export const components = {
 	textimg: Textimage,
 	text_pile: TextPile,
 	therms: Therms,
+	topimage: Topimage,
 	welcom: Welcom,
 };

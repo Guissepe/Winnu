@@ -46,7 +46,7 @@ const Header = ({ slice }) => {
       {loading && <Box>Loading...</Box>}
       {session && (
         <Center ml={'16rem'}>
-          <Text fontSize={'0.5rem'} color="white">
+          <Text fontSize={'1rem'} color="white">
             {session.user.name ?? session.user.email}!
           </Text>
           <PrismicLink field={slice.primary.userlink}>

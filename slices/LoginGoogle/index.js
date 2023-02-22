@@ -1,20 +1,25 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
-import { Center } from '@chakra-ui/react';
+import { Center, Button } from '@chakra-ui/react';
 import { LogInbutton } from '../../src/components/loginbutton.tsx';
 import { handleGoogleSignin } from '../../src/components/Handlers.tsx';
 import { getProviders, signIn } from 'next-auth/react';
 
 const GoogBtton = ({ slice }) => (
   <Center bg="black">
-    <LogInbutton
-      marginTop={'7rem'}
-      classname={slice.variation}
+    <Button
+      borderRadius="3px"
+      mt={'7rem'}
+      fontSize={17}
+      width={350}
+      maxWidth={850}
+      height={55}
       variant="primary"
-      src={handleGoogleSignin}
-      click={'google'}
-      provname={<PrismicRichText field={slice.primary.title} />}
-    ></LogInbutton>
+      fontFamily="Sora"
+      onClick={() => signIn('google')}
+    >
+      <PrismicRichText field={slice.primary.title} />
+    </Button>
   </Center>
 );
 

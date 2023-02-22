@@ -46,7 +46,7 @@ const Header = ({ slice }) => {
         </Show>
         {loading && <Box>Loading...</Box>}
         {session && (
-          <Center ml={'16rem'}>
+          <Flex gap={'1rem'}>
             <Text fontSize={'1rem'} color="white" pr={'1rem'}>
               {session.user.name ?? session.user.email}!
             </Text>
@@ -63,7 +63,7 @@ const Header = ({ slice }) => {
                 <Text>{slice.primary.user}</Text>
               </Button>
             </PrismicLink>
-          </Center>
+          </Flex>
         )}
         {!session && (
           <>

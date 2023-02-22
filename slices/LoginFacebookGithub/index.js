@@ -10,7 +10,7 @@ import { getProviders, signIn } from 'next-auth/react';
 
 const FaceBtton = ({ slice }) => (
   <Center bg="black">
-    <Flex mb={435} mt={'1rem'}>
+    <Flex mb={235} mt={'1rem'}>
       <Button
         borderRadius="3px"
         fontSize={17}

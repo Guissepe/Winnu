@@ -7,7 +7,7 @@ const Topimage = ({ slice }) => (
     <Image
       mb={'5rem'}
       mt={'10rem'}
-      height={'2rem'}
+      height={'1rem'}
       src={slice.primary.image.url}
       alt={slice.primary.image.alt}
     />

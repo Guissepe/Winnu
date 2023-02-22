@@ -1,7 +1,9 @@
 import React from 'react';
-import { Center, Flex, Box, Image } from '@chakra-ui/react';
-import Flicking from '@egjs/react-flicking';
+import { Center, Flex, Box, Image, Button, Switch } from '@chakra-ui/react';
+import Flicking, { ViewportSlot } from '@egjs/react-flicking';
 import '@egjs/react-flicking/dist/flicking.css';
+import '@egjs/flicking-plugins/dist/arrow.css';
+import { Arrow } from '@egjs/flicking-plugins';
 
 const updateform = e => {
   e.currentTarget.panels.forEach(panel => {
@@ -11,6 +13,7 @@ const updateform = e => {
     panel.element.style.transform = `translateZ(-${depth}px) rotateX(${rotateVal}deg)`;
   });
 };
+
 const updateform2 = e => {
   e.currentTarget.panels.forEach(panel => {
     const rotateVal = 1;
@@ -26,6 +29,7 @@ const Carousell = ({ slice }) => (
         <Flex pb={'12rem'}>
           <Box className="slide" px={'0.375rem'}>
             <Flicking
+              plugins={[new Arrow()]}
               horizontal={true}
               onReady={updateform}
               onMove={updateform}
@@ -39,6 +43,10 @@ const Carousell = ({ slice }) => (
                   alt={item.image.alt}
                 />
               ))}
+              <ViewportSlot>
+                <span className="flicking-arrow-prev is-circle"></span>
+                <span className="flicking-arrow-next is-circle"></span>
+              </ViewportSlot>
             </Flicking>
           </Box>
         </Flex>

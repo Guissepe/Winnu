@@ -16,11 +16,11 @@ import NavigationItem from './NavigationItem';
 import PageInfo from './PageInfo';
 import Priceplan from './Priceplan';
 import Quicknote from './Quicknote';
-import Textimage from './Textimage';
 import TextPile from './TextPile';
+import Textimage from './Textimage';
 import Therms from './Therms';
-import Topimage from './Topimage';
 import Welcom from './Welcom';
+import WelcomeCarousel from './WelcomeCarousel';
 
 export {
 	Button,
@@ -39,11 +39,11 @@ export {
 	PageInfo,
 	Priceplan,
 	Quicknote,
-	Textimage,
 	TextPile,
+	Textimage,
 	Therms,
-	Topimage,
 	Welcom,
+	WelcomeCarousel,
 };
 
 export const components = {
@@ -63,9 +63,9 @@ export const components = {
 	slice1: PageInfo,
 	priceplan: Priceplan,
 	quicknote: Quicknote,
-	textimg: Textimage,
 	text_pile: TextPile,
+	textimg: Textimage,
 	therms: Therms,
-	topimage: Topimage,
 	welcom: Welcom,
+	welcome_carousel: WelcomeCarousel,
 };

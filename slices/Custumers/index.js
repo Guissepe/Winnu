@@ -1,5 +1,5 @@
 import React from 'react';
-import { Center, Box, Text, Image } from '@chakra-ui/react';
+import { Center, Box, Text, Image, Flex } from '@chakra-ui/react';
 
 const Custumers = ({ slice }) => (
   <Box>
@@ -8,17 +8,16 @@ const Custumers = ({ slice }) => (
         {slice.primary.title}
       </Text>
     </Box>
-    <Center>
+    <Flex justify={'center'} direction={{ base: 'column', md: 'row' }}>
       {slice?.items?.map((item, i) => (
-        <Image
-          key={i}
+        <Image maxW={300} mx="auto"
           px="3%"
           mt={'1.25rem'}
           src={item.custumer.url}
           alt={item.custumer.alt}
         />
       ))}
-    </Center>
+    </Flex>
   </Box>
 );
 

@@ -48,7 +48,7 @@ const Header = ({ slice }) => {
         <>
           <PrismicLink field={slice.primary.userlink}>
             <Button borderRadius={1} background={'black'} color={'white'}>
-              <Text>{slice.primary.user}</Text>
+              <Image borderRadius={'360px'} src={session.user.image}></Image>
             </Button>
           </PrismicLink>
 
@@ -57,7 +57,6 @@ const Header = ({ slice }) => {
               <Text>{slice.primary.logout}</Text>
             </Button>
           </PrismicLink>
-          <Image borderRadius={'360px'} src={session.user.image}></Image>
         </>
       )}
       {!session && (

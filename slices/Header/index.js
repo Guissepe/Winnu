@@ -47,11 +47,15 @@ const Header = ({ slice }) => {
       {session && (
         <>
           <PrismicLink field={slice.primary.userlink}>
-            <Image borderRadius={'360px'} src={session.user.image}></Image>
+            <Image
+              height={'3rem'}
+              borderRadius={'360px'}
+              src={session.user.image}
+            ></Image>
           </PrismicLink>
 
           <PrismicLink field={slice.primary.logoutuser}>
-            <Button borderRadius={1} variant={'primary'} color={'Black'}>
+            <Button borderRadius={1} background={'black'} color={'white'}>
               <Text>{slice.primary.user}</Text>
             </Button>
           </PrismicLink>

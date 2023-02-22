@@ -24,6 +24,22 @@
                 "placeholder": "",
                 "select": null
               }
+            },
+            "userpage": {
+              "type": "Link",
+              "config": {
+                "label": "userpage",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "logout": {
+              "type": "Link",
+              "config": {
+                "label": "logout",
+                "placeholder": "",
+                "select": null
+              }
             }
           }
         }

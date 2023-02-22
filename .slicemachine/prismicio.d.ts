@@ -57,6 +57,26 @@ export interface HeaderDocumentDataMenuItemsItem {
      *
      */
     link: prismicT.LinkField;
+    /**
+     * userpage field in *Header → Menu items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.menu_items[].userpage
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    userpage: prismicT.LinkField;
+    /**
+     * logout field in *Header → Menu items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.menu_items[].logout
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    logout: prismicT.LinkField;
 }
 /**
  * Header document from Prismic
@@ -951,6 +971,46 @@ interface HeaderSliceDefaultPrimary {
      *
      */
     startedlink: prismicT.LinkField;
+    /**
+     * user field in *Header → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.primary.user
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    user: prismicT.KeyTextField;
+    /**
+     * userlink field in *Header → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.primary.userlink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    userlink: prismicT.LinkField;
+    /**
+     * logout field in *Header → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.primary.logout
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    logout: prismicT.KeyTextField;
+    /**
+     * logoutuser field in *Header → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.primary.logoutuser
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    logoutuser: prismicT.LinkField;
 }
 /**
  * Item in Header → Items

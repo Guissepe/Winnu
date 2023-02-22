@@ -9,7 +9,7 @@
             "label",
             {
               "__TYPE__": "FieldContent",
-              "value": "method",
+              "value": "low",
               "type": "Text"
             }
           ],
@@ -19,7 +19,27 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            }
+          ],
+          [
+            "userpage",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
                 "url": "http://twitter.com"
+              }
+            }
+          ],
+          [
+            "logout",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
               }
             }
           ]

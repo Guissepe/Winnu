@@ -49,6 +49,30 @@
           "__TYPE__": "ExternalLink",
           "url": "http://google.com"
         }
+      },
+      "user": {
+        "__TYPE__": "FieldContent",
+        "value": "advice",
+        "type": "Text"
+      },
+      "userlink": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
+      },
+      "logout": {
+        "__TYPE__": "FieldContent",
+        "value": "to",
+        "type": "Text"
+      },
+      "logoutuser": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
       }
     },
     "items": [

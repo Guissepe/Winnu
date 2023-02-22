@@ -48,6 +48,36 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "user": {
+          "type": "Text",
+          "config": {
+            "label": "user",
+            "placeholder": ""
+          }
+        },
+        "userlink": {
+          "type": "Link",
+          "config": {
+            "label": "userlink",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "logout": {
+          "type": "Text",
+          "config": {
+            "label": "logout",
+            "placeholder": ""
+          }
+        },
+        "logoutuser": {
+          "type": "Link",
+          "config": {
+            "label": "logoutuser",
+            "placeholder": "",
+            "select": null
+          }
         }
       },
       "items": {

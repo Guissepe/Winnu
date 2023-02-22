@@ -46,6 +46,17 @@ const Header = ({ slice }) => {
       {loading && <Box>Loading...</Box>}
       {session && (
         <>
+          <PrismicLink field={slice.primary.userlink}>
+            <Button borderRadius={1} background={'black'} color={'white'}>
+              <Text>{slice.primary.user}</Text>
+            </Button>
+          </PrismicLink>
+
+          <PrismicLink field={slice.primary.logoutuser}>
+            <Button borderRadius={1} variant={'primary'} color={'Black'}>
+              <Text>{slice.primary.logout}</Text>
+            </Button>
+          </PrismicLink>
           <Image borderRadius={'360px'} src={session.user.image}></Image>
         </>
       )}

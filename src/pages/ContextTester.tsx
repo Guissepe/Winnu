@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import AuthContext from '../contexts/authContext';
+// import AuthContext from '../contexts/authContext';
 
 const Testes = () => {
 
- const { authenticated, HandleLogin }: any = useContext(AuthContext);
+//  const { authenticated, HandleLogin }: any = useContext(AuthContext);
 
- console.log(authenticated);
+//  console.log(authenticated)  onClick={HandleLogin};
 
  return(
-  <button onClick={HandleLogin}>Click me please</button>
+  <button>Click me please</button>
  );
 }
 

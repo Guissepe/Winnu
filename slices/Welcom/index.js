@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, Center, VStack, Image, HStack, Button } from '@chakra-ui/react';
-import BigDropdown from '../../src/components/Bigdropdown copy.tsx';
+import BigDropdown from '../../src/components/Bigdropdown.tsx';
 import SmallDropdown from '../../src/components/Smalldropdown.tsx';
 import { InputField } from '../../src/components/inputfield.tsx';
 import Username from '../../src/components/Username.tsx';

@@ -10,7 +10,9 @@ const Custumers = ({ slice }) => (
     </Box>
     <Flex justify={'center'} direction={{ base: 'column', md: 'row' }}>
       {slice?.items?.map((item, i) => (
-        <Image maxW={300} mx="auto"
+        <Image
+          maxW={300}
+          mx="auto"
           px="3%"
           mt={'1.25rem'}
           src={item.custumer.url}

@@ -9,11 +9,13 @@ export const theme = extendTheme({
     Lightgrey: "#A3A3A3",
     Yellow01: "#EBC142",
     Yellow02: "#C9A538",
+    Yellow03: "#FFD966",
     border01: "#FFBDB4",
     dkgrey01: "#1e1e1e",
     grey01: '#1E1E1E',
     grey02: "#383838",
     grey03: "#787878",
+    white01: "#F2F2F2",
     brand: {
       primary: "#FCCF47",
       secondary: "#FFAFA3",

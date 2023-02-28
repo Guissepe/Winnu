@@ -1,31 +1,43 @@
 import React from 'react';
 import { PrismicLink } from '@prismicio/react';
-import { Button, Center, Text, Image, Flex } from '@chakra-ui/react';
+import {
+  Button,
+  Center,
+  Text,
+  Image,
+  Flex,
+  VStack,
+  HStack,
+} from '@chakra-ui/react';
 
 const LogoButton = ({ slice }) => (
-  <Center fontFamily={'Sora'} pb={'0.625rem'} background={'black'}>
-    <Flex>
+  <VStack fontFamily={'Sora'} pb={'6rem'} background={'grey01'}>
+    <Center>
       <Image
-        height={'2rem'}
-        pr={'7rem'}
+        height={'3.5rem'}
+        m={'3rem'}
         src={slice.primary.logo.url}
         alt={slice.primary.logo.alt}
       />
-      <Flex>
-        <Center>
-          <Text color={'text.grey04'} pr={3}>
-            {slice.primary.follow}
-          </Text>
+    </Center>
+
+    <Center>
+      <Text fontSize={'1.5rem'} color={'white'}>
+        {slice.primary.follow}
+      </Text>
+    </Center>
+    <HStack>
+      <Text fontSize={'1.5rem'} color={'white'}>
+        {slice.primary.poweredby}
+      </Text>
+      {slice?.items?.map((item, i) => (
+        <Center key={i}>
+          <Image height={'2.25rem'} src={item.icon.url} alt={item.icon.alt} />
+          <PrismicLink field={item.link}>{item.icon.url}</PrismicLink>
         </Center>
-        {slice?.items?.map((item, i) => (
-          <Center key={i}>
-            <Image height={5} px={1} src={item.icon.url} alt={item.icon.alt} />
-            <PrismicLink field={item.link}>{item.icon.url}</PrismicLink>
-          </Center>
-        ))}
-      </Flex>
-    </Flex>
-  </Center>
+      ))}
+    </HStack>
+  </VStack>
 );
 
 export default LogoButton;

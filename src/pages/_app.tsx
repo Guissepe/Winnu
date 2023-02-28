@@ -7,11 +7,11 @@ import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName, linkResolver } from "../../prismicio";
 import React, { useContext } from "react";
-import { AuthProvider } from "../contexts/auth";
+// import { AuthProvider } from "../contexts/authContext";
 
 function App({ Component, pageProps }: { Component: any; pageProps: any }) {
   return (
-    <AuthProvider>
+    // <AuthProvider>
       <PrismicProvider
         linkResolver={linkResolver}
         internalLinkComponent={({ href, ...props }) => (
@@ -26,7 +26,7 @@ function App({ Component, pageProps }: { Component: any; pageProps: any }) {
           </ChakraProvider>
         </PrismicPreview>
       </PrismicProvider>
-    </AuthProvider>
+    // </AuthProvider>
   );
 }
 

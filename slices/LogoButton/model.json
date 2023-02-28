@@ -25,6 +25,13 @@
             "label": "Follow",
             "placeholder": ""
           }
+        },
+        "poweredby": {
+          "type": "Text",
+          "config": {
+            "label": "Poweredby",
+            "placeholder": ""
+          }
         }
       },
       "items": {

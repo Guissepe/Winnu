@@ -1,18 +1,18 @@
 import { Box, Flex, Image, Show, Text } from "@chakra-ui/react";
 import { useSession, getSession, getProviders, getCsrfToken } from 'next-auth/react'
 import React, { useContext } from 'react';
-import AuthContext from '../contexts/auth';
+// import AuthContext from '../contexts/authContext';
 
-const Testes = () => {
+// const Testes = () => {
 
- const { authenticated, HandleLogin }: any = useContext(AuthContext);
+//  const { authenticated, HandleLogin }: any = useContext(AuthContext);
 
- console.log(authenticated);
+//  console.log(authenticated);
 
- return(
-  <button onClick={HandleLogin}>Click me please</button>
- );
-}
+//  return(
+//   <button onClick={HandleLogin}>Click me please</button>
+//  );
+// }
 const Userimage = () => {
   const { data: session, status }: any = useSession();
     const loading = status === "loading"

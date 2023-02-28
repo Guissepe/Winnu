@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import AuthContext from '../contexts/auth';
+import AuthContext from '../contexts/authContext';
 
-const Textes = () => {
+const Testes = () => {
 
  const { authenticated, HandleLogin }: any = useContext(AuthContext);
 
@@ -12,4 +12,4 @@ const Textes = () => {
  );
 }
 
-export default Textes
+export default Testes

@@ -16,9 +16,10 @@ import NavigationItem from './NavigationItem';
 import PageInfo from './PageInfo';
 import Priceplan from './Priceplan';
 import Quicknote from './Quicknote';
-import TextPile from './TextPile';
 import Textimage from './Textimage';
+import TextPile from './TextPile';
 import Therms from './Therms';
+import Topimage from './Topimage';
 import Welcom from './Welcom';
 import WelcomeCarousel from './WelcomeCarousel';
 
@@ -39,9 +40,10 @@ export {
 	PageInfo,
 	Priceplan,
 	Quicknote,
-	TextPile,
 	Textimage,
+	TextPile,
 	Therms,
+	Topimage,
 	Welcom,
 	WelcomeCarousel,
 };
@@ -63,9 +65,10 @@ export const components = {
 	slice1: PageInfo,
 	priceplan: Priceplan,
 	quicknote: Quicknote,
-	text_pile: TextPile,
 	textimg: Textimage,
+	text_pile: TextPile,
 	therms: Therms,
+	topimage: Topimage,
 	welcom: Welcom,
 	welcome_carousel: WelcomeCarousel,
 };

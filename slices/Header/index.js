@@ -22,76 +22,91 @@ const Header = ({ slice }) => {
   const { data: session, status } = useSession();
   const loading = status === 'loading';
   return (
-    <Box py={'1rem'} background={'black'}>
-      <Flex justify={'space-between'} align={'center'} maxW={1280} mx="auto">
-        <Box>
-          <Image
-            height={'1.25rem'}
-            src={slice.primary.logo.url}
-            alt={slice.primary.logo.alt}
-          />
-        </Box>
-        <Show above="md">
-          <Flex gap={6}>
-            {slice?.items?.map((item, i) => (
-              <HStack key={i}>
-                <PrismicLink field={item.buttonlink}>
-                  <Button background={'black'} color={'white'}>
-                    <Text>{item.buttonname}</Text>
-                  </Button>
-                </PrismicLink>
-              </HStack>
-            ))}
-          </Flex>
-        </Show>
-        {loading && <Box>Loading...</Box>}
-        {session && (
-          <Flex gap={'1rem'}>
+    <HStack
+      justify={'center'}
+      background={'white01'}
+      spacing={'30rem'}
+      align={'center'}
+      mx="auto"
+    >
+      <Center width={'13rem'} height={'5.25rem'}>
+        <Image
+          width={'11rem'}
+          height={'3.25rem'}
+          src={slice.primary.logo.url}
+          alt={slice.primary.logo.alt}
+        />
+      </Center>
+      <Show above="md">
+        <Center gap={6}>
+          {slice?.items?.map((item, i) => (
+            <HStack key={i}>
+              <PrismicLink field={item.buttonlink}>
+                <Button background={'white01'} color={'black'}>
+                  <Text fontSize={'1.25rem'}>{item.buttonname}</Text>
+                </Button>
+              </PrismicLink>
+            </HStack>
+          ))}
+        </Center>
+      </Show>
+      {loading && <Box>Loading...</Box>}
+      {session && (
+        <Flex gap={'1rem'}>
+          <Show above="md">
+            <Text fontSize={'1rem'} color="white" pr={'1rem'}>
+              {session.user.name ?? session.user.email}!
+            </Text>
+            <PrismicLink field={slice.primary.userlink}>
+              <Image
+                height={'3rem'}
+                borderRadius={'360px'}
+                src={session.user.image}
+              ></Image>
+            </PrismicLink>
+          </Show>
+          <PrismicLink field={slice.primary.logoutuser}>
+            <Button borderRadius={1} background={'black'} color={'white'}>
+              <Text>{slice.primary.user}</Text>
+            </Button>
+          </PrismicLink>
+          <Hide above="md">
+            <Image src="/assets/icons/menu.svg" alt="menu" />
+          </Hide>
+        </Flex>
+      )}
+      {!session && (
+        <>
+          <Center gap={'1rem'}>
             <Show above="md">
-              <Text fontSize={'1rem'} color="white" pr={'1rem'}>
-                {session.user.name ?? session.user.email}!
-              </Text>
-              <PrismicLink field={slice.primary.userlink}>
-                <Image
-                  height={'3rem'}
-                  borderRadius={'360px'}
-                  src={session.user.image}
-                ></Image>
+              <PrismicLink field={slice.primary.loglink}>
+                <Button
+                  variant={'trasnparent'}
+                  borderRadius={1}
+                  color={'black'}
+                >
+                  <Text>{slice.primary.login}</Text>
+                </Button>
               </PrismicLink>
             </Show>
-            <PrismicLink field={slice.primary.logoutuser}>
-              <Button borderRadius={1} background={'black'} color={'white'}>
-                <Text>{slice.primary.user}</Text>
+            <PrismicLink field={slice.primary.startedlink}>
+              <Button
+                variant={'primary'}
+                color={'Black'}
+                borderRadius={'6'}
+                height="3.125rem"
+                width={'8rem'}
+              >
+                <Text fontSize={'0.85rem'}>{slice.primary.getstarted}</Text>
               </Button>
             </PrismicLink>
             <Hide above="md">
               <Image src="/assets/icons/menu.svg" alt="menu" />
             </Hide>
-          </Flex>
-        )}
-        {!session && (
-          <>
-            <Flex gap={'1rem'}>
-              <Show above="md">
-                <PrismicLink field={slice.primary.loglink}>
-                  <Button borderRadius={1} background={'black'} color={'white'}>
-                    <Text>{slice.primary.login}</Text>
-                  </Button>
-                </PrismicLink>
-              </Show>
-              <PrismicLink field={slice.primary.startedlink}>
-                <Button borderRadius={1} variant={'primary'} color={'Black'}>
-                  <Text>{slice.primary.getstarted}</Text>
-                </Button>
-              </PrismicLink>
-              <Hide above="md">
-                <Image src="/assets/icons/menu.svg" alt="menu" />
-              </Hide>
-            </Flex>
-          </>
-        )}
-      </Flex>
-    </Box>
+          </Center>
+        </>
+      )}
+    </HStack>
   );
 };
 

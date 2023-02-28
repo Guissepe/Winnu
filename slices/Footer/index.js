@@ -1,25 +1,27 @@
 import React from 'react';
-import { Box, Text, Flex, Center, VStack, HStack } from '@chakra-ui/react';
+import { Box, Text, Center, VStack, HStack } from '@chakra-ui/react';
 
 const Footer = ({ slice }) => (
-  <Box pt={'4rem'} pb={'10rem'} fontFamily={'Sora'} background={'black'}>
+  <Box pt={'4rem'} pb={'2rem'} fontFamily={'Sora'} background={'grey01'}>
     <Center>
       <HStack spacing={'8rem'}>
-        <VStack
-          mb={'3rem'}
-          align={'start'}
-          spacing={'1.5rem'}
-          color={'text.peach'}
-        >
-          <Text color="white">{slice.primary.support}</Text>
-          <Text>{slice.primary.winnuhelp}</Text>
-          <Text>{slice.primary.contactus}</Text>
+        <VStack spacing={'1.5rem'} color={'text.peach'}>
+          <Text fontSize={'1.5rem'} color="Yellow03">
+            {slice.primary.support}
+          </Text>
+          <HStack fontSize={'1.33rem'} spacing={'3rem'} color="white">
+            <Text>{slice.primary.winnuhelp}</Text>
+            <Text>{slice.primary.contactus}</Text>
+          </HStack>
         </VStack>
-        <VStack align={'start'} spacing={'1.5rem'} color="text.peach">
-          <Text color="white">{slice.primary.company}</Text>
-          <Text>{slice.primary.about_us}</Text>
-          <Text>{slice.primary.careers}</Text>
-          <Text>{slice.primary.terms_and_policies}</Text>
+        <VStack spacing={'1.5rem'} color="text.peach">
+          <Text fontSize={'1.5rem'} color="Yellow03">
+            {slice.primary.company}
+          </Text>
+          <HStack fontSize={'1.33rem'} spacing={'3rem'} color="white">
+            <Text>{slice.primary.about_us}</Text>
+            <Text>{slice.primary.terms_and_policies}</Text>
+          </HStack>
         </VStack>
       </HStack>
     </Center>

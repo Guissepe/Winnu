@@ -17,6 +17,13 @@
             "label": "Title",
             "placeholder": ""
           }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "description",
+            "placeholder": ""
+          }
         }
       },
       "items": {

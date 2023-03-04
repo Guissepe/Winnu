@@ -201,6 +201,16 @@
       "default": {
         "primary": {}
       }
+    },
+    "Templates": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "HomeOnboarding": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

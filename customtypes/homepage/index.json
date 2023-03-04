@@ -83,6 +83,12 @@
             },
             "quicknote": {
               "type": "SharedSlice"
+            },
+            "templates": {
+              "type": "SharedSlice"
+            },
+            "home_onboarding": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -15,6 +15,7 @@ export const buttonStyles = {
     transparent: {
       bg: "transparent",
       fontFamily: "inter",
+      color: 'white'
     },
   },
   defaultProps: {},

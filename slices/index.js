@@ -7,6 +7,7 @@ import Clickwords from './Clickwords';
 import Custumers from './Custumers';
 import Footer from './Footer';
 import Header from './Header';
+import HomeOnboarding from './HomeOnboarding';
 import Imagerow from './Imagerow';
 import Infobox from './Infobox';
 import LoginFacebookGithub from './LoginFacebookGithub';
@@ -16,6 +17,7 @@ import NavigationItem from './NavigationItem';
 import PageInfo from './PageInfo';
 import Priceplan from './Priceplan';
 import Quicknote from './Quicknote';
+import Templates from './Templates';
 import Textimage from './Textimage';
 import TextPile from './TextPile';
 import Therms from './Therms';
@@ -31,6 +33,7 @@ export {
 	Custumers,
 	Footer,
 	Header,
+	HomeOnboarding,
 	Imagerow,
 	Infobox,
 	LoginFacebookGithub,
@@ -40,6 +43,7 @@ export {
 	PageInfo,
 	Priceplan,
 	Quicknote,
+	Templates,
 	Textimage,
 	TextPile,
 	Therms,
@@ -56,6 +60,7 @@ export const components = {
 	custumers: Custumers,
 	footer: Footer,
 	header: Header,
+	home_onboarding: HomeOnboarding,
 	imgrow: Imagerow,
 	infobox: Infobox,
 	log_face: LoginFacebookGithub,
@@ -65,6 +70,7 @@ export const components = {
 	slice1: PageInfo,
 	priceplan: Priceplan,
 	quicknote: Quicknote,
+	templates: Templates,
 	textimg: Textimage,
 	text_pile: TextPile,
 	therms: Therms,

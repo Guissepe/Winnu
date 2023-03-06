@@ -3,36 +3,43 @@ import { PrismicRichText } from '@prismicio/react';
 import { Box, Flex, Center, Image, Text } from '@chakra-ui/react';
 
 const Textimg = ({ slice }) => (
-  <Box pt="10%">
+  <Box background={'black01'} pt="10%">
     {slice.variation !== 'textimgImgBottom' ? (
       <Center>
         <Flex gridGap="4rem" direction={{ base: 'column', lg: 'row' }}>
           <Box maxW={450}>
-            <Box fontWeight="600" fontSize={'2.5rem'}>
+            <Box
+              pt={'5rem'}
+              color={'white'}
+              fontWeight="600"
+              fontSize={'2.5rem'}
+            >
               <PrismicRichText field={slice.primary.title} />
             </Box>
-            <Box fontSize={'2rem'} fontWeight="500">
+            <Box
+              color={'white'}
+              fontSize={'1.15rem'}
+              py={'1.5rem'}
+              fontWeight="500"
+              width={'25.7rem'}
+            >
               <PrismicRichText field={slice.primary.subtitle} />
             </Box>
-            <Box>
+            <Box
+              width={'22rem'}
+              color={'BrowGray'}
+              fontSize={'110%'}
+              fontWeight="500"
+            >
               <PrismicRichText field={slice.primary.description} />
             </Box>
-            <Box
-              borderWidth={1.5}
-              borderColor="black"
-              mt={'0.5rem'}
-              mb={'0.625rem'}
-            ></Box>
-            <Text fontWeight="600" fontSize={'2.5rem'}>
-              {slice.primary.title2}
-            </Text>
-            <Text fontWeight="600" fontSize={'2.5rem'}>
-              {slice.primary.title3}
-            </Text>
           </Box>
           <Image
-            width="100%"
-            height="100%"
+            borderStyle={'solid'}
+            borderWidth={'3rem'}
+            borderColor={'BrowGray'}
+            width="52%"
+            height="38%"
             src={slice.primary.image.url}
             alt={slice.primary.image.alt}
           />

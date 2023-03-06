@@ -36,11 +36,6 @@
           }
         ]
       },
-      "title2": {
-        "__TYPE__": "FieldContent",
-        "value": "method",
-        "type": "Text"
-      },
       "image": {
         "origin": {
           "id": "main",
@@ -63,11 +58,6 @@
         "alt": null,
         "__TYPE__": "ImageContent",
         "thumbnails": {}
-      },
-      "title3": {
-        "__TYPE__": "FieldContent",
-        "value": "forgot",
-        "type": "Text"
       }
     },
     "items": [
@@ -87,7 +77,7 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Worried"
+              "text": "Difference"
             }
           }
         ]
@@ -98,7 +88,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Mollit cupidatat ex labore labore ad et quis quis amet minim nisi est incididunt laborum. Ullamco Lorem culpa Lorem occaecat veniam laboris mollit minim aliqua."
+              "text": "Deserunt in culpa Lorem veniam qui non ex."
             }
           }
         ]
@@ -109,7 +99,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Quis qui Lorem ex occaecat quis est labore exercitation irure aute consequat non. Commodo qui sint eiusmod aliqua enim esse. Elit nisi esse do duis officia deserunt tempor sit eiusmod id voluptate voluptate nostrud."
+              "text": "Qui tempor amet ut labore non Lorem. Deserunt proident id deserunt."
             }
           }
         ]
@@ -118,13 +108,13 @@
         "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
-          "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
-          "width": 5616,
-          "height": 3744
+          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+          "width": 3958,
+          "height": 3958
         },
-        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
-        "width": 5616,
-        "height": 3744,
+        "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+        "width": 3958,
+        "height": 3958,
         "edit": {
           "zoom": 1,
           "crop": {

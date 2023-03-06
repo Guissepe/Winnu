@@ -25,9 +25,8 @@ const Header = ({ slice }) => {
     <HStack
       justify={'center'}
       background={'white01'}
-      spacing={'30rem'}
+      spacing={'25%'}
       align={'center'}
-      mx="auto"
     >
       <Center width={'13rem'} height={'5.25rem'}>
         <Image

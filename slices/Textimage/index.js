@@ -28,7 +28,7 @@ const Textimg = ({ slice }) => (
             <Box
               width={'22rem'}
               color={'BrowGray'}
-              fontSize={'1.25rem'}
+              fontSize={'110%'}
               fontWeight="500"
             >
               <PrismicRichText field={slice.primary.description} />
@@ -38,8 +38,8 @@ const Textimg = ({ slice }) => (
             borderStyle={'solid'}
             borderWidth={'3rem'}
             borderColor={'BrowGray'}
-            width="52rem"
-            height="38rem"
+            width="52%"
+            height="38%"
             src={slice.primary.image.url}
             alt={slice.primary.image.alt}
           />

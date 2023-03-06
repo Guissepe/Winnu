@@ -36,20 +36,6 @@
             "placeholder": "A nice description of your feature"
           }
         },
-        "title2": {
-          "type": "Text",
-          "config": {
-            "label": "Title2",
-            "placeholder": ""
-          }
-        },
-        "title3": {
-          "type": "Text",
-          "config": {
-            "label": "Title3",
-            "placeholder": ""
-          }
-        },
         "image": {
           "type": "Image",
           "config": {

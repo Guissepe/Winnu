@@ -38,7 +38,7 @@ const Header = ({ slice }) => {
         />
       </Center>
       <Show above="md">
-        <Center gap={6}>
+        <Flex gap={6}>
           {slice?.items?.map((item, i) => (
             <HStack key={i}>
               <PrismicLink field={item.buttonlink}>
@@ -48,7 +48,7 @@ const Header = ({ slice }) => {
               </PrismicLink>
             </HStack>
           ))}
-        </Center>
+        </Flex>
       </Show>
       {loading && <Box>Loading...</Box>}
       {session && (

@@ -14,7 +14,6 @@ const WelcomeCarousel = ({ slice }) => {
     <Box bg={'black'} minH={'100vh'} pt={'3rem'}>
       <Box className="slide">
         <Flicking horizontal={true} plugins={plugins}>
-          
           {slice?.items?.map((item, index) => (
             <Box key={index} width={586} px={'2rem'}>
               <Box bg="white" p={'3rem'}>
@@ -43,7 +42,6 @@ const WelcomeCarousel = ({ slice }) => {
             <div className="flicking-pagination"></div>
           </ViewportSlot>
         </Flicking>
-        
       </Box>
     </Box>
   );

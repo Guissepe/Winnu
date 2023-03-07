@@ -1,11 +1,12 @@
 import React from 'react';
 import { PrismicRichText, PrismicLink } from '@prismicio/react';
-import { Box, Button, Flex, Center, Image } from '@chakra-ui/react';
+import { Box, Button, Flex, Center, Image, VStack } from '@chakra-ui/react';
 
 const Infobox = ({ slice }) => (
   <Box className="section relative bg-black">
     {slice.variation !== 'singleButton' ? (
       <Center
+        background={'white'}
         textAlign="center"
         fontFamily="manrope"
         pt={{ base: '2.5rem', md: '4rem' }}
@@ -53,6 +54,7 @@ const Infobox = ({ slice }) => (
       </Center>
     ) : (
       <Center
+        background={'white01'}
         textAlign="center"
         fontFamily="sora"
         pt={{ base: '2.5rem', md: '12rem' }}
@@ -60,11 +62,12 @@ const Infobox = ({ slice }) => (
         px={'1.5rem'}
         fontSize={'1.25rem'}
       >
-        <Box>
+        <VStack>
           <Box
             fontWeight="600"
             fontSize={{ base: '1.25rem', md: '2.5rem' }}
             color="text.01"
+            width={'40rem'}
           >
             <PrismicRichText field={slice.primary.title} />
           </Box>
@@ -72,6 +75,7 @@ const Infobox = ({ slice }) => (
             fontSize={{ base: '1rem', md: '1.5rem' }}
             color="text.02"
             mt="16px"
+            width={'45rem'}
           >
             <PrismicRichText field={slice.primary.description} />
           </Box>
@@ -98,10 +102,9 @@ const Infobox = ({ slice }) => (
               </Button>
             </Box>
           </PrismicLink>
-        </Box>
+        </VStack>
       </Center>
     )}
-    ;
   </Box>
 );
 

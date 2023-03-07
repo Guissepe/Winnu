@@ -25,12 +25,12 @@ const Header = ({ slice }) => {
     <HStack
       justify={'center'}
       background={'white01'}
-      spacing={'30rem'}
+      spacing={'20%'}
       align={'center'}
-      mx="auto"
     >
-      <Center width={'13rem'} height={'5.25rem'}>
+      <Center height={'5.25rem'}>
         <Image
+          minWidth={'11rem'}
           width={'11rem'}
           height={'3.25rem'}
           src={slice.primary.logo.url}
@@ -38,7 +38,7 @@ const Header = ({ slice }) => {
         />
       </Center>
       <Show above="md">
-        <Center gap={6}>
+        <Flex gap={6}>
           {slice?.items?.map((item, i) => (
             <HStack key={i}>
               <PrismicLink field={item.buttonlink}>
@@ -48,7 +48,7 @@ const Header = ({ slice }) => {
               </PrismicLink>
             </HStack>
           ))}
-        </Center>
+        </Flex>
       </Show>
       {loading && <Box>Loading...</Box>}
       {session && (

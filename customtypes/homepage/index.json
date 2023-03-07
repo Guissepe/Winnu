@@ -89,6 +89,21 @@
             },
             "home_onboarding": {
               "type": "SharedSlice"
+            },
+            "clickwords": {
+              "type": "SharedSlice"
+            },
+            "therms": {
+              "type": "SharedSlice"
+            },
+            "welcome_carousel": {
+              "type": "SharedSlice"
+            },
+            "welcom": {
+              "type": "SharedSlice"
+            },
+            "topimage": {
+              "type": "SharedSlice"
             }
           }
         }

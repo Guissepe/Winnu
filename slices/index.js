@@ -18,8 +18,8 @@ import PageInfo from './PageInfo';
 import Priceplan from './Priceplan';
 import Quicknote from './Quicknote';
 import Templates from './Templates';
-import TextPile from './TextPile';
 import Textimage from './Textimage';
+import TextPile from './TextPile';
 import Therms from './Therms';
 import Topimage from './Topimage';
 import Welcom from './Welcom';
@@ -44,8 +44,8 @@ export {
 	Priceplan,
 	Quicknote,
 	Templates,
-	TextPile,
 	Textimage,
+	TextPile,
 	Therms,
 	Topimage,
 	Welcom,
@@ -71,8 +71,8 @@ export const components = {
 	priceplan: Priceplan,
 	quicknote: Quicknote,
 	templates: Templates,
-	text_pile: TextPile,
 	textimg: Textimage,
+	text_pile: TextPile,
 	therms: Therms,
 	topimage: Topimage,
 	welcom: Welcom,

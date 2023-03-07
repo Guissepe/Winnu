@@ -128,7 +128,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | NavigationItemSlice | Slice1Slice | ButtonSlice | TextimgSlice | CustumersSlice | ButtonRowSlice | CarousellSlice | ImgrowSlice | TextPileSlice | LogFaceSlice | LogGoogSlice | FooterSlice | LogoButtonSlice | PriceplanSlice | QuicknoteSlice | TemplatesSlice | HomeOnboardingSlice;
+type HomepageDocumentDataSlicesSlice = HeaderSlice | InfoboxSlice | NavigationItemSlice | Slice1Slice | ButtonSlice | TextimgSlice | CustumersSlice | ButtonRowSlice | CarousellSlice | ImgrowSlice | TextPileSlice | LogFaceSlice | LogGoogSlice | FooterSlice | LogoButtonSlice | PriceplanSlice | QuicknoteSlice | TemplatesSlice | HomeOnboardingSlice | ClickwordsSlice | ThermsSlice | WelcomeCarouselSlice | WelcomSlice | TopimageSlice;
 /**
  * Homepage document from Prismic
  *

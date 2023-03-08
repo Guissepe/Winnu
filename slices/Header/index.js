@@ -11,12 +11,7 @@ import {
   Hide,
   Show,
 } from '@chakra-ui/react';
-import {
-  useSession,
-  getSession,
-  getProviders,
-  getCsrfToken,
-} from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 
 const Header = ({ slice }) => {
   const { data: session, status } = useSession();
@@ -29,23 +24,19 @@ const Header = ({ slice }) => {
       align={'center'}
     >
       <Center height={'5.25rem'}>
-        <PrismicLink field={slice.primary.homepagelink}>
+        <Button
+          minWidth={'11rem'}
+          width={'11rem'}
+          height={'3.25rem'}
+          background={'transparent'}
+        >
           <Image
             minWidth={'11rem'}
             width={'11rem'}
             height={'3.25rem'}
             src={slice.primary.logo.url}
-            alt={slice.primary.logo.alt}
           ></Image>
-        </PrismicLink>
-        <PrismicLink field={slice.primary.homepagelink}>
-          <Image
-            minWidth={'11rem'}
-            width={'11rem'}
-            height={'3.25rem'}
-            src={slice.primary.userlink}
-          ></Image>
-        </PrismicLink>
+        </Button>
       </Center>
       <Show above="md">
         <Flex gap={6}>

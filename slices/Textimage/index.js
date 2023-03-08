@@ -3,7 +3,7 @@ import { PrismicRichText } from '@prismicio/react';
 import { Box, Flex, Center, Image, Text } from '@chakra-ui/react';
 
 const Textimg = ({ slice }) => (
-  <Box background={'black01'} pt="10%">
+  <Box background={'black01'} py="10%">
     {slice.variation !== 'textimgImgBottom' ? (
       <Center>
         <Flex gridGap="4rem" direction={{ base: 'column', lg: 'row' }}>

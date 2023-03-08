@@ -55,9 +55,11 @@ const Header = ({ slice }) => {
       {session && (
         <Flex gap={'1rem'}>
           <Show above="md">
-            <Text fontSize={'1rem'} color="white" pr={'1rem'}>
-              {session.user.name ?? session.user.email}!
-            </Text>
+            <Center>
+              <Text fontSize={'1rem'} color="black" pr={'1rem'}>
+                {session.user.name ?? session.user.email}!
+              </Text>
+            </Center>
             <PrismicLink field={slice.primary.userlink}>
               <Image
                 height={'3rem'}

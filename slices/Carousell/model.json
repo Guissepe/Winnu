@@ -10,7 +10,95 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "Carousell",
-      "primary": {},
+      "primary": {
+        "desc1": {
+          "type": "Text",
+          "config": {
+            "label": "Desc1",
+            "placeholder": ""
+          }
+        },
+        "des2": {
+          "type": "Text",
+          "config": {
+            "label": "Des2",
+            "placeholder": ""
+          }
+        },
+        "desc3": {
+          "type": "Text",
+          "config": {
+            "label": "Desc3",
+            "placeholder": ""
+          }
+        },
+        "ofer1": {
+          "type": "Text",
+          "config": {
+            "label": "Ofer1",
+            "placeholder": ""
+          }
+        },
+        "ofer2": {
+          "type": "Text",
+          "config": {
+            "label": "Ofer2",
+            "placeholder": ""
+          }
+        },
+        "ofer3": {
+          "type": "Text",
+          "config": {
+            "label": "Ofer3",
+            "placeholder": ""
+          }
+        },
+        "image01": {
+          "type": "Image",
+          "config": {
+            "label": "Image01",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image02": {
+          "type": "Image",
+          "config": {
+            "label": "Image02",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image03": {
+          "type": "Image",
+          "config": {
+            "label": "Image03",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "button1": {
+          "type": "Text",
+          "config": {
+            "label": "Button1",
+            "placeholder": ""
+          }
+        },
+        "button2": {
+          "type": "Text",
+          "config": {
+            "label": "Button2",
+            "placeholder": ""
+          }
+        },
+        "button3": {
+          "type": "Text",
+          "config": {
+            "label": "Button3",
+            "placeholder": ""
+          }
+        }
+      },
       "items": {
         "image": {
           "type": "Image",

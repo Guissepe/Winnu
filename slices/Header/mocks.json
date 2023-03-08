@@ -4,7 +4,6 @@
     "variation": "default",
     "primary": {
       "logo": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
           "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
@@ -22,6 +21,9 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       },
       "login": {
@@ -70,6 +72,13 @@
         "value": {
           "__TYPE__": "ExternalLink",
           "url": "https://prismic.io"
+        }
+      },
+      "homepagelink": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://slicemachine.dev"
         }
       }
     },

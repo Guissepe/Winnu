@@ -78,6 +78,14 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "homepagelink": {
+          "type": "Link",
+          "config": {
+            "label": "Homepagelink",
+            "placeholder": "",
+            "select": null
+          }
         }
       },
       "items": {

@@ -29,13 +29,23 @@ const Header = ({ slice }) => {
       align={'center'}
     >
       <Center height={'5.25rem'}>
-        <Image
-          minWidth={'11rem'}
-          width={'11rem'}
-          height={'3.25rem'}
-          src={slice.primary.logo.url}
-          alt={slice.primary.logo.alt}
-        />
+        <PrismicLink field={slice.primary.homepagelink}>
+          <Image
+            minWidth={'11rem'}
+            width={'11rem'}
+            height={'3.25rem'}
+            src={slice.primary.logo.url}
+            alt={slice.primary.logo.alt}
+          ></Image>
+        </PrismicLink>
+        <PrismicLink field={slice.primary.homepagelink}>
+          <Image
+            minWidth={'11rem'}
+            width={'11rem'}
+            height={'3.25rem'}
+            src={slice.primary.userlink}
+          ></Image>
+        </PrismicLink>
       </Center>
       <Show above="md">
         <Flex gap={6}>
